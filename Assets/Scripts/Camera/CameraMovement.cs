@@ -21,7 +21,7 @@ namespace Camera
 
         void Update()
         {
-            _cameraPositionX = _characterPosition.position.x + 2f;
+            _cameraPositionX = _characterPosition.position.x + 5f;
             _cameraPositionY = _characterPosition.position.y;
             transform.position = new Vector3(_cameraPositionX, _cameraPositionY, _cameraPosition.position.z);
         }
