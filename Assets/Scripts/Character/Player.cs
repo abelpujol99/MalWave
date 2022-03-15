@@ -9,20 +9,23 @@ namespace Character
 {
     public class Player : MonoBehaviour
     {
+        private const String JUMP_ANIMATOR_NAME = "Jump";
+        private const String DOUBLEJUMP_ANIMATOR_NAME = "Double Jump";
+        private const String FALL_ANIMATOR_NAME = "Fall";
 
         private delegate void JumpAction();
         private static event JumpAction onJumpButton;
 
-        [SerializeField] private float _speed;
-
-        private Animator _animator;
+        [SerializeField] private Animator _animator;
         
-        private Rigidbody2D _rb2D;
+        [SerializeField] private Rigidbody2D _rb2D;
 
         private RaycastHit2D _checkGround;
 
         private Dictionary<string, EventManager.Action> _animationsTransitions;
 
+        [SerializeField] private bool _jump;
+        [SerializeField] private bool _doubleJump;
         [SerializeField] private bool _ground;
         [SerializeField] private bool _canDoubleJump;
         
@@ -31,67 +34,85 @@ namespace Character
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
         [SerializeField] private float _lowJumpMultiplier = 1f;
-        
+
+        [SerializeField] private float _horizontalMove;
+
         void Start()
         {
-            _animator = GetComponent<Animator>();
-            _rb2D = GetComponent<Rigidbody2D>();
+            _horizontalMove = 0f;
         }
         
         void Update()
         {
-            Move();
+            CheckMove();
             
-            CheckJump();
-            
+            CheckJumpAndDoubleJump();
+
             CheckFall();
         }
 
         private void FixedUpdate()
         {
+            Move();
+
+            Jump();
+
+            DoubleJump();
+            
             CheckLowHighJump();
         }
 
+        void CheckMove()
+        {
+            _horizontalMove = Input.GetAxisRaw("Horizontal") * _moveSpeed;
+        }
+        
         void Move()
         {
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            _rb2D.velocity = new Vector2(_horizontalMove, _rb2D.velocity.y);
+        }
+
+        void CheckJumpAndDoubleJump()
+        {
+            if (_ground && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
             {
-                _rb2D.velocity = new Vector2(_moveSpeed, _rb2D.velocity.y);
-            } 
-            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                _rb2D.velocity = new Vector2(-_moveSpeed, _rb2D.velocity.y);
+                _jump = true;
             }
-            else
+            else if (!_ground && _canDoubleJump && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
             {
-                _rb2D.velocity = new Vector2(0, _rb2D.velocity.y);
+                _doubleJump = true;
+            }
+            
+        }
+
+        void Jump()
+        {
+            if (_jump)
+            {
+                _rb2D.velocity = new Vector2(_rb2D.velocity.x, _jumpSpeed);
+                _jump = false;
+                _ground = false;
+                _animator.SetBool(JUMP_ANIMATOR_NAME, true);
+                StartCoroutine(SetAnimationFalse(JUMP_ANIMATOR_NAME, ReturnAnimationClip(JUMP_ANIMATOR_NAME).length));
             }
         }
 
-        void CheckJump()
+        void DoubleJump()
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+            if (_doubleJump)
             {
-                if (_ground)
-                {
-                    _rb2D.velocity = new Vector2(_rb2D.velocity.x, _jumpSpeed);
-                    _ground = false;
-                    _animator.SetBool("Jump", true);
-                    StartCoroutine(SetAnimationFalse("Jump", _animator.))
-                }
-                else if (_canDoubleJump && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
-                {
-                    _rb2D.velocity = new Vector2(_rb2D.velocity.x, _doubleJumpSpeed);
-                    _canDoubleJump = false;
-                }
+                _rb2D.velocity = new Vector2(_rb2D.velocity.x, _doubleJumpSpeed);    
+                _doubleJump = false;
+                _animator.SetBool(DOUBLEJUMP_ANIMATOR_NAME, true);
+                StartCoroutine(SetAnimationFalse(DOUBLEJUMP_ANIMATOR_NAME, ReturnAnimationClip(DOUBLEJUMP_ANIMATOR_NAME).length));
             }
         }
 
         void CheckFall()
         {
-            if (_rb2D.velocity.y < 0)
+            if (_rb2D.velocity.y < 0 && !_ground)
             {
-                _animator.SetBool("Fall", true);
+                _animator.SetBool(FALL_ANIMATOR_NAME, true);
             }
         }
 
@@ -110,7 +131,19 @@ namespace Character
                 _rb2D.velocity += Vector2.up * Physics2D.gravity.y * (_lowJumpMultiplier) * Time.deltaTime;
             }
         }
-
+        
+        AnimationClip ReturnAnimationClip(string name)
+        {
+            for (int i = 0; i < _animator.runtimeAnimatorController.animationClips.Length; i++)
+            {
+                if (_animator.runtimeAnimatorController.animationClips[i].name == JUMP_ANIMATOR_NAME)
+                {
+                    return _animator.runtimeAnimatorController.animationClips[i];
+                }
+            }
+            return null;
+        }
+        
         private IEnumerator SetAnimationFalse(string state, float time)
         {
             yield return new WaitForSeconds(time);
@@ -121,10 +154,7 @@ namespace Character
         {
             if (Vector2.Angle(collision2D.contacts[0].normal, Vector2.up) <= 60f && collision2D.contacts[0].collider.gameObject.layer == 6)
             {
-                if (_animator.GetBool("Fall"))
-                {
-                    _animator.SetBool("Fall", false);
-                }
+                _animator.SetBool(FALL_ANIMATOR_NAME, false);
                 _ground = true;
                 _canDoubleJump = true;
             }
