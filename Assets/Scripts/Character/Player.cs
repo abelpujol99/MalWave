@@ -35,7 +35,14 @@ namespace Character
         [SerializeField] private float _fallMultiplier = 0.5f;
         [SerializeField] private float _lowJumpMultiplier = 1f;
 
+
         [SerializeField] private float _horizontalMove;
+
+        //DASH
+        [SerializeField] private float _dashDistance = 15f;
+        bool isDashing = false;
+        float doubleTapTime;
+        KeyCode lastKeyCode;
 
         void Start()
         {
@@ -49,6 +56,20 @@ namespace Character
             CheckJumpAndDoubleJump();
 
             CheckFall();
+
+            //DASH
+            if(Input.GetKeyDown(KeyCode.D))
+            {
+                if(doubleTapTime > Time.time && lastKeyCode == KeyCode.D)
+                {
+                    StartCoroutine(Dash(1f));
+                }
+                else
+                {
+                    doubleTapTime = Time.time + 0.5f;
+                }
+                lastKeyCode = KeyCode.D;
+            }
         }
 
         private void FixedUpdate()
@@ -60,8 +81,20 @@ namespace Character
             DoubleJump();
             
             CheckLowHighJump();
-        }
 
+        }
+        //DASH
+        IEnumerator Dash (float direction)
+        {
+            isDashing = true;
+            _rb2D.velocity = new Vector2(_rb2D.velocity.x, 0f);
+            _rb2D.AddForce(new Vector2(_dashDistance * direction, 0f), ForceMode2D.Impulse);
+            float gravity = _rb2D.gravityScale;
+            _rb2D.gravityScale = 0;
+            yield return new WaitForSeconds(0.4f);
+            isDashing = false;
+            _rb2D.gravityScale = gravity;
+        }
         void CheckMove()
         {
             _horizontalMove = Input.GetAxisRaw("Horizontal") * _moveSpeed;
