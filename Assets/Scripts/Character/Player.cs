@@ -82,6 +82,10 @@ namespace Character
             
             CheckLowHighJump();
 
+            //DASH
+            /*if (!isDashing)
+                _rb2D.velocity = new Vector2(mx*speed, _rb2D.velocity.y);*/
+
         }
         //DASH
         IEnumerator Dash (float direction)
