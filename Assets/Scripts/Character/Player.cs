@@ -17,7 +17,7 @@ namespace Character
         private const String DASH_ANIMATOR_NAME = "Dash";
 
         private delegate void JumpAction();
-        private static event JumpAction onJumpButton;
+        private event JumpAction onJumpButtonEvent;
         
         
 
@@ -37,14 +37,20 @@ namespace Character
         [SerializeField] private bool _canDash;
         private bool _cooldownDashRestarting;
 
-        [SerializeField] private float _moveSpeed = 2;
+        [SerializeField] private float _moveSpeed;
+        [SerializeField] private float _auxMoveSpeed = 2;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
         [SerializeField] private float _lowJumpMultiplier = 1f;
         [SerializeField] private float _dashCooldown = 1f;
         [SerializeField] private float _dashSpeed = 5f;
-        
+
+        private void Start()
+        {
+            _moveSpeed = _auxMoveSpeed;
+        }
+
         void Update()
         {
             CheckJumpAndDoubleJump();
@@ -153,10 +159,10 @@ namespace Character
             if (_dash)
             {
                 _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-                _rb2D.AddForce(new Vector2(5, _rb2D.velocity.y));
+                //_moveSpeed = _dashSpeed;
+                _rb2D.AddForce(Vector2.right * _dashSpeed, ForceMode2D.Impulse);
+                StartCoroutine(DashBehaviour(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
                 _dash = false;
-                StartCoroutine(SetAnimationFalse(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
-                StartCoroutine(UnfreezePositionY(ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
             }
         }
 
@@ -171,17 +177,19 @@ namespace Character
             }
             return null;
         }
+
+        private IEnumerator DashBehaviour(string name, float time)
+        {
+            yield return new WaitForSeconds(time);
+            //_moveSpeed = _auxMoveSpeed;
+            _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+            _animator.SetBool(name, false);
+        }
         
         private IEnumerator SetAnimationFalse(string state, float time)
         {
             yield return new WaitForSeconds(time);
             _animator.SetBool(state, false);
-        }
-
-        private IEnumerator UnfreezePositionY(float time)
-        {
-            yield return new WaitForSeconds(time);
-            _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
         }
 
         private IEnumerator ResetDashCooldown(float time)
