@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Event;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace Character
 {
@@ -12,6 +13,7 @@ namespace Character
         private const String JUMP_ANIMATOR_NAME = "Jump";
         private const String DOUBLEJUMP_ANIMATOR_NAME = "Double Jump";
         private const String FALL_ANIMATOR_NAME = "Fall";
+        private const String LAND_ANIMATOR_NAME = "Land";
         private const String DASH_ANIMATOR_NAME = "Dash";
 
         private delegate void JumpAction();
@@ -35,29 +37,26 @@ namespace Character
         [SerializeField] private bool _canDash;
         private bool _cooldownDashRestarting;
 
-        [SerializeField] private float _moveSpeed = 1;
+        [SerializeField] private float _moveSpeed = 2;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
         [SerializeField] private float _lowJumpMultiplier = 1f;
         [SerializeField] private float _dashCooldown = 1f;
-
-        [SerializeField] private float _horizontalMove;
-
-        void Start()
-        {
-            _horizontalMove = 0f;
-        }
+        [SerializeField] private float _dashSpeed = 5f;
         
         void Update()
         {
-            CheckMove();
-            
             CheckJumpAndDoubleJump();
 
             CheckFall();
 
             CheckDash();
+
+            if (transform.position.y < -4)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
 
         private void FixedUpdate()
@@ -73,14 +72,9 @@ namespace Character
             Dash();
         }
         
-        void CheckMove()
-        {
-            _horizontalMove = Input.GetAxisRaw("Horizontal") * _moveSpeed;
-        }
-        
         void Move()
         {
-            _rb2D.velocity = new Vector2(_horizontalMove, _rb2D.velocity.y);
+            _rb2D.velocity = new Vector2(_moveSpeed, _rb2D.velocity.y);
         }
 
         void CheckJumpAndDoubleJump()
@@ -103,6 +97,7 @@ namespace Character
                 _jump = false;
                 _ground = false;
                 _animator.SetBool(JUMP_ANIMATOR_NAME, true);
+                _animator.SetBool(LAND_ANIMATOR_NAME, false);
                 StartCoroutine(SetAnimationFalse(JUMP_ANIMATOR_NAME, ReturnAnimationClip(JUMP_ANIMATOR_NAME).length));
             }
         }
@@ -114,8 +109,9 @@ namespace Character
                 _rb2D.velocity = new Vector2(_rb2D.velocity.x, _doubleJumpSpeed);    
                 _doubleJump = false;
                 _canDoubleJump = false;
+                _animator.SetBool(FALL_ANIMATOR_NAME, false);
                 _animator.SetBool(DOUBLEJUMP_ANIMATOR_NAME, true);
-                StartCoroutine(SetAnimationFalse(DOUBLEJUMP_ANIMATOR_NAME, ReturnAnimationClip(DOUBLEJUMP_ANIMATOR_NAME).length));
+                StartCoroutine(SetAnimationFalse(DOUBLEJUMP_ANIMATOR_NAME, ReturnAnimationClip(JUMP_ANIMATOR_NAME).length));
             }
         }
 
@@ -156,12 +152,11 @@ namespace Character
         {
             if (_dash)
             {
-                _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY;
+                _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                 _rb2D.AddForce(new Vector2(5, _rb2D.velocity.y));
                 _dash = false;
                 StartCoroutine(SetAnimationFalse(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
                 StartCoroutine(UnfreezePositionY(ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
-                StartCoroutine(ResetDashCooldown(_dashCooldown));
             }
         }
 
@@ -169,7 +164,7 @@ namespace Character
         {
             for (int i = 0; i < _animator.runtimeAnimatorController.animationClips.Length; i++)
             {
-                if (_animator.runtimeAnimatorController.animationClips[i].name == JUMP_ANIMATOR_NAME)
+                if (_animator.runtimeAnimatorController.animationClips[i].name == name)
                 {
                     return _animator.runtimeAnimatorController.animationClips[i];
                 }
@@ -202,6 +197,7 @@ namespace Character
             if (Vector2.Angle(collision2D.contacts[0].normal, Vector2.up) <= 60f && collision2D.contacts[0].collider.gameObject.layer == 6)
             {
                 _animator.SetBool(FALL_ANIMATOR_NAME, false);
+                _animator.SetBool(LAND_ANIMATOR_NAME, true);
                 _ground = true;
                 _canDoubleJump = true;
                 if (!_canDash && !_cooldownDashRestarting)
