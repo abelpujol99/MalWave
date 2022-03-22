@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!50 &391783943 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7029461126232232193, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+  m_PrefabInstance: {fileID: 1865159429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &391783945 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7029461126232232204, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+  m_PrefabInstance: {fileID: 1865159429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &892776040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5869,7 +5879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006636330365517449, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.68
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 5006636330365517449, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5940,8 +5950,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+      propertyPath: _rb2D
+      value: 
+      objectReference: {fileID: 391783943}
+    - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 391783945}
+    - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+      propertyPath: _dashTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+      propertyPath: _dashSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: _moveSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+      propertyPath: _startDashTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029461126232232193, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_RootOrder
@@ -5949,11 +5983,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.764
+      value: -2.307
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.112
+      value: 0.165
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5990,6 +6024,10 @@ PrefabInstance:
     - target: {fileID: 7029461126232232206, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029461126232232206, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}

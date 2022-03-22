@@ -1,55 +1,49 @@
 fileFormatVersion: 2
-guid: 29f25cd124f448d488164f5feae7af49
+guid: 78bbad3c8cc30b7428d3a052ceea66cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -862081301876300693
-    second: SPRITE_0
+      213: 6771542286313037864
+    second: Disparant_0
   - first:
-      213: 3334305052752828467
-    second: SPRITE_1
+      213: -9148028672207293485
+    second: Disparant_1
   - first:
-      213: -2267444687875720506
-    second: SPRITE_2
+      213: 3444988459910335890
+    second: Disparant_2
   - first:
-      213: -1226128731039218630
-    second: SPRITE_3
+      213: 9108398678978871618
+    second: Disparant_3
   - first:
-      213: -1151714591508851231
-    second: SPRITE_4
+      213: -2653959311326138267
+    second: Disparant_4
   - first:
-      213: -2024166764220620245
-    second: SPRITE_5
+      213: 8756809142418702996
+    second: Disparant_5
   - first:
-      213: 1127258210409247008
-    second: SPRITE_6
+      213: 1066809229201811775
+    second: Disparant_6
   - first:
-      213: -3871992926703098006
-    second: SPRITE_7
+      213: -7964768844901372416
+    second: Disparant_7
   - first:
-      213: 2604344236633693686
-    second: SPRITE_8
+      213: 3114262948075192950
+    second: Disparant_8
   - first:
-      213: 8803676568428326186
-    second: SPRITE_9
+      213: 2146268996375479604
+    second: Disparant_9
   - first:
-      213: -1253500913086194102
-    second: SPRITE_10
+      213: -6942004054819290055
+    second: Disparant_10
   - first:
-      213: 5751605112755103247
-    second: SPRITE_11
+      213: 2188117064034741822
+    second: Disparant_11
   - first:
-      213: -2266545074848810190
-    second: SPRITE_12
+      213: 5691707583877579621
+    second: Disparant_12
   - first:
-      213: 5014130927979695094
-    second: SPRITE_13
-  - first:
-      213: 8515186039058608297
-    second: SPRITE_14
-  - first:
-      213: 4741434460859220948
-    second: SPRITE_15
+      213: -8046794716179708646
+    second: Disparant_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,7 +85,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -135,215 +129,251 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPRITE_1
+      name: Disparant_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 1313
-        width: 600
-        height: 674
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3385f1297c4d54e20800000000000000
-      internalID: 3334305052752828467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPRITE_2
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 1289
-        width: 600
+        x: 104
+        y: 1438
+        width: 650
         height: 674
       alignment: 9
-      pivot: {x: 0.3, y: 0.5}
+      pivot: {x: 0.4713162, y: 0.5276627}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ca325fd11b6880e0800000000000000
-      internalID: -2267444687875720506
+      spriteID: 820a93d05d959fd50800000000000000
+      internalID: 6771542286313037864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPRITE_3
+      name: Disparant_1
       rect:
         serializedVersion: 2
-        x: 1797
-        y: 1301
-        width: 600
-        height: 674
+        x: 955
+        y: 1418
+        width: 597
+        height: 697
       alignment: 9
-      pivot: {x: 0.38, y: 0.5}
+      pivot: {x: 0.517846, y: 0.53439265}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a34c1895a6aebfee0800000000000000
-      internalID: -1226128731039218630
+      spriteID: 3d3fef5146cab0180800000000000000
+      internalID: -9148028672207293485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPRITE_4
+      name: Disparant_2
       rect:
         serializedVersion: 2
-        x: 2559
-        y: 1298
-        width: 600
-        height: 674
+        x: 1808
+        y: 1427
+        width: 613
+        height: 679
       alignment: 9
-      pivot: {x: 0.47, y: 0.5}
+      pivot: {x: 0.46958518, y: 0.539227}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e51b7a5ea94400f0800000000000000
-      internalID: -1151714591508851231
+      spriteID: 29d864080ce0fcf20800000000000000
+      internalID: 3444988459910335890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPRITE_5
-      rect:
-        serializedVersion: 2
-        x: 3393
-        y: 1297
-        width: 600
-        height: 674
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b226a7c6d07b8e3e0800000000000000
-      internalID: -2024166764220620245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPRITE_6
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 457
-        width: 600
-        height: 674
-      alignment: 9
-      pivot: {x: 0.32, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 021f591be53d4af00800000000000000
-      internalID: 1127258210409247008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPRITE_7
-      rect:
-        serializedVersion: 2
-        x: 991
-        y: 455
-        width: 600
-        height: 674
-      alignment: 9
-      pivot: {x: 0.32, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a676907a2fae34ac0800000000000000
-      internalID: -3871992926703098006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPRITE_8
-      rect:
-        serializedVersion: 2
-        x: 1791
-        y: 439
-        width: 600
-        height: 674
-      alignment: 9
-      pivot: {x: 0.32, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fd1369e84d742420800000000000000
-      internalID: 2604344236633693686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPRITE_10
+      name: Disparant_3
       rect:
         serializedVersion: 2
         x: 2589
-        y: 507
-        width: 600
-        height: 674
+        y: 1425
+        width: 708
+        height: 644
       alignment: 9
-      pivot: {x: 0.47, y: 0.5}
+      pivot: {x: 0.5037621, y: 0.56203824}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e9ed59f8baa9ee0800000000000000
-      internalID: -1253500913086194102
+      spriteID: 2414c251758876e70800000000000000
+      internalID: 9108398678978871618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPRITE_11
+      name: Disparant_4
       rect:
         serializedVersion: 2
-        x: 3395
-        y: 485
-        width: 600
-        height: 674
+        x: 3427
+        y: 1423
+        width: 666
+        height: 636
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5639883, y: 0.5670064}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f06a612706ec1df40800000000000000
-      internalID: 5751605112755103247
+      spriteID: 560b010511e3b2bd0800000000000000
+      internalID: -2653959311326138267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparant_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 191
+        width: 604
+        height: 668
+      alignment: 9
+      pivot: {x: 0.4559023, y: 0.53987277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49282cbf48f668970800000000000000
+      internalID: 8756809142418702996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparant_6
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 189
+        width: 564
+        height: 646
+      alignment: 9
+      pivot: {x: 0.4291624, y: 0.5659691}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39aead77511ece00800000000000000
+      internalID: 1066809229201811775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparant_7
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 169
+        width: 602
+        height: 666
+      alignment: 9
+      pivot: {x: 0.4469073, y: 0.58398426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e2e894fe4777190800000000000000
+      internalID: -7964768844901372416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparant_9
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 241
+        width: 684
+        height: 622
+      alignment: 9
+      pivot: {x: 0.49610624, y: 0.5171288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4350561e74419cd10800000000000000
+      internalID: 2146268996375479604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparant_10
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 219
+        width: 704
+        height: 600
+      alignment: 9
+      pivot: {x: 0.5037838, y: 0.5532703}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934cc2ba71c09af90800000000000000
+      internalID: -6942004054819290055
       vertices: []
       indices: 
       edges: []
