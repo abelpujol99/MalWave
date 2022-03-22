@@ -119,7 +119,6 @@ namespace Character
             {
                 _doubleJump = true;
             }
-            
         }
 
         void Jump()
@@ -136,10 +135,11 @@ namespace Character
 
         void DoubleJump()
         {
-            if (_doubleJump)
+            if (_doubleJump && _canDoubleJump)
             {
                 _rb2D.velocity = new Vector2(_rb2D.velocity.x, _doubleJumpSpeed);    
                 _doubleJump = false;
+                _canDoubleJump = false;
                 _animator.SetBool(DOUBLEJUMP_ANIMATOR_NAME, true);
                 StartCoroutine(SetAnimationFalse(DOUBLEJUMP_ANIMATOR_NAME, ReturnAnimationClip(DOUBLEJUMP_ANIMATOR_NAME).length));
             }
