@@ -5,6 +5,7 @@ using Event;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Character
 {
@@ -16,11 +17,6 @@ namespace Character
         private const String LAND_ANIMATOR_NAME = "Land";
         private const String DASH_ANIMATOR_NAME = "Dash";
 
-        private delegate void JumpAction();
-        private event JumpAction onJumpButtonEvent;
-        
-        
-
         [SerializeField] private Animator _animator;
         
         [SerializeField] private Rigidbody2D _rb2D;
@@ -28,6 +24,8 @@ namespace Character
         private RaycastHit2D _checkGround;
 
         private Dictionary<string, EventManager.Action> _animationsTransitions;
+
+        private Vector3 _dashTargetPosition; 
 
         [SerializeField] private bool _jump;
         [SerializeField] private bool _doubleJump;
@@ -37,18 +35,18 @@ namespace Character
         [SerializeField] private bool _canDash;
         private bool _cooldownDashRestarting;
 
-        [SerializeField] private float _moveSpeed;
-        [SerializeField] private float _auxMoveSpeed = 2;
+        [SerializeField] private float _runSpeed;
+        [SerializeField] private float _auxRunSpeed = 2;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
         [SerializeField] private float _lowJumpMultiplier = 1f;
         [SerializeField] private float _dashCooldown = 1f;
-        [SerializeField] private float _dashSpeed = 5f;
+        [SerializeField] private float _dashSpeed = 2f;
+        [SerializeField] private float _dashDistance = 5f;
 
         private void Start()
         {
-            _moveSpeed = _auxMoveSpeed;
         }
 
         void Update()
@@ -59,28 +57,42 @@ namespace Character
 
             CheckDash();
 
-            if (transform.position.y < -4)
+            if (transform.position.x > 5)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                transform.Translate(-11, 0, 0);
             }
         }
 
         private void FixedUpdate()
         {
-            Move();
+            RunOrDash();
 
             Jump();
 
             DoubleJump();
             
             CheckLowHighJump();
-
-            Dash();
         }
-        
-        void Move()
+
+        void RunOrDash()
         {
-            _rb2D.velocity = new Vector2(_moveSpeed, _rb2D.velocity.y);
+            if (_dash)
+            {
+                Dash();
+            }
+            else
+            {
+                Run();
+            }
+        }
+
+        void Run()
+        {
+            if (_runSpeed < _auxRunSpeed)
+            {
+                _runSpeed += Time.deltaTime;
+            }
+            _rb2D.velocity = new Vector2(_runSpeed, _rb2D.velocity.y);
         }
 
         void CheckJumpAndDoubleJump()
@@ -102,9 +114,8 @@ namespace Character
                 _rb2D.velocity = new Vector2(_rb2D.velocity.x, _jumpSpeed);
                 _jump = false;
                 _ground = false;
-                _animator.SetBool(JUMP_ANIMATOR_NAME, true);
+                _animator.SetTrigger(JUMP_ANIMATOR_NAME);
                 _animator.SetBool(LAND_ANIMATOR_NAME, false);
-                StartCoroutine(SetAnimationFalse(JUMP_ANIMATOR_NAME, ReturnAnimationClip(JUMP_ANIMATOR_NAME).length));
             }
         }
 
@@ -151,6 +162,9 @@ namespace Character
             {
                 _dash = true;
                 _canDash= false;
+                _dashTargetPosition = new Vector3(transform.position.x + _dashDistance, transform.position.y, 0);
+                _animator.SetTrigger(DASH_ANIMATOR_NAME);
+                StartCoroutine(SetAnimationFalse(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
             }
         }
 
@@ -159,10 +173,13 @@ namespace Character
             if (_dash)
             {
                 _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-                //_moveSpeed = _dashSpeed;
-                _rb2D.AddForce(Vector2.right * _dashSpeed, ForceMode2D.Impulse);
-                StartCoroutine(DashBehaviour(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
-                _dash = false;
+                if (Vector3.Distance( transform.position, _dashTargetPosition) < 0.1f)
+                {
+                    _dash = false;
+                    _runSpeed = 0.25f;
+                    _rb2D.velocity = Vector2.zero;
+                    _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+                }
             }
         }
 
@@ -178,14 +195,6 @@ namespace Character
             return null;
         }
 
-        private IEnumerator DashBehaviour(string name, float time)
-        {
-            yield return new WaitForSeconds(time);
-            //_moveSpeed = _auxMoveSpeed;
-            _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-            _animator.SetBool(name, false);
-        }
-        
         private IEnumerator SetAnimationFalse(string state, float time)
         {
             yield return new WaitForSeconds(time);
@@ -221,6 +230,12 @@ namespace Character
             {
                 _ground = false;
             }
+        }
+
+
+        void StartDashing()
+        {
+            _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
         }
     }
 }
