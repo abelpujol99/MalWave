@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb0344c-1a9f-4eec-9776-06569cde4453" name="Changes" comment="" />
+    <list default="true" id="feb0344c-1a9f-4eec-9776-06569cde4453" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +75,7 @@
       <workItem from="1647968072523" duration="2230000" />
       <workItem from="1647979357534" duration="4047000" />
       <workItem from="1648057881425" duration="6733000" />
+      <workItem from="1648199471162" duration="296000" />
     </task>
     <servers />
   </component>
