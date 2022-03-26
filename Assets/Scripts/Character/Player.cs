@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Event;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Character
 {
@@ -12,9 +14,8 @@ namespace Character
         private const String JUMP_ANIMATOR_NAME = "Jump";
         private const String DOUBLEJUMP_ANIMATOR_NAME = "Double Jump";
         private const String FALL_ANIMATOR_NAME = "Fall";
-
-        private delegate void JumpAction();
-        private static event JumpAction onJumpButton;
+        private const String LAND_ANIMATOR_NAME = "Land";
+        private const String DASH_ANIMATOR_NAME = "Dash";
 
         [SerializeField] private Animator _animator;
         
@@ -24,89 +25,74 @@ namespace Character
 
         private Dictionary<string, EventManager.Action> _animationsTransitions;
 
+        private Vector3 _dashTargetPosition; 
+
         [SerializeField] private bool _jump;
         [SerializeField] private bool _doubleJump;
         [SerializeField] private bool _ground;
         [SerializeField] private bool _canDoubleJump;
-        
-        [SerializeField] private float _moveSpeed = 1;
+        [SerializeField] private bool _dash;
+        [SerializeField] private bool _canDash;
+        private bool _cooldownDashRestarting;
+
+        [SerializeField] private float _runSpeed;
+        [SerializeField] private float _auxRunSpeed = 2;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
         [SerializeField] private float _lowJumpMultiplier = 1f;
+        [SerializeField] private float _dashCooldown = 1f;
+        [SerializeField] private float _dashSpeed = 2f;
+        [SerializeField] private float _dashDistance = 5f;
 
-
-        [SerializeField] private float _horizontalMove;
-
-        //DASH
-        [SerializeField] private float _dashDistance = 15f;
-        bool isDashing = false;
-        float doubleTapTime;
-        KeyCode lastKeyCode;
-
-        void Start()
+        private void Start()
         {
-            _horizontalMove = 0f;
         }
-        
+
         void Update()
         {
-            CheckMove();
-            
             CheckJumpAndDoubleJump();
 
             CheckFall();
 
-            //DASH
-            if(Input.GetKeyDown(KeyCode.D))
+            CheckDash();
+
+            if (transform.position.x > 5)
             {
-                if(doubleTapTime > Time.time && lastKeyCode == KeyCode.D)
-                {
-                    StartCoroutine(Dash(1f));
-                }
-                else
-                {
-                    doubleTapTime = Time.time + 0.5f;
-                }
-                lastKeyCode = KeyCode.D;
+                transform.Translate(-11, 0, 0);
             }
         }
 
         private void FixedUpdate()
         {
-            Move();
+            RunOrDash();
 
             Jump();
 
             DoubleJump();
             
             CheckLowHighJump();
+        }
 
-            //DASH
-            /*if (!isDashing)
-                _rb2D.velocity = new Vector2(mx*speed, _rb2D.velocity.y);*/
+        void RunOrDash()
+        {
+            if (_dash)
+            {
+                Dash();
+            }
+            else
+            {
+                Run();
+            }
+        }
 
-        }
-        //DASH
-        IEnumerator Dash (float direction)
+        void Run()
         {
-            isDashing = true;
-            _rb2D.velocity = new Vector2(_rb2D.velocity.x, 0f);
-            _rb2D.AddForce(new Vector2(_dashDistance * direction, 0f), ForceMode2D.Impulse);
-            float gravity = _rb2D.gravityScale;
-            _rb2D.gravityScale = 0;
-            yield return new WaitForSeconds(0.4f);
-            isDashing = false;
-            _rb2D.gravityScale = gravity;
-        }
-        void CheckMove()
-        {
-            _horizontalMove = Input.GetAxisRaw("Horizontal") * _moveSpeed;
-        }
-        
-        void Move()
-        {
-            _rb2D.velocity = new Vector2(_horizontalMove, _rb2D.velocity.y);
+            if (_runSpeed < _auxRunSpeed)
+            {
+                _runSpeed += Time.deltaTime;
+            }
+            _rb2D.velocity = new Vector2(_runSpeed, _rb2D.velocity.y);
         }
 
         void CheckJumpAndDoubleJump()
@@ -128,8 +114,8 @@ namespace Character
                 _rb2D.velocity = new Vector2(_rb2D.velocity.x, _jumpSpeed);
                 _jump = false;
                 _ground = false;
-                _animator.SetBool(JUMP_ANIMATOR_NAME, true);
-                StartCoroutine(SetAnimationFalse(JUMP_ANIMATOR_NAME, ReturnAnimationClip(JUMP_ANIMATOR_NAME).length));
+                _animator.SetTrigger(JUMP_ANIMATOR_NAME);
+                _animator.SetBool(LAND_ANIMATOR_NAME, false);
             }
         }
 
@@ -140,8 +126,9 @@ namespace Character
                 _rb2D.velocity = new Vector2(_rb2D.velocity.x, _doubleJumpSpeed);    
                 _doubleJump = false;
                 _canDoubleJump = false;
+                _animator.SetBool(FALL_ANIMATOR_NAME, false);
                 _animator.SetBool(DOUBLEJUMP_ANIMATOR_NAME, true);
-                StartCoroutine(SetAnimationFalse(DOUBLEJUMP_ANIMATOR_NAME, ReturnAnimationClip(DOUBLEJUMP_ANIMATOR_NAME).length));
+                StartCoroutine(SetAnimationFalse(DOUBLEJUMP_ANIMATOR_NAME, ReturnAnimationClip(JUMP_ANIMATOR_NAME).length));
             }
         }
 
@@ -168,23 +155,58 @@ namespace Character
                 _rb2D.velocity += Vector2.up * Physics2D.gravity.y * (_lowJumpMultiplier) * Time.deltaTime;
             }
         }
-        
+
+        void CheckDash()
+        {
+            if (Input.GetKeyDown(KeyCode.E) && _canDash)
+            {
+                _dash = true;
+                _canDash= false;
+                _dashTargetPosition = new Vector3(transform.position.x + _dashDistance, transform.position.y, 0);
+                _animator.SetTrigger(DASH_ANIMATOR_NAME);
+                StartCoroutine(SetAnimationFalse(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
+            }
+        }
+
+        void Dash()
+        {
+            if (_dash)
+            {
+                _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+                if (Vector3.Distance( transform.position, _dashTargetPosition) < 0.1f)
+                {
+                    _dash = false;
+                    _runSpeed = 0.25f;
+                    _rb2D.velocity = Vector2.zero;
+                    _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+                }
+            }
+        }
+
         AnimationClip ReturnAnimationClip(string name)
         {
             for (int i = 0; i < _animator.runtimeAnimatorController.animationClips.Length; i++)
             {
-                if (_animator.runtimeAnimatorController.animationClips[i].name == JUMP_ANIMATOR_NAME)
+                if (_animator.runtimeAnimatorController.animationClips[i].name == name)
                 {
                     return _animator.runtimeAnimatorController.animationClips[i];
                 }
             }
             return null;
         }
-        
+
         private IEnumerator SetAnimationFalse(string state, float time)
         {
             yield return new WaitForSeconds(time);
             _animator.SetBool(state, false);
+        }
+
+        private IEnumerator ResetDashCooldown(float time)
+        {
+            _cooldownDashRestarting = true;
+            yield return new WaitForSeconds(time);
+            _canDash = true;
+            _cooldownDashRestarting = false;
         }
 
         private void OnCollisionEnter2D(Collision2D collision2D)
@@ -192,8 +214,13 @@ namespace Character
             if (Vector2.Angle(collision2D.contacts[0].normal, Vector2.up) <= 60f && collision2D.contacts[0].collider.gameObject.layer == 6)
             {
                 _animator.SetBool(FALL_ANIMATOR_NAME, false);
+                _animator.SetBool(LAND_ANIMATOR_NAME, true);
                 _ground = true;
                 _canDoubleJump = true;
+                if (!_canDash && !_cooldownDashRestarting)
+                {
+                    StartCoroutine(ResetDashCooldown(_dashCooldown));   
+                }
             }
         }
 
@@ -203,6 +230,12 @@ namespace Character
             {
                 _ground = false;
             }
+        }
+
+
+        void StartDashing()
+        {
+            _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
         }
     }
 }
