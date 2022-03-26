@@ -4,7 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb0344c-1a9f-4eec-9776-06569cde4453" name="Changes" comment="" />
+    <list default="true" id="feb0344c-1a9f-4eec-9776-06569cde4453" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tuto 0.1 i 0.2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tuto 0.1 i 0.2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/edit_barBG_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/edit_barBG_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/edit_barBG_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/edit_barBG_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_01_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_01_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_01_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_01_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_02_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_02_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_02_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_02_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_03_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_03_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_03_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_03_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_04_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_04_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_04_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_04_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_05_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_05_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_05_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/game_bg_05_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_01_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_01_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_01_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_01_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_02_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_02_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_02_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_02_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_03_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_03_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_03_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_03_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_04_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_04_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_04_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_04_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_05_001-hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_05_001-hd.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_05_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Grounds/groundSquare_05_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646937375116</updated>
       <workItem from="1646937379098" duration="9368000" />
+      <workItem from="1648314256883" duration="1720000" />
     </task>
     <servers />
   </component>
