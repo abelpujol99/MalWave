@@ -156,13 +156,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 7029461126232232204}
   _rb2D: {fileID: 7029461126232232193}
+  _spriteRenderer: {fileID: 7029461126232232195}
   _jump: 0
   _doubleJump: 0
   _ground: 0
   _canDoubleJump: 0
   _dash: 0
   _canDash: 0
-  _runSpeed: 0
+  _runSpeed: 2
   _auxRunSpeed: 2
   _jumpSpeed: 4
   _doubleJumpSpeed: 3.5
@@ -170,3 +171,4 @@ MonoBehaviour:
   _lowJumpMultiplier: 1
   _dashCooldown: 1
   _dashSpeed: 5
+  _dashDistance: 5

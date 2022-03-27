@@ -21,11 +21,15 @@ namespace Character
         
         [SerializeField] private Rigidbody2D _rb2D;
 
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+
         private RaycastHit2D _checkGround;
 
         private Dictionary<string, EventManager.Action> _animationsTransitions;
 
-        private Vector3 _dashTargetPosition; 
+        private Vector3 _dashTargetPosition;
+
+        private Vector2 _characterYDirection;
 
         [SerializeField] private bool _jump;
         [SerializeField] private bool _doubleJump;
@@ -36,7 +40,7 @@ namespace Character
         private bool _cooldownDashRestarting;
 
         [SerializeField] private float _runSpeed;
-        [SerializeField] private float _auxRunSpeed = 2;
+        [SerializeField] private float _auxRunSpeed = 3;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
@@ -47,6 +51,7 @@ namespace Character
 
         private void Start()
         {
+            CheckSceneName();
         }
 
         void Update()
@@ -57,9 +62,9 @@ namespace Character
 
             CheckDash();
 
-            if (transform.position.x > 5)
+            if (transform.position.y < -40 || transform.position.y > 100)
             {
-                transform.Translate(-11, 0, 0);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 
@@ -72,6 +77,23 @@ namespace Character
             DoubleJump();
             
             CheckLowHighJump();
+        }
+
+        void CheckSceneName()
+        {
+            if (SceneManager.GetActiveScene().name.Equals("Tuto 0.2.0")) //Array on guardar les escenes, i ficar l'if a un bucle per recorrer totes les escenes en que la gravetat estigui invertida :)
+            {
+                _characterYDirection = new Vector2(0, -1);
+                _jumpSpeed *= -1;
+                _doubleJumpSpeed *= -1;
+                _fallMultiplier *= -1;
+                _lowJumpMultiplier *= -1;
+                _spriteRenderer.flipY = true;
+            }
+            else
+            {
+                _characterYDirection = new Vector2(0, 1);
+            }
         }
 
         void RunOrDash()
@@ -144,15 +166,15 @@ namespace Character
         {
             if (_ground)
             {
-                _rb2D.velocity += Vector2.up * Physics.gravity * 0;
+                _rb2D.velocity += _characterYDirection * Physics.gravity * 0;
             }
             else if (_rb2D.velocity.y < 0)
             {
-                _rb2D.velocity += Vector2.up * Physics.gravity.y * _fallMultiplier * Time.deltaTime;
+                _rb2D.velocity += _characterYDirection * Physics.gravity.y * _fallMultiplier * Time.deltaTime;
             }
             else if (_rb2D.velocity.y > 0 && !(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)))
             {
-                _rb2D.velocity += Vector2.up * Physics2D.gravity.y * (_lowJumpMultiplier) * Time.deltaTime;
+                _rb2D.velocity += _characterYDirection * Physics2D.gravity.y * (_lowJumpMultiplier) * Time.deltaTime;
             }
         }
 
@@ -173,10 +195,10 @@ namespace Character
             if (_dash)
             {
                 _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-                if (Vector3.Distance( transform.position, _dashTargetPosition) < 0.1f)
+                if (Vector3.Distance( transform.position, _dashTargetPosition) < 1.0f)
                 {
                     _dash = false;
-                    _runSpeed = 0.25f;
+                    _runSpeed = 2.5f;
                     _rb2D.velocity = Vector2.zero;
                     _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
                 }
@@ -211,7 +233,7 @@ namespace Character
 
         private void OnCollisionEnter2D(Collision2D collision2D)
         {
-            if (Vector2.Angle(collision2D.contacts[0].normal, Vector2.up) <= 60f && collision2D.contacts[0].collider.gameObject.layer == 6)
+            if (Vector2.Angle(collision2D.contacts[0].normal, _characterYDirection) <= 60f && collision2D.contacts[0].collider.gameObject.layer == 6)
             {
                 _animator.SetBool(FALL_ANIMATOR_NAME, false);
                 _animator.SetBool(LAND_ANIMATOR_NAME, true);
@@ -237,6 +259,8 @@ namespace Character
         {
             _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
         }
+        
+        
     }
 }
 
