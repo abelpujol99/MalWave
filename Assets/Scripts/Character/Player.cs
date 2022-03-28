@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UIElements;
 
 namespace Character
 {
@@ -16,6 +17,7 @@ namespace Character
         private const String FALL_ANIMATOR_NAME = "Fall";
         private const String LAND_ANIMATOR_NAME = "Land";
         private const String DASH_ANIMATOR_NAME = "Dash";
+        private const String SHOOT_ANIMATOR_NAME = "Shoot";
 
         [SerializeField] private Animator _animator;
         
@@ -23,7 +25,9 @@ namespace Character
 
         private RaycastHit2D _checkGround;
 
-        private Dictionary<string, EventManager.Action> _animationsTransitions;
+        private Queue<GameObject> _bulletQueue;
+
+        [SerializeField] private GameObject _bullet;
 
         private Vector3 _dashTargetPosition; 
 
@@ -33,10 +37,13 @@ namespace Character
         [SerializeField] private bool _canDoubleJump;
         [SerializeField] private bool _dash;
         [SerializeField] private bool _canDash;
+        [SerializeField] private bool _shoot;
         private bool _cooldownDashRestarting;
 
-        [SerializeField] private float _runSpeed;
-        [SerializeField] private float _auxRunSpeed = 2;
+        [SerializeField] private int _magSize = 5;
+        
+        [SerializeField] private float _currentRunSpeed;
+        [SerializeField] private float _runSpeed = 2;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
@@ -44,12 +51,27 @@ namespace Character
         [SerializeField] private float _dashCooldown = 1f;
         [SerializeField] private float _dashSpeed = 2f;
         [SerializeField] private float _dashDistance = 5f;
+        [SerializeField] private float _currentShootCooldown;
+        [SerializeField] private float _shootCooldown = 0.7f;
 
         private void Start()
         {
+            InitializeMag();
         }
 
-        void Update()
+        private void InitializeMag()
+        {
+            _bulletQueue = new Queue<GameObject>();
+
+            for (int i = 0; i < _magSize; i++)
+            {
+                GameObject obj = Instantiate(_bullet);
+                obj.SetActive(false);
+                _bulletQueue.Enqueue(obj);
+            }
+        }
+
+        private void Update()
         {
             CheckJumpAndDoubleJump();
 
@@ -74,7 +96,7 @@ namespace Character
             CheckLowHighJump();
         }
 
-        void RunOrDash()
+        private void RunOrDash()
         {
             if (_dash)
             {
@@ -82,20 +104,22 @@ namespace Character
             }
             else
             {
+                CheckShoot();
+                Shoot();
                 Run();
             }
         }
 
-        void Run()
+        private void Run()
         {
-            if (_runSpeed < _auxRunSpeed)
+            if (_currentRunSpeed < _runSpeed)
             {
-                _runSpeed += Time.deltaTime;
+                _currentRunSpeed += Time.deltaTime;
             }
-            _rb2D.velocity = new Vector2(_runSpeed, _rb2D.velocity.y);
+            _rb2D.velocity = new Vector2(_currentRunSpeed, _rb2D.velocity.y);
         }
 
-        void CheckJumpAndDoubleJump()
+        private void CheckJumpAndDoubleJump()
         {
             if (_ground && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
             {
@@ -107,7 +131,7 @@ namespace Character
             }
         }
 
-        void Jump()
+        private void Jump()
         {
             if (_jump)
             {
@@ -119,7 +143,7 @@ namespace Character
             }
         }
 
-        void DoubleJump()
+        private void DoubleJump()
         {
             if (_doubleJump && _canDoubleJump)
             {
@@ -127,20 +151,11 @@ namespace Character
                 _doubleJump = false;
                 _canDoubleJump = false;
                 _animator.SetBool(FALL_ANIMATOR_NAME, false);
-                _animator.SetBool(DOUBLEJUMP_ANIMATOR_NAME, true);
-                StartCoroutine(SetAnimationFalse(DOUBLEJUMP_ANIMATOR_NAME, ReturnAnimationClip(JUMP_ANIMATOR_NAME).length));
+                _animator.SetTrigger(DOUBLEJUMP_ANIMATOR_NAME);
             }
         }
-
-        void CheckFall()
-        {
-            if (_rb2D.velocity.y < 0 && !_ground)
-            {
-                _animator.SetBool(FALL_ANIMATOR_NAME, true);
-            }
-        }
-
-        void CheckLowHighJump()
+        
+        private void CheckLowHighJump()
         {
             if (_ground)
             {
@@ -156,7 +171,15 @@ namespace Character
             }
         }
 
-        void CheckDash()
+        private void CheckFall()
+        {
+            if (_rb2D.velocity.y < 0 && !_ground)
+            {
+                _animator.SetBool(FALL_ANIMATOR_NAME, true);
+            }
+        }
+
+        private void CheckDash()
         {
             if (Input.GetKeyDown(KeyCode.E) && _canDash)
             {
@@ -168,7 +191,7 @@ namespace Character
             }
         }
 
-        void Dash()
+        private void Dash()
         {
             if (_dash)
             {
@@ -176,11 +199,57 @@ namespace Character
                 if (Vector3.Distance( transform.position, _dashTargetPosition) < 0.1f)
                 {
                     _dash = false;
-                    _runSpeed = 0.25f;
+                    _currentRunSpeed = 0.25f;
                     _rb2D.velocity = Vector2.zero;
                     _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+
+                    if (_ground && !_cooldownDashRestarting)
+                    {
+                        StartCoroutine(ResetDashCooldown(_dashCooldown));   
+                    }
                 }
             }
+        }
+
+        private void CheckShoot()
+        {
+            if (Input.GetMouseButton(0))
+            {
+                _shoot = true;
+            }
+            else
+            {
+                _shoot = false;
+            }
+            _animator.SetBool(SHOOT_ANIMATOR_NAME, _shoot);
+        }
+
+        private void Shoot()
+        {
+            if (_currentShootCooldown > 0)
+            {
+                _currentShootCooldown -= Time.deltaTime;
+            }
+
+            if (_shoot && _currentShootCooldown <= 0)
+            {
+                _currentShootCooldown = _shootCooldown;
+                GameObject bulletToSpawn;
+                bulletToSpawn = SpawnBullet();
+                Bullet.Bullet bullet = bulletToSpawn.GetComponent<Bullet.Bullet>();
+                bullet.ShootBullet(transform.position);
+            }
+        }
+
+        private GameObject SpawnBullet()
+        {
+            GameObject bulletToSpawn;
+
+            bulletToSpawn = _bulletQueue.Dequeue();
+            _bulletQueue.Enqueue(bulletToSpawn);
+
+            return bulletToSpawn;
+
         }
 
         AnimationClip ReturnAnimationClip(string name)
@@ -209,9 +278,9 @@ namespace Character
             _cooldownDashRestarting = false;
         }
 
-        private void OnCollisionEnter2D(Collision2D collision2D)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (Vector2.Angle(collision2D.contacts[0].normal, Vector2.up) <= 60f && collision2D.contacts[0].collider.gameObject.layer == 6)
+            if (Vector2.Angle(collision.contacts[0].normal, Vector2.up) <= 60f && collision.contacts[0].collider.gameObject.layer == 6)
             {
                 _animator.SetBool(FALL_ANIMATOR_NAME, false);
                 _animator.SetBool(LAND_ANIMATOR_NAME, true);
@@ -224,11 +293,11 @@ namespace Character
             }
         }
 
-        private void OnCollisionExit2D(Collision2D collision2D)
+        private void OnCollisionStay2D(Collision2D collision)
         {
-            if (collision2D.collider.gameObject.layer == 6)
+            if (!_canDash && !_cooldownDashRestarting && collision.gameObject.name == "Tilemap")
             {
-                _ground = false;
+                StartCoroutine(ResetDashCooldown(_dashCooldown));
             }
         }
 
