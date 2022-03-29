@@ -11,7 +11,7 @@ namespace Camera
 
         private float _cameraPositionX;
         private float _cameraPositionY;
-        
+
         void Start()
         {
             _cameraPosition = GetComponent<Transform>();
