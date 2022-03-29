@@ -12234,6 +12234,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+--- !u!114 &477046118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+  m_PrefabInstance: {fileID: 477046117}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04474e5e5070b234a9440e1eb5523c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &584026800
 GameObject:
   m_ObjectHideFlags: 0
@@ -12650,8 +12661,9 @@ GameObject:
   - component: {fileID: 1293425026}
   - component: {fileID: 1293425025}
   - component: {fileID: 1293425024}
+  - component: {fileID: 1293425027}
   m_Layer: 6
-  m_Name: Parets que fan mal
+  m_Name: "Da\xF1o al tocar"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13985,3 +13997,16 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1293425027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293425022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fafcba6df40cbd42a0133eca5a51253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 477046118}

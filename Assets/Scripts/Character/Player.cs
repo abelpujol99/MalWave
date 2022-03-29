@@ -44,6 +44,7 @@ namespace Character
         [SerializeField] private float _dashCooldown = 1f;
         [SerializeField] private float _dashSpeed = 2f;
         [SerializeField] private float _dashDistance = 5f;
+        [SerializeField] private float _respawnInY;
 
         private void Start()
         {
@@ -57,7 +58,7 @@ namespace Character
 
             CheckDash();
 
-            if (transform.position.y < -40 || transform.position.y > 100)
+            if (transform.position.y < _respawnInY)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
@@ -237,8 +238,11 @@ namespace Character
         {
             _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
         }
-        
-        
+
+        public void Respawn()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
 
