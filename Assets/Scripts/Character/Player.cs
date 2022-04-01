@@ -183,6 +183,11 @@ namespace Character
             }
         }
 
+        public bool ReturnDash()
+        {
+            return _dash;
+        }
+
         AnimationClip ReturnAnimationClip(string name)
         {
             for (int i = 0; i < _animator.runtimeAnimatorController.animationClips.Length; i++)
