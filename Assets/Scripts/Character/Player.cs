@@ -18,6 +18,7 @@ namespace Character
         private const String LAND_ANIMATOR_NAME = "Land";
         private const String DASH_ANIMATOR_NAME = "Dash";
         private const String SHOOT_ANIMATOR_NAME = "Shoot";
+        private const String DEATH_ANIMATOR_NAME = "Death";
 
         [SerializeField] private Animator _animator;
         
@@ -38,6 +39,7 @@ namespace Character
         [SerializeField] private bool _dash;
         [SerializeField] private bool _canDash;
         [SerializeField] private bool _shoot;
+        [SerializeField] private bool _dead;
         private bool _cooldownDashRestarting;
 
         [SerializeField] private int _magSize = 5;
@@ -79,15 +81,26 @@ namespace Character
 
             CheckDash();
 
-            if (transform.position.x > 5)
+            if (transform.position.x > 1)
             {
-                transform.Translate(-11, 0, 0);
+                Death();
             }
+        }
+
+        private void Death()
+        {
+            _dead = true;
+            _animator.SetTrigger(DEATH_ANIMATOR_NAME);
+            _rb2D.velocity = new Vector2(0, 0);
+            StartCoroutine(AfterDeath(ReturnAnimationClip(DEATH_ANIMATOR_NAME).length));
         }
 
         private void FixedUpdate()
         {
-            RunOrDash();
+            if (!_dead)
+            {
+                RunOrDash();    
+            }
 
             Jump();
 
@@ -278,6 +291,13 @@ namespace Character
             _cooldownDashRestarting = false;
         }
 
+        private IEnumerator AfterDeath(float time)
+        {
+            yield return new WaitForSeconds(time);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (Vector2.Angle(collision.contacts[0].normal, Vector2.up) <= 60f && collision.contacts[0].collider.gameObject.layer == 6)
@@ -300,7 +320,6 @@ namespace Character
                 StartCoroutine(ResetDashCooldown(_dashCooldown));
             }
         }
-
 
         void StartDashing()
         {
