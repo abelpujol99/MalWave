@@ -21,11 +21,16 @@ public class RockEnemy : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision2D)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision2D.gameObject.layer == 7 && _player.ReturnDash())
+        if (other.gameObject.layer == 7 && _player.ReturnDash())
         {
             Destroy(gameObject);
         }
+        else if (other.gameObject.layer == 7 && !_player.ReturnDash())
+        {
+            //_player.Death();
+        }
     }
+
 }
