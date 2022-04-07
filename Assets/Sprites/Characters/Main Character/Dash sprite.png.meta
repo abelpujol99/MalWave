@@ -219,7 +219,7 @@ TextureImporter:
         width: 518
         height: 734
       alignment: 9
-      pivot: {x: 0.5411353, y: 0.53991634}
+      pivot: {x: 0.5411353, y: 0.47}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,7 +240,7 @@ TextureImporter:
         width: 600
         height: 720
       alignment: 9
-      pivot: {x: 0.40708786, y: 0.55878097}
+      pivot: {x: 0.40708786, y: 0.47}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -261,7 +261,7 @@ TextureImporter:
         width: 603
         height: 723
       alignment: 9
-      pivot: {x: 0.40472084, y: 0.5587}
+      pivot: {x: 0.4047208, y: 0.47}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,7 +282,7 @@ TextureImporter:
         width: 622
         height: 862
       alignment: 9
-      pivot: {x: 0.42292127, y: 0.54943854}
+      pivot: {x: 0.42, y: 0.468}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,7 +303,7 @@ TextureImporter:
         width: 646
         height: 870
       alignment: 9
-      pivot: {x: 0.41341567, y: 0.55204546}
+      pivot: {x: 0.437, y: 0.476}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -319,12 +319,12 @@ TextureImporter:
       name: Dash sprite_12
       rect:
         serializedVersion: 2
-        x: 2289
+        x: 2293
         y: 101
         width: 622
         height: 862
       alignment: 9
-      pivot: {x: 0.4272037, y: 0.5494387}
+      pivot: {x: 0.4172037, y: 0.468}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,7 +345,7 @@ TextureImporter:
         width: 484
         height: 732
       alignment: 9
-      pivot: {x: 0.51100653, y: 0.5327483}
+      pivot: {x: 0.51, y: 0.47}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
