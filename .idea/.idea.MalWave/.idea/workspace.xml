@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feb0344c-1a9f-4eec-9776-06569cde4453" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/MainCharacter/Character.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/MainCharacter/Character.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/Main Character/Death sprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/Main Character/Death sprite.png.meta" afterDir="false" />
-    </list>
+    <list default="true" id="feb0344c-1a9f-4eec-9776-06569cde4453" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

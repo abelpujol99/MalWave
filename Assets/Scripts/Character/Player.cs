@@ -91,8 +91,8 @@ namespace Character
         {
             _dead = true;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
+            _rb2D.isKinematic = true;
             _rb2D.velocity = new Vector2(0, 0);
-            StartCoroutine(AfterDeath(ReturnAnimationClip(DEATH_ANIMATOR_NAME).length));
         }
 
         private void FixedUpdate()
@@ -277,6 +277,11 @@ namespace Character
             return null;
         }
 
+        public bool GetDeah()
+        {
+            return _dead;
+        }
+
         private IEnumerator SetAnimationFalse(string state, float time)
         {
             yield return new WaitForSeconds(time);
@@ -289,13 +294,6 @@ namespace Character
             yield return new WaitForSeconds(time);
             _canDash = true;
             _cooldownDashRestarting = false;
-        }
-
-        private IEnumerator AfterDeath(float time)
-        {
-            yield return new WaitForSeconds(time);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
