@@ -81,7 +81,7 @@ namespace Character
 
             CheckDash();
 
-            if (transform.position.x > 1)
+            if (transform.position.y < -10)
             {
                 Death();
             }
@@ -186,7 +186,7 @@ namespace Character
 
         private void CheckFall()
         {
-            if (_rb2D.velocity.y < 0 && !_ground)
+            if (_rb2D.velocity.y < -1f && !_ground)
             {
                 _animator.SetBool(FALL_ANIMATOR_NAME, true);
             }
@@ -310,6 +310,15 @@ namespace Character
                 {
                     StartCoroutine(ResetDashCooldown(_dashCooldown));   
                 }
+            }
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.gameObject.layer == 6)
+            {
+                _ground = false;
+                _animator.SetBool(LAND_ANIMATOR_NAME, false);
             }
         }
 
