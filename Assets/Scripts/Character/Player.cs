@@ -57,9 +57,9 @@ namespace Character
 
             CheckDash();
 
-            if (transform.position.x > 5)
+            if (transform.position.y < -40)
             {
-                transform.Translate(-11, 0, 0);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 
