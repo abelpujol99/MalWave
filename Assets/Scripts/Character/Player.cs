@@ -41,6 +41,7 @@ namespace Character
         [SerializeField] private bool _shoot;
         [SerializeField] private bool _dead;
         private bool _cooldownDashRestarting;
+        private bool _win;
 
         [SerializeField] private int _magSize = 5;
         
@@ -55,10 +56,15 @@ namespace Character
         [SerializeField] private float _dashDistance = 5f;
         [SerializeField] private float _currentShootCooldown;
         [SerializeField] private float _shootCooldown = 0.7f;
+        
+        [SerializeField] private int _score;
+
+        private String _killer;
 
         private void Start()
         {
             InitializeMag();
+            _score = 0;
         }
 
         private void InitializeMag()
@@ -83,16 +89,17 @@ namespace Character
 
             if (transform.position.y < -10)
             {
-                Death();
+                Death("Gravity");
             }
         }
 
-        private void Death()
+        public void Death(string killer)
         {
+            _killer = killer;
             _dead = true;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
+            _rb2D.isKinematic = true;
             _rb2D.velocity = new Vector2(0, 0);
-            StartCoroutine(AfterDeath(ReturnAnimationClip(DEATH_ANIMATOR_NAME).length));
         }
 
         private void FixedUpdate()
@@ -186,9 +193,13 @@ namespace Character
 
         private void CheckFall()
         {
-            if (_rb2D.velocity.y < -1f && !_ground)
+            _checkGround = Physics2D.Raycast(transform.position, 
+                Vector2.down, 1f, LayerMask.GetMask("Ground"));
+            if (!_checkGround)
             {
+                _ground = false;
                 _animator.SetBool(FALL_ANIMATOR_NAME, true);
+                _animator.SetBool(LAND_ANIMATOR_NAME, false);
             }
         }
 
@@ -209,18 +220,23 @@ namespace Character
             if (_dash)
             {
                 _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-                if (Vector3.Distance( transform.position, _dashTargetPosition) < 0.1f)
+                if (_dashTargetPosition.x < transform.position.x)
                 {
-                    _dash = false;
-                    _currentRunSpeed = 0.25f;
-                    _rb2D.velocity = Vector2.zero;
-                    _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-
-                    if (_ground && !_cooldownDashRestarting)
-                    {
-                        StartCoroutine(ResetDashCooldown(_dashCooldown));   
-                    }
+                    EndDash();
                 }
+            }
+        }
+
+        private void EndDash()
+        {
+            _dash = false;
+            _currentRunSpeed = 2.5f;
+            _rb2D.velocity = Vector2.zero;
+            _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+
+            if (_ground && !_cooldownDashRestarting)
+            {
+                StartCoroutine(ResetDashCooldown(_dashCooldown));   
             }
         }
 
@@ -291,13 +307,6 @@ namespace Character
             _cooldownDashRestarting = false;
         }
 
-        private IEnumerator AfterDeath(float time)
-        {
-            yield return new WaitForSeconds(time);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-        }
-
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (Vector2.Angle(collision.contacts[0].normal, Vector2.up) <= 60f && collision.contacts[0].collider.gameObject.layer == 6)
@@ -310,15 +319,9 @@ namespace Character
                 {
                     StartCoroutine(ResetDashCooldown(_dashCooldown));   
                 }
-            }
-        }
-
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            if (collision.gameObject.layer == 6)
+            }else if (_dash && Vector2.Angle(collision.contacts[0].normal, Vector2.left) <= 60f)
             {
-                _ground = false;
-                _animator.SetBool(LAND_ANIMATOR_NAME, false);
+                EndDash();
             }
         }
 
@@ -330,9 +333,49 @@ namespace Character
             }
         }
 
-        void StartDashing()
+        public String GetKiller()
+        {
+            return _killer;
+        }
+
+        public void SetWin()
+        {
+            _win = true;
+        }
+
+        public bool GetWin()
+        {
+            return _win;
+        }
+
+        public void IncrementScore(int score)
+        {
+            _score += score;
+        }
+
+        public int GetScore()
+        {
+            return _score;
+        }
+
+        public bool ReturnDash()
+        {
+            return _dash;
+        }
+
+        public bool GetDeath()
+        {
+            return _dead;
+        }
+
+        public void StartDashing()
         {
             _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
+        }
+
+        public void Respawn()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
