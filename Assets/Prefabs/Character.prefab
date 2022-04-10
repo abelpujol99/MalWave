@@ -178,3 +178,4 @@ MonoBehaviour:
   _currentShootCooldown: 1
   _shootCooldown: 1
   _score: 0
+  _respawnInY: -10

@@ -11,7 +11,7 @@ namespace Camera
 
         private float _cameraPositionX;
         private float _cameraPositionY;
-        
+
         void Start()
         {
             _cameraPosition = GetComponent<Transform>();
@@ -21,7 +21,7 @@ namespace Camera
 
         void Update()
         {
-            _cameraPositionX = _characterPosition.position.x + 3f;
+            _cameraPositionX = _characterPosition.position.x + 3.5f;
             _cameraPositionY = _characterPosition.position.y;
             transform.position = new Vector3(_cameraPositionX, _cameraPositionY, _cameraPosition.position.z);
         }
