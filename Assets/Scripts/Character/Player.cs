@@ -56,7 +56,8 @@ namespace Character
         [SerializeField] private float _dashDistance = 5f;
         [SerializeField] private float _currentShootCooldown;
         [SerializeField] private float _shootCooldown = 0.7f;
-        [SerializeField] private float _score;
+        
+        [SerializeField] private int _score;
 
         private String _killer;
 
@@ -347,9 +348,14 @@ namespace Character
             return _win;
         }
 
-        public void IncrementScore(float score)
+        public void IncrementScore(int score)
         {
             _score += score;
+        }
+
+        public int GetScore()
+        {
+            return _score;
         }
 
         public bool ReturnDash()

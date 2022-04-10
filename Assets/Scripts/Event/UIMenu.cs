@@ -13,7 +13,9 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _deathMenu;
     [SerializeField] private GameObject _settingsMenu;
+    [SerializeField] private GameObject _winMenu;
     [SerializeField] private TextMeshProUGUI _killText;
+    [SerializeField] private TextMeshProUGUI _winText;
     [SerializeField] private Player _player;
 
     private GameObject _lastActiveMenu;
@@ -24,27 +26,36 @@ public class UIMenu : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (_settingsMenu.activeSelf)
+        if (_player.GetWin())
         {
-            CheckLastActiveMenuAndDeactivate();
-        }
-        else if (_lastActiveMenu != null)
-        {
-            _lastActiveMenu.SetActive(true);
-            _lastActiveMenu = null;
+            _winMenu.SetActive(true);
+            _winText.SetText("YOU WIN\nSCORE: " + _player.GetScore());
         }
         else
         {
-            if (_player.GetDeath())
+            if (_settingsMenu.activeSelf)
             {
-                _deathMenu.SetActive(true);
-                _killText.SetText(_player.GetKiller().ToUpper() + "\nKILLED YOU");
+                CheckLastActiveMenuAndDeactivate();
+            }
+            else if (_lastActiveMenu != null)
+            {
+                _lastActiveMenu.SetActive(true);
+                _lastActiveMenu = null;
             }
             else
-            { 
-                CheckPause(); 
+            {
+                if (_player.GetDeath())
+                {
+                    _deathMenu.SetActive(true);
+                    _killText.SetText(_player.GetKiller().ToUpper() + "\nKILLED YOU");
+                }
+                else
+                { 
+                    CheckPause(); 
+                }
             }
         }
+
     }
 
     void CheckPause()

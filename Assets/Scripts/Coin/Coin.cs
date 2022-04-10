@@ -8,7 +8,7 @@ public class Coin : MonoBehaviour
 {
     [SerializeField] private Player _player;
 
-    [SerializeField] private float _score;
+    [SerializeField] private int _score;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
