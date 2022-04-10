@@ -33,7 +33,7 @@ public class UIMenu : MonoBehaviour
         }
         else
         {
-            if (_player.GetDeah())
+            if (_player.GetDeath())
             {
                 _deathMenu.SetActive(true);
             }

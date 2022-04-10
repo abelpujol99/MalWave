@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -11,7 +12,19 @@ public class SettingsMenu : MonoBehaviour
     private const String SETTINGS_MENU_NAME = "Settings Menu";
     
     [SerializeField] private AudioMixer _audioMixer;
-    
+    [SerializeField] private Toggle _muteToggle;
+
+    private float _lastVolumeValue;
+
+    private void Update()
+    {
+        if (_lastVolumeValue < -50.0f)
+        {
+            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+            _muteToggle.isOn = true;
+        }
+    }
+
     public void FullScreenToggle(bool fullScreen)
     {
         Screen.fullScreen = fullScreen;
@@ -19,7 +32,30 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, volume);
+        if (volume < -50.0f)
+        {
+            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+            _muteToggle.isOn = true;
+        }
+        else
+        {
+            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, volume);
+            _muteToggle.isOn = false;
+        }
+        _lastVolumeValue = volume;
+        
+    }
+
+    public void Mute(bool mute)
+    {
+        if (mute)
+        {
+            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+        }
+        else
+        {
+            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, _lastVolumeValue);
+        }
     }
 
     public void Exit()

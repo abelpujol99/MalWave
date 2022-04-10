@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7029461126232232205}
   - component: {fileID: 7029461126232232193}
   - component: {fileID: 7029461126232232192}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,3 +177,4 @@ MonoBehaviour:
   _dashDistance: 5
   _currentShootCooldown: 1
   _shootCooldown: 1
+  _score: 0

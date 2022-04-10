@@ -55,10 +55,12 @@ namespace Character
         [SerializeField] private float _dashDistance = 5f;
         [SerializeField] private float _currentShootCooldown;
         [SerializeField] private float _shootCooldown = 0.7f;
+        [SerializeField] private float _score;
 
         private void Start()
         {
             InitializeMag();
+            _score = 0;
         }
 
         private void InitializeMag()
@@ -87,7 +89,7 @@ namespace Character
             }
         }
 
-        private void Death()
+        public void Death()
         {
             _dead = true;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
@@ -186,9 +188,13 @@ namespace Character
 
         private void CheckFall()
         {
-            if (_rb2D.velocity.y < -1f && !_ground)
+            _checkGround = Physics2D.Raycast(transform.position, 
+                Vector2.down, 1f, LayerMask.GetMask("Ground"));
+            if (!_checkGround)
             {
+                _ground = false;
                 _animator.SetBool(FALL_ANIMATOR_NAME, true);
+                _animator.SetBool(LAND_ANIMATOR_NAME, false);
             }
         }
 
@@ -209,18 +215,23 @@ namespace Character
             if (_dash)
             {
                 _rb2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-                if (Vector3.Distance( transform.position, _dashTargetPosition) < 0.1f)
+                if (_dashTargetPosition.x < transform.position.x)
                 {
-                    _dash = false;
-                    _currentRunSpeed = 0.25f;
-                    _rb2D.velocity = Vector2.zero;
-                    _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-
-                    if (_ground && !_cooldownDashRestarting)
-                    {
-                        StartCoroutine(ResetDashCooldown(_dashCooldown));   
-                    }
+                    EndDash();
                 }
+            }
+        }
+
+        private void EndDash()
+        {
+            _dash = false;
+            _currentRunSpeed = 0.25f;
+            _rb2D.velocity = Vector2.zero;
+            _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+
+            if (_ground && !_cooldownDashRestarting)
+            {
+                StartCoroutine(ResetDashCooldown(_dashCooldown));   
             }
         }
 
@@ -265,11 +276,6 @@ namespace Character
 
         }
 
-        public bool ReturnDash()
-        {
-            return _dash;
-        }
-
         AnimationClip ReturnAnimationClip(string name)
         {
             for (int i = 0; i < _animator.runtimeAnimatorController.animationClips.Length; i++)
@@ -280,11 +286,6 @@ namespace Character
                 }
             }
             return null;
-        }
-
-        public bool GetDeah()
-        {
-            return _dead;
         }
 
         private IEnumerator SetAnimationFalse(string state, float time)
@@ -313,15 +314,9 @@ namespace Character
                 {
                     StartCoroutine(ResetDashCooldown(_dashCooldown));   
                 }
-            }
-        }
-
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            if (collision.gameObject.layer == 6)
+            }else if (_dash && Vector2.Angle(collision.contacts[0].normal, Vector2.left) <= 60f)
             {
-                _ground = false;
-                _animator.SetBool(LAND_ANIMATOR_NAME, false);
+                EndDash();
             }
         }
 
@@ -333,7 +328,22 @@ namespace Character
             }
         }
 
-        void StartDashing()
+        public void IncrementScore(float score)
+        {
+            _score += score;
+        }
+
+        public bool ReturnDash()
+        {
+            return _dash;
+        }
+
+        public bool GetDeath()
+        {
+            return _dead;
+        }
+
+        public void StartDashing()
         {
             _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
         }

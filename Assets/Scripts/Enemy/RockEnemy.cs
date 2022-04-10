@@ -29,7 +29,7 @@ public class RockEnemy : MonoBehaviour
         }
         else if (other.gameObject.layer == 7 && !_player.ReturnDash())
         {
-            //_player.Death();
+            _player.Death();
         }
     }
 

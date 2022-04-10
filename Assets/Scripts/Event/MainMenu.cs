@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (!_settingsMenu.activeSelf)
         {
@@ -28,5 +28,10 @@ public class MainMenu : MonoBehaviour
     {
         _mainPanel.SetActive(false);
         _settingsMenu.SetActive(true);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
