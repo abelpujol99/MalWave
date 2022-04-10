@@ -8,6 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MalWave/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Levels
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tuto 0.1 i 0.2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tuto 0.1 i 0.2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/RECURSOS/Backgrounds/edit_barBG_001-hd.png" beforeDir="false" />
@@ -59,9 +62,12 @@
 =======
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests.unity" afterDir="false" />
 >>>>>>> Enemies
+<<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" afterDir="false" />
 >>>>>>> Player
+=======
+>>>>>>> Levels
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +138,11 @@
       <updated>1646937375116</updated>
       <workItem from="1646937379098" duration="9368000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <workItem from="1648314256883" duration="1720000" />
+=======
+>>>>>>> Levels
       <workItem from="1647015549738" duration="6564000" />
       <workItem from="1647366698663" duration="9609000" />
       <workItem from="1647889444292" duration="1600000" />
@@ -155,9 +166,12 @@
       <workItem from="1648799420715" duration="4234000" />
       <workItem from="1649578778155" duration="2759000" />
 >>>>>>> Enemies
+<<<<<<< HEAD
 =======
       <workItem from="1649406567214" duration="879000" />
 >>>>>>> Player
+=======
+>>>>>>> Levels
     </task>
     <servers />
   </component>
