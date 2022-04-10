@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class UIMenu : MonoBehaviour
 {
-    private const String MAIN_MENU_BUTTON_NAME = "MainMenu";
+    private const String MAIN_MENU_BUTTON_NAME = "Main Menu";
     
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _deathMenu;
