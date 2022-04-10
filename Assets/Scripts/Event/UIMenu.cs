@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Character;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _deathMenu;
     [SerializeField] private GameObject _settingsMenu;
+    [SerializeField] private TextMeshProUGUI _killText;
     [SerializeField] private Player _player;
 
     private GameObject _lastActiveMenu;
@@ -36,6 +38,7 @@ public class UIMenu : MonoBehaviour
             if (_player.GetDeath())
             {
                 _deathMenu.SetActive(true);
+                _killText.SetText(_player.GetKiller().ToUpper() + "\nKILLED YOU");
             }
             else
             { 

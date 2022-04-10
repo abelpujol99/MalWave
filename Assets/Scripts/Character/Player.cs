@@ -41,6 +41,7 @@ namespace Character
         [SerializeField] private bool _shoot;
         [SerializeField] private bool _dead;
         private bool _cooldownDashRestarting;
+        private bool _win;
 
         [SerializeField] private int _magSize = 5;
         
@@ -56,6 +57,8 @@ namespace Character
         [SerializeField] private float _currentShootCooldown;
         [SerializeField] private float _shootCooldown = 0.7f;
         [SerializeField] private float _score;
+
+        private String _killer;
 
         private void Start()
         {
@@ -85,12 +88,13 @@ namespace Character
 
             if (transform.position.y < -10)
             {
-                Death();
+                Death("Gravity");
             }
         }
 
-        public void Death()
+        public void Death(string killer)
         {
+            _killer = killer;
             _dead = true;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
             _rb2D.isKinematic = true;
@@ -225,7 +229,7 @@ namespace Character
         private void EndDash()
         {
             _dash = false;
-            _currentRunSpeed = 0.25f;
+            _currentRunSpeed = 2.5f;
             _rb2D.velocity = Vector2.zero;
             _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
 
@@ -326,6 +330,21 @@ namespace Character
             {
                 StartCoroutine(ResetDashCooldown(_dashCooldown));
             }
+        }
+
+        public String GetKiller()
+        {
+            return _killer;
+        }
+
+        public void SetWin()
+        {
+            _win = true;
+        }
+
+        public bool GetWin()
+        {
+            return _win;
         }
 
         public void IncrementScore(float score)
