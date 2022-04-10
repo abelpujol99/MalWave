@@ -153,10 +153,10 @@ TextureImporter:
         serializedVersion: 2
         x: 353
         y: 1407
-        width: 570
-        height: 724
+        width: 686
+        height: 874
       alignment: 9
-      pivot: {x: 0.39252564, y: 0.5809353}
+      pivot: {x: 0.27, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,10 +174,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1285
         y: 1405
-        width: 548
-        height: 774
+        width: 686
+        height: 874
       alignment: 9
-      pivot: {x: 0.4076527, y: 0.5894717}
+      pivot: {x: 0.29, y: 0.39}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,10 +195,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2177
         y: 1355
-        width: 552
+        width: 686
         height: 874
       alignment: 9
-      pivot: {x: 0.4469233, y: 0.58228236}
+      pivot: {x: 0.32, y: 0.52}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,11 +215,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3125
-        y: 1377
-        width: 636
-        height: 763
+        y: 1371
+        width: 686
+        height: 874
       alignment: 9
-      pivot: {x: 0.46649706, y: 0.60472494}
+      pivot: {x: 0.41, y: 0.402}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,9 +238,9 @@ TextureImporter:
         x: 451
         y: 187
         width: 686
-        height: 824
+        height: 874
       alignment: 9
-      pivot: {x: 0.49223474, y: 0.6002045}
+      pivot: {x: 0.46, y: 0.39}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -258,10 +258,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1837
         y: 181
-        width: 610
-        height: 768
+        width: 686
+        height: 874
       alignment: 9
-      pivot: {x: 0.40830597, y: 0.5728302}
+      pivot: {x: 0.32, y: 0.39}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: Salt disparant_7
       rect:
         serializedVersion: 2
-        x: 3071
+        x: 3067
         y: 213
-        width: 668
-        height: 628
+        width: 686
+        height: 874
       alignment: 9
-      pivot: {x: 0.5199369, y: 0.5381716}
+      pivot: {x: 0.46, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Character;
 using UnityEngine;
 
 namespace Camera
@@ -9,21 +11,24 @@ namespace Camera
         private Transform _cameraPosition;
         [SerializeField] private Transform _characterPosition;
 
+        [SerializeField] private Player _player;
+
+        private Vector3 _targetPosition;
+        private Vector3 _smoothedPosition;
+
         private float _cameraPositionX;
         private float _cameraPositionY;
-        
-        void Start()
-        {
-            _cameraPosition = GetComponent<Transform>();
-            _cameraPositionX = _cameraPosition.position.x;
-            _cameraPositionY = _cameraPosition.position.y;
-        }
+        private float _smoothSpeed = 6;
 
-        void Update()
+        private void LateUpdate()
         {
-            _cameraPositionX = _characterPosition.position.x + 3f;
-            _cameraPositionY = _characterPosition.position.y;
-            transform.position = new Vector3(_cameraPositionX, _cameraPositionY, _cameraPosition.position.z);
+            if (!_player.GetWin())
+            {
+                _targetPosition = new Vector3(_characterPosition.position.x + 3f, _characterPosition.position.y,
+                    transform.position.z);
+                _smoothedPosition = Vector3.Lerp(transform.position, _targetPosition , _smoothSpeed * Time.deltaTime);
+                transform.position = _smoothedPosition;
+            }
         }
     }
 }

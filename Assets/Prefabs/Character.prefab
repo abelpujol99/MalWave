@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7029461126232232205}
   - component: {fileID: 7029461126232232193}
   - component: {fileID: 7029461126232232192}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,17 +156,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 7029461126232232204}
   _rb2D: {fileID: 7029461126232232193}
+  _bullet: {fileID: 3289658312201462153, guid: 7b49e062177c35b4ab2f08d70d24ae1d, type: 3}
   _jump: 0
   _doubleJump: 0
   _ground: 0
   _canDoubleJump: 0
   _dash: 0
   _canDash: 0
-  _runSpeed: 0
-  _auxRunSpeed: 2
+  _shoot: 0
+  _dead: 0
+  _magSize: 5
+  _currentRunSpeed: 3
+  _runSpeed: 3
   _jumpSpeed: 4
   _doubleJumpSpeed: 3.5
   _fallMultiplier: 0.5
   _lowJumpMultiplier: 1
   _dashCooldown: 1
   _dashSpeed: 5
+  _dashDistance: 5
+  _currentShootCooldown: 1
+  _shootCooldown: 1
+  _score: 0
