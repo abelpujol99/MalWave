@@ -2647,7 +2647,7 @@ MonoBehaviour:
   _pauseMenu: {fileID: 5161951349992460946}
   _deathMenu: {fileID: 5161951349865977765}
   _settingsMenu: {fileID: 5161951348953105106}
-  _player: {fileID: 0}
+  _player: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
 --- !u!114 &5161951350719644154
 MonoBehaviour:
   m_ObjectHideFlags: 0

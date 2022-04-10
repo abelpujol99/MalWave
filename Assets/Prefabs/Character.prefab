@@ -164,9 +164,10 @@ MonoBehaviour:
   _dash: 0
   _canDash: 0
   _shoot: 0
+  _dead: 0
   _magSize: 5
-  _currentRunSpeed: 0
-  _runSpeed: 0
+  _currentRunSpeed: 2
+  _runSpeed: 2
   _jumpSpeed: 4
   _doubleJumpSpeed: 3.5
   _fallMultiplier: 0.5
@@ -174,5 +175,5 @@ MonoBehaviour:
   _dashCooldown: 1
   _dashSpeed: 5
   _dashDistance: 5
-  _currentShootCooldown: 5
-  _shootCooldown: 5
+  _currentShootCooldown: 1
+  _shootCooldown: 1
