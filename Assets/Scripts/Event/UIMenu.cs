@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Character;
 using TMPro;
 using UnityEngine;
@@ -9,7 +10,8 @@ using UnityEngine.SceneManagement;
 public class UIMenu : MonoBehaviour
 {
     private const String MAIN_MENU_BUTTON_NAME = "Main Menu";
-    
+    private const String TUTO_LEVEL = "Tuto 0.1 i 0.2";
+
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _deathMenu;
     [SerializeField] private GameObject _settingsMenu;
@@ -17,6 +19,7 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _killText;
     [SerializeField] private TextMeshProUGUI _winText;
     [SerializeField] private Player _player;
+    [SerializeField] private AudioSource _music;
 
     private GameObject _lastActiveMenu;
 
@@ -58,7 +61,7 @@ public class UIMenu : MonoBehaviour
 
     }
 
-    void CheckPause()
+    private void CheckPause()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -89,7 +92,8 @@ public class UIMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(TUTO_LEVEL);
+        Destroy(GameObject.FindWithTag("Music"));
         Resume();
     }
 
@@ -97,6 +101,7 @@ public class UIMenu : MonoBehaviour
     {
         _pause = false;
         Time.timeScale = 1f;
+        Destroy(_music);
         SceneManager.LoadScene(MAIN_MENU_BUTTON_NAME);
     }
 
