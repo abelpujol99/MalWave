@@ -165,6 +165,7 @@ MonoBehaviour:
   _canDash: 0
   _shoot: 0
   _dead: 0
+  _surf: 0
   _magSize: 5
   _currentRunSpeed: 3
   _runSpeed: 3
