@@ -12837,6 +12837,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 477046118}
+    - target: {fileID: 4106452376141957414, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
+      propertyPath: _characterPosition
+      value: 
+      objectReference: {fileID: 2018212395}
     - target: {fileID: 5006636330365517429, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -14375,6 +14379,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2018212395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
+  m_PrefabInstance: {fileID: 477046117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2108074465
 PrefabInstance:
   m_ObjectHideFlags: 0
