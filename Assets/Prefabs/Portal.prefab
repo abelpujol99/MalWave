@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3665878907175727312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 45.445, y: -0.36, z: 0}
-  m_LocalScale: {x: 0.02399857, y: 0.03740818, z: 1}
+  m_LocalScale: {x: 0.047659997, y: 0.073476, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4a4fba28e936c474ea4ac3596c38eb00, type: 3}
-  m_Color: {r: 1, g: 0.0047169924, b: 0.6572996, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,4 +122,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4197f51d3bcddc459431b53f587e44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: 
+  _spriteRenderer: {fileID: 3665878907175727317}
+  _orangePortal: {fileID: 21300000, guid: c50bb227e2ca2df46b275dd7f2e6c221, type: 3}
+  _bluePortal: {fileID: 21300000, guid: f6b437a66b3753e4a89383039a2c88c7, type: 3}
+  _cyanPortal: {fileID: 21300000, guid: 95ed1655f7f705b43b178702e20c0700, type: 3}
+  _greenPortal: {fileID: 21300000, guid: 0c3bc2b5cab674a4c8073e2c5e0378e2, type: 3}
+  _pinkPortal: {fileID: 21300000, guid: f98f0b381f56e8e4083c7bbb9d6b7a76, type: 3}
+  _purplePortal: {fileID: 21300000, guid: 6c7e1e97f36fa90478e0f18e99d1b869, type: 3}
+  _redPortal: {fileID: 21300000, guid: 954513408d69f574a932292d6f0212b7, type: 3}
+  _yellowPortal: {fileID: 21300000, guid: fdf7386055836b645b3ef7f3538a020a, type: 3}
+  _nextSceneIndex: 0
