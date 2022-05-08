@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (89)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -198,7 +198,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (45)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -329,7 +329,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (111)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -395,7 +395,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (101)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -597,7 +597,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (10)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -663,7 +663,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (43)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -729,7 +729,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (53)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -795,7 +795,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (6)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -861,7 +861,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (78)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -927,7 +927,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (94)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -993,7 +993,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (68)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1059,7 +1059,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (14)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1125,7 +1125,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (106)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1191,7 +1191,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (21)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1248,6 +1248,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8765257560316101591, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
   m_PrefabInstance: {fileID: 258971020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &275950367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5161951350719644096, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_Name
+      value: InGame Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1066.9564
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644158, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
 --- !u!1001 &337324814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1257,7 +1358,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (62)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1323,7 +1424,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (51)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1389,7 +1490,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (93)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1455,7 +1556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (34)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1521,7 +1622,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (28)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1587,7 +1688,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (71)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1653,7 +1754,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (17)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1719,7 +1820,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (104)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1785,7 +1886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (76)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1851,7 +1952,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (27)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1917,7 +2018,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (103)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -1983,7 +2084,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (110)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -2049,7 +2150,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (8)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -2115,7 +2216,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (77)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -2181,7 +2282,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (47)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -22609,7 +22710,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (29)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -22675,7 +22776,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (9)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -22741,7 +22842,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (66)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -22807,7 +22908,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (30)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -22873,7 +22974,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (61)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -22939,7 +23040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (7)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23005,7 +23106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23071,7 +23172,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (70)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23137,7 +23238,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (65)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23203,7 +23304,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (33)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23269,7 +23370,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (63)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23335,7 +23436,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (37)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23401,7 +23502,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (72)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23467,7 +23568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (16)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23533,7 +23634,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (88)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23599,7 +23700,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (60)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23665,7 +23766,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (55)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23731,7 +23832,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (69)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23797,7 +23898,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (86)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23863,7 +23964,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (99)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23929,7 +24030,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (41)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -23995,7 +24096,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (67)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24061,7 +24162,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (102)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24127,7 +24228,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (2)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24198,7 +24299,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (95)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24264,7 +24365,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (58)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24330,7 +24431,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (5)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24461,7 +24562,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (56)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24527,7 +24628,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (64)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24584,6 +24685,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8765257560316101591, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
   m_PrefabInstance: {fileID: 1239462645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1257235367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257235370}
+  - component: {fileID: 1257235369}
+  - component: {fileID: 1257235368}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1257235368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257235367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1257235369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257235367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1257235370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257235367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1282733431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24593,7 +24760,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (40)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24659,7 +24826,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (35)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24725,7 +24892,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (24)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24791,7 +24958,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (105)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24857,7 +25024,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (48)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -24923,7 +25090,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (25)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25046,7 +25213,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (11)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25112,7 +25279,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (12)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25178,7 +25345,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (20)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25244,7 +25411,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (3)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25310,7 +25477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (49)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25376,7 +25543,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (52)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25442,7 +25609,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (92)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25508,7 +25675,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (15)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -25574,7 +25741,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (82)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26058,7 +26225,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (96)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26124,7 +26291,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (75)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26190,7 +26357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (85)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26256,7 +26423,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (74)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26322,7 +26489,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (50)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26388,7 +26555,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (109)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26454,7 +26621,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (97)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26520,7 +26687,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (107)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26586,7 +26753,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (73)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -26659,6 +26826,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 7661463370781592, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001139280106828, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001139280106828, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001139280106828, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -26899,6 +27078,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 392606297775756226, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 409098287151814234, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409098287151814234, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 409098287151814234, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -27278,6 +27469,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 364
       objectReference: {fileID: 0}
+    - target: {fileID: 935637248344432355, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 935637248344432355, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 935637248344432355, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 936453289266425504, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -27303,6 +27506,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 950186454347834036, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 967338306919219117, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 967338306919219117, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 967338306919219117, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -27337,6 +27552,18 @@ PrefabInstance:
     - target: {fileID: 990284480647960009, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 232
+      objectReference: {fileID: 0}
+    - target: {fileID: 991083091411557304, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 991083091411557304, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 991083091411557304, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 991487732249710185, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
@@ -30370,6 +30597,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 394
       objectReference: {fileID: 0}
+    - target: {fileID: 1506121926298729481, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506121926298729481, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506121926298729481, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 1511220329190361613, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -30447,6 +30686,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 1592436723879054887, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603646838148125850, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603646838148125850, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603646838148125850, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -31938,6 +32189,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 3364732338659740247, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364732338659740247, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364732338659740247, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 3371587860714941337, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 426
@@ -32098,6 +32361,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 3642327905305757103, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642327905305757103, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642327905305757103, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 3651505959274692880, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -32159,6 +32434,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 3756700467031372840, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778452396606542691, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778452396606542691, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778452396606542691, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -32445,6 +32732,18 @@ PrefabInstance:
     - target: {fileID: 4073130313256512081, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094873415276659886, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094873415276659886, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094873415276659886, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 4119919460244228108, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
@@ -32934,6 +33233,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 4630916633332529293, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630916633332529293, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630916633332529293, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 4652215967639242151, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -32959,6 +33270,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 4685267182201810352, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692060294099170314, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692060294099170314, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692060294099170314, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -33310,6 +33633,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 5027371889926220445, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027371889926220445, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027371889926220445, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 5050460079799676548, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 346
@@ -33353,6 +33688,18 @@ PrefabInstance:
     - target: {fileID: 5125780076361463594, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 411
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159815541356128686, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159815541356128686, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159815541356128686, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 5169207414872496957, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
@@ -33475,6 +33822,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 5352688524664045927, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374327744830165150, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374327744830165150, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374327744830165150, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -33649,6 +34008,18 @@ PrefabInstance:
     - target: {fileID: 5601190126745924088, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 351
+      objectReference: {fileID: 0}
+    - target: {fileID: 5625249969615611735, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5625249969615611735, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5625249969615611735, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 5626574010571643581, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
@@ -33942,6 +34313,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 312
       objectReference: {fileID: 0}
+    - target: {fileID: 5921266778201336334, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921266778201336334, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921266778201336334, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 5925218444561786789, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -34009,6 +34392,18 @@ PrefabInstance:
     - target: {fileID: 5963612261730971784, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 431
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971134560746022932, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971134560746022932, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971134560746022932, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 5992667563639281568, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
@@ -34286,6 +34681,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 6366578105077369255, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366578105077369255, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366578105077369255, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 6373873358035216428, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -34346,6 +34753,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 6437171941329961399, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437171941329961399, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437171941329961399, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 6437669459860226080, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -34367,6 +34786,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 6454392996960665662, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463384214225144833, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463384214225144833, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463384214225144833, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -34598,6 +35029,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 6695490747716361231, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695490747716361231, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695490747716361231, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 6699306931841450390, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -34643,6 +35086,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 6708248023228274514, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718404680321939203, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718404680321939203, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718404680321939203, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -34745,6 +35200,18 @@ PrefabInstance:
     - target: {fileID: 6820410796086347984, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 361
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828442686216523496, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828442686216523496, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828442686216523496, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 6832363907962374354, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
@@ -35078,6 +35545,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 7302333986077278925, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302333986077278925, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302333986077278925, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 7314645753364481274, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -35266,6 +35745,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 7466199112322033498, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7466199112322033498, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7466199112322033498, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 7489389359958780093, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -35342,6 +35833,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 7592173872063277857, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592173872063277857, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592173872063277857, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 7604898228831301504, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -35357,6 +35860,18 @@ PrefabInstance:
     - target: {fileID: 7611627697994192260, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 265
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612123814692009165, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612123814692009165, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612123814692009165, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 7632053423641291874, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
@@ -35529,6 +36044,18 @@ PrefabInstance:
     - target: {fileID: 7804627841185848560, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 419
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828548725555328261, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828548725555328261, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828548725555328261, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 7835060522469363097, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
@@ -35834,6 +36361,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
+    - target: {fileID: 8233172313505996818, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233172313505996818, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233172313505996818, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 8235144880423745582, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 240
@@ -35875,6 +36414,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 8278111658785406519, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279748939764567802, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279748939764567802, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279748939764567802, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -35925,6 +36476,18 @@ PrefabInstance:
     - target: {fileID: 8363836098013052681, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
       value: 352
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368862241613113079, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368862241613113079, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368862241613113079, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
       objectReference: {fileID: 0}
     - target: {fileID: 8376414382625291374, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_RootOrder
@@ -36442,6 +37005,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 310
       objectReference: {fileID: 0}
+    - target: {fileID: 8983019716205241830, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983019716205241830, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983019716205241830, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 9004017734585410907, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -36482,6 +37057,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 375
       objectReference: {fileID: 0}
+    - target: {fileID: 9072493560015152961, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072493560015152961, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072493560015152961, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
     - target: {fileID: 9119923639626873885, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -36515,6 +37102,18 @@ PrefabInstance:
       value: 0.56078434
       objectReference: {fileID: 0}
     - target: {fileID: 9125974920775206456, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141672880850879116, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141672880850879116, guid: cacf99b316eab4147ae386835de49065, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141672880850879116, guid: cacf99b316eab4147ae386835de49065, type: 3}
       propertyPath: m_Color.r
       value: 0.3254902
       objectReference: {fileID: 0}
@@ -36589,7 +37188,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (79)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -36655,7 +37254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (91)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -36721,7 +37320,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (80)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -36787,7 +37386,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (18)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -36853,7 +37452,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (83)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -36919,7 +37518,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (100)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -36985,7 +37584,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (4)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37051,7 +37650,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (26)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37117,7 +37716,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (57)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37183,7 +37782,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (31)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37249,7 +37848,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (32)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37315,7 +37914,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (84)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37385,7 +37984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7358850531480445551, guid: 5cca2bd3c7e7dc64f93d5678d4029a03, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7358850531480445551, guid: 5cca2bd3c7e7dc64f93d5678d4029a03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37438,7 +38037,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (87)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37504,7 +38103,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (59)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37570,7 +38169,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (36)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37636,7 +38235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (98)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37702,7 +38301,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (19)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37768,7 +38367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (23)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37834,7 +38433,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (81)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37900,7 +38499,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (90)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -37966,7 +38565,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (22)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -38032,7 +38631,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (1)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -38098,7 +38697,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (108)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
@@ -38164,7 +38763,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8765257560316101585, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: m_Name
-      value: CoinBlue (13)
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 8765257560316101590, guid: 334ea3e33f27e22498b3b17b9e5349b1, type: 3}
       propertyPath: _player
