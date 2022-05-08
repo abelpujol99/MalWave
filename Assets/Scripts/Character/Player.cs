@@ -84,11 +84,14 @@ namespace Character
 
         private void Update()
         {
-            CheckJumpAndDoubleJump();
+            if (!_surf)
+            {
+                CheckJumpAndDoubleJump();    
 
-            CheckFall();
+                CheckFall();
 
-            CheckDash();
+                CheckDash();
+            }
 
             if (transform.position.y < -10)
             {
@@ -112,11 +115,18 @@ namespace Character
                 RunOrDash();    
             }
 
-            Jump();
+            if (_surf)
+            {
+                TranslateYAxisWhileSurfing();   
+            }
+            else
+            {
+                Jump();
 
-            DoubleJump();
+                DoubleJump();
             
-            CheckLowHighJump();
+                CheckLowHighJump();
+            }
         }
 
         private void RunOrDash()
@@ -148,7 +158,7 @@ namespace Character
             {
                 _jump = true;
             }
-            else if (!_ground && _canDoubleJump && Input.GetKeyDown(KeyCode.Space) && !_surf)
+            else if (!_ground && _canDoubleJump && Input.GetKeyDown(KeyCode.Space))
             {
                 _doubleJump = true;
             }
@@ -275,10 +285,22 @@ namespace Character
 
         private void CheckSurf()
         {
-            if (SceneManager.GetActiveScene().name == "Tests")
+            if (SceneManager.GetActiveScene().name == "Tuto 0.2.2")
             {
                 _surf = true;
                 _animator.SetBool(SURF_ANIMATOR_NAME, true);
+            }
+        }
+
+        private void TranslateYAxisWhileSurfing()
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _rb2D.velocity += Vector2.up * -(Physics.gravity.y) * Time.deltaTime;
+            }
+            else
+            {
+                _rb2D.velocity += Vector2.up * Physics.gravity.y * Time.deltaTime;
             }
         }
 
