@@ -294,14 +294,14 @@ namespace Character
 
         private void TranslateYAxisWhileSurfing()
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                _rb2D.velocity += Vector2.up * -(Physics.gravity.y) * Time.deltaTime;
-            }
-            else
-            {
-                _rb2D.velocity += Vector2.up * Physics.gravity.y * Time.deltaTime;
-            }
+            if (Input.GetKey(KeyCode.Space)) 
+            { 
+                _rb2D.velocity += Vector2.up * -(Physics.gravity.y) * Time.deltaTime; 
+            } 
+            else 
+            { 
+                _rb2D.velocity += Vector2.up * Physics.gravity.y * Time.deltaTime; 
+            } 
         }
 
         private GameObject SpawnBullet()
