@@ -6,7 +6,17 @@ public class SceneChangerManager : MonoBehaviour
 {
     private static SceneChangerManager _instance;
 
-    private static int _lastSceneIndex;
+    public static SceneChangerManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
+
+    private int _lastSceneIndex;
+
+    private int _score;
 
     private void Awake()
     {
@@ -21,13 +31,23 @@ public class SceneChangerManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public static int GetLastSceneIndex()
+    public int GetLastSceneIndex()
     {
         return _lastSceneIndex;
     }
 
-    public static void SetLastSceneIndex(int lastSceneIndex)
+    public void SetLastSceneIndex(int lastSceneIndex)
     {
         _lastSceneIndex = lastSceneIndex;
+    }
+
+    public int GetScore()
+    {
+        return _score;
+    }
+
+    public void SetScore(int score)
+    {
+        _score = score;
     }
 }
