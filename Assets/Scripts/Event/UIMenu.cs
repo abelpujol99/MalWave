@@ -101,7 +101,7 @@ public class UIMenu : MonoBehaviour
     {
         _pause = false;
         Time.timeScale = 1f;
-        Destroy(_music);
+        Destroy(GameObject.FindWithTag("Music"));
         SceneManager.LoadScene(MAIN_MENU_BUTTON_NAME);
     }
 
