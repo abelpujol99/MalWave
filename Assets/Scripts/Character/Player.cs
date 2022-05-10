@@ -1,12 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Event;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 
 namespace Character
 {
@@ -102,6 +98,7 @@ namespace Character
             _dead = true;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
             _rb2D.isKinematic = true;
+            _rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
             _rb2D.velocity = new Vector2(0, 0);
         }
 
@@ -392,11 +389,6 @@ namespace Character
         public void StartDashing()
         {
             _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
-        }
-
-        public void Respawn()
-        {
-            SceneManager.LoadScene("Tuto 0.1 i 0.2");
         }
     }
 }

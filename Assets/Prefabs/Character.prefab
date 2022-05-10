@@ -168,7 +168,7 @@ MonoBehaviour:
   _surf: 0
   _magSize: 5
   _currentRunSpeed: 3
-  _runSpeed: 3
+  _runSpeed: 2
   _jumpSpeed: 4
   _doubleJumpSpeed: 3.5
   _fallMultiplier: 0.5
@@ -178,4 +178,3 @@ MonoBehaviour:
   _dashDistance: 5
   _currentShootCooldown: 1
   _shootCooldown: 1
-  _score: 0

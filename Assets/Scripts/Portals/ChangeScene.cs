@@ -56,13 +56,13 @@ public class ChangeScene : MonoBehaviour
             }
             else if (SceneManager.GetActiveScene().buildIndex == 4 && SceneChangerManager.Instance.GetLastSceneIndex() == 5)
             {
-                _nextSceneIndex = 2;   
+                _nextSceneIndex = 6;   
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 2 && SceneChangerManager.Instance.GetLastSceneIndex() == 4)
+            else if (SceneManager.GetActiveScene().buildIndex == 6 && SceneChangerManager.Instance.GetLastSceneIndex() == 4)
             {
-                _nextSceneIndex = 6;
+                _nextSceneIndex = 2;
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 6 && SceneChangerManager.Instance.GetLastSceneIndex() == 2)
+            else if (SceneManager.GetActiveScene().buildIndex == 2 && SceneChangerManager.Instance.GetLastSceneIndex() == 6)
             {
                 _nextSceneIndex = 7;    
             }
