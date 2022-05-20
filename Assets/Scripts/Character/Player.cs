@@ -1,12 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Event;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 
 namespace Character
 {
@@ -58,8 +54,6 @@ namespace Character
         [SerializeField] private float _dashDistance = 5f;
         [SerializeField] private float _currentShootCooldown;
         [SerializeField] private float _shootCooldown = 0.7f;
-        
-        [SerializeField] private int _score;
 
         private String _killer;
 
@@ -67,7 +61,6 @@ namespace Character
         {
             CheckSurf();
             InitializeMag();
-            _score = 0;
         }
 
         private void InitializeMag()
@@ -84,11 +77,14 @@ namespace Character
 
         private void Update()
         {
-            CheckJumpAndDoubleJump();
+            if (!_surf)
+            {
+                CheckJumpAndDoubleJump();    
 
-            CheckFall();
+                CheckFall();
 
-            CheckDash();
+                CheckDash();
+            }
 
             if (transform.position.y < -10)
             {
@@ -102,6 +98,7 @@ namespace Character
             _dead = true;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
             _rb2D.isKinematic = true;
+            _rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
             _rb2D.velocity = new Vector2(0, 0);
         }
 
@@ -112,11 +109,18 @@ namespace Character
                 RunOrDash();    
             }
 
-            Jump();
+            if (_surf)
+            {
+                TranslateYAxisWhileSurfing();   
+            }
+            else
+            {
+                Jump();
 
-            DoubleJump();
+                DoubleJump();
             
-            CheckLowHighJump();
+                CheckLowHighJump();
+            }
         }
 
         private void RunOrDash()
@@ -148,7 +152,7 @@ namespace Character
             {
                 _jump = true;
             }
-            else if (!_ground && _canDoubleJump && Input.GetKeyDown(KeyCode.Space) && !_surf)
+            else if (!_ground && _canDoubleJump && Input.GetKeyDown(KeyCode.Space))
             {
                 _doubleJump = true;
             }
@@ -275,11 +279,23 @@ namespace Character
 
         private void CheckSurf()
         {
-            if (SceneManager.GetActiveScene().name == "Tests")
+            if (SceneManager.GetActiveScene().name == "Tuto 0.2.2")
             {
                 _surf = true;
                 _animator.SetBool(SURF_ANIMATOR_NAME, true);
             }
+        }
+
+        private void TranslateYAxisWhileSurfing()
+        {
+            if (Input.GetKey(KeyCode.Space)) 
+            { 
+                _rb2D.velocity += Vector2.up * -(Physics.gravity.y) * Time.deltaTime; 
+            } 
+            else 
+            { 
+                _rb2D.velocity += Vector2.up * Physics.gravity.y * Time.deltaTime; 
+            } 
         }
 
         private GameObject SpawnBullet()
@@ -360,16 +376,6 @@ namespace Character
             return _win;
         }
 
-        public void IncrementScore(int score)
-        {
-            _score += score;
-        }
-
-        public int GetScore()
-        {
-            return _score;
-        }
-
         public bool ReturnDash()
         {
             return _dash;
@@ -383,11 +389,6 @@ namespace Character
         public void StartDashing()
         {
             _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
-        }
-
-        public void Respawn()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
