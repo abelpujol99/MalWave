@@ -14,7 +14,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            _player.IncrementScore(_score);
+            SceneChangerManager.Instance.SetScore(SceneChangerManager.Instance.GetScore() + _score);
             Destroy(gameObject);
         }
     }

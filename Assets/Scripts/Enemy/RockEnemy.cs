@@ -11,7 +11,7 @@ public class RockEnemy : MonoBehaviour
     
     [SerializeField] private Player _player;
 
-    [SerializeField]private Vector3 _targetPosition;
+    private Vector3 _targetPosition;
 
     private float _distanceToMoveOnYAxis = 0.3f;
 
