@@ -144,9 +144,6 @@ namespace Character
                 _currentRunSpeed += Time.deltaTime;
             }
             _rb2D.velocity = new Vector2(_currentRunSpeed, _rb2D.velocity.y);
-            Debug.Log(_rb2D.velocity.x + " velocity");
-            Debug.Log(_currentRunSpeed + " variable");
-            Debug.Log(_runSpeed + " variable fixe");
         }
 
         private void CheckJumpAndDoubleJump()
