@@ -167,8 +167,8 @@ MonoBehaviour:
   _dead: 0
   _surf: 0
   _magSize: 5
-  _currentRunSpeed: 3
-  _runSpeed: 2
+  _currentRunSpeed: 2
+  _runSpeed: 3
   _jumpSpeed: 4
   _doubleJumpSpeed: 3.5
   _fallMultiplier: 0.5

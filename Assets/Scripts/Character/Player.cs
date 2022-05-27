@@ -43,8 +43,8 @@ namespace Character
 
         [SerializeField] private int _magSize = 5;
         
-        [SerializeField] private float _currentRunSpeed;
-        [SerializeField] private float _runSpeed = 2;
+        [SerializeField] private float _currentRunSpeed = 2;
+        [SerializeField] private float _runSpeed = 3;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
@@ -77,7 +77,7 @@ namespace Character
 
         private void Update()
         {
-            if (!_surf)
+            if (!_surf && !_dead)
             {
                 CheckJumpAndDoubleJump();    
 
@@ -144,6 +144,9 @@ namespace Character
                 _currentRunSpeed += Time.deltaTime;
             }
             _rb2D.velocity = new Vector2(_currentRunSpeed, _rb2D.velocity.y);
+            Debug.Log(_rb2D.velocity.x + " velocity");
+            Debug.Log(_currentRunSpeed + " variable");
+            Debug.Log(_runSpeed + " variable fixe");
         }
 
         private void CheckJumpAndDoubleJump()
