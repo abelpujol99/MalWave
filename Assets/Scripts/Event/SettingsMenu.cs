@@ -1,65 +1,67 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SettingsMenu : MonoBehaviour
+namespace Event
 {
-
-    private const String MUSIC_VOLUME_MIXER_NAME = "Music Volume";
-    private const String SETTINGS_MENU_NAME = "Settings Menu";
+    public class SettingsMenu : MonoBehaviour
+    {
     
-    [SerializeField] private AudioMixer _audioMixer;
-    [SerializeField] private Toggle _muteToggle;
-
-    private float _lastVolumeValue;
-
-    private void Update()
-    {
-        if (_lastVolumeValue < -50.0f)
-        {
-            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
-            _muteToggle.isOn = true;
-        }
-    }
-
-    public void FullScreenToggle(bool fullScreen)
-    {
-        Screen.fullScreen = fullScreen;
-    }
-
-    public void SetVolume(float volume)
-    {
-        if (volume < -50.0f)
-        {
-            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
-            _muteToggle.isOn = true;
-        }
-        else
-        {
-            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, volume);
-            _muteToggle.isOn = false;
-        }
-        _lastVolumeValue = volume;
+        private const String MUSIC_VOLUME_MIXER_NAME = "Music Volume";
+        private const String SETTINGS_MENU_NAME = "Settings Menu";
         
-    }
-
-    public void Mute(bool mute)
-    {
-        if (mute)
+        [SerializeField] private AudioMixer _audioMixer;
+        [SerializeField] private Toggle _muteToggle;
+    
+        private float _lastVolumeValue;
+    
+        private void Update()
         {
-            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+            if (_lastVolumeValue < -50.0f)
+            {
+                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+                _muteToggle.isOn = true;
+            }
         }
-        else
+    
+        public void FullScreenToggle(bool fullScreen)
         {
-            _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, _lastVolumeValue);
+            Screen.fullScreen = fullScreen;
         }
-    }
-
-    public void Exit()
-    {
-        transform.Find(SETTINGS_MENU_NAME).gameObject.SetActive(false);
+    
+        public void SetVolume(float volume)
+        {
+            if (volume < -50.0f)
+            {
+                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+                _muteToggle.isOn = true;
+            }
+            else
+            {
+                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, volume);
+                _muteToggle.isOn = false;
+            }
+            _lastVolumeValue = volume;
+            
+        }
+    
+        public void Mute(bool mute)
+        {
+            if (mute)
+            {
+                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+            }
+            else
+            {
+                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, _lastVolumeValue);
+            }
+        }
+    
+        public void Exit()
+        {
+            transform.Find(SETTINGS_MENU_NAME).gameObject.SetActive(false);
+        }
     }
 }
+

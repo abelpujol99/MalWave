@@ -1,18 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Character;
+using Characters.Main;
 using UnityEngine;
 
-public class WinGround : MonoBehaviour
+
+namespace Terrain
 {
-    [SerializeField] private Player _player;
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class WinGround : MonoBehaviour
     {
-        if (collision.gameObject.layer == 7)
+        [SerializeField] private Player _player;
+    
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            _player.SetWin();
+            if (collision.gameObject.layer == 7)
+            {
+                _player.SetWin();
+            }
         }
     }
 }
+

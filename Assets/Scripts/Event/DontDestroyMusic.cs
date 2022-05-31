@@ -1,14 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class DontDestroyMusic : MonoBehaviour
+namespace Event
 {
-
-    private void Awake()
+    public class DontDestroyMusic : MonoBehaviour
     {
-        DontDestroyOnLoad(gameObject);
+
+        private void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }
+

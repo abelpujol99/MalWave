@@ -1,53 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneChangerManager : MonoBehaviour
+
+namespace Event
 {
-    private static SceneChangerManager _instance;
-
-    public static SceneChangerManager Instance
+    public class SceneChangerManager : MonoBehaviour
     {
-        get
+        private static SceneChangerManager _instance;
+
+        public static SceneChangerManager Instance
         {
-            return _instance;
+            get
+            {
+                return _instance;
+            }
         }
-    }
 
-    private int _lastSceneIndex;
+        private int _lastSceneIndex;
 
-    private int _score;
+        private int _score;
 
-    private void Awake()
-    {
-        if (_instance == null)
+        private void Awake()
         {
-            _instance = this;
+            if (_instance == null)
+            {
+                _instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            DontDestroyOnLoad(gameObject);
         }
-        else
+
+        public int GetLastSceneIndex()
         {
-            Destroy(gameObject);
+            return _lastSceneIndex;
         }
-        DontDestroyOnLoad(gameObject);
-    }
 
-    public int GetLastSceneIndex()
-    {
-        return _lastSceneIndex;
-    }
+        public void SetLastSceneIndex(int lastSceneIndex)
+        {
+            _lastSceneIndex = lastSceneIndex;
+        }
 
-    public void SetLastSceneIndex(int lastSceneIndex)
-    {
-        _lastSceneIndex = lastSceneIndex;
-    }
+        public int GetScore()
+        {
+            return _score;
+        }
 
-    public int GetScore()
-    {
-        return _score;
-    }
-
-    public void SetScore(int score)
-    {
-        _score = score;
+        public void SetScore(int score)
+        {
+            _score = score;
+        }
     }
 }
+
