@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7062151151122119648}
   - component: {fileID: 6606530145435803530}
   - component: {fileID: 8654099522737016242}
-  - component: {fileID: 993136600704109076}
+  - component: {fileID: 9125056367900677633}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2336039528399532061, guid: 4b6175b60a975a648adf806e74e80e1a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 11.08, y: 15.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6606530145435803530
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 4711509585661423296}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2c931c3b35b67e84db9c4075c01c9b4c, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -117,10 +117,10 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5965806, y: 0.4261271}
-  m_Size: {x: 9.526844, y: 16.97226}
+  m_Offset: {x: 1.7452027, y: 0.4261271}
+  m_Size: {x: 7.2296047, y: 16.97226}
   m_Direction: 0
---- !u!114 &993136600704109076
+--- !u!114 &9125056367900677633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,10 +129,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4711509585661423296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1e217b43c3d2864a9d4aa3991b42d9b, type: 3}
+  m_Script: {fileID: 11500000, guid: cd2dbe5d4d8a45ac9c8c882bf2c4472e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tinyBullet: {fileID: 7609995378200035672, guid: d717d19c6cb8346479903493b59b7a75, type: 3}
+  _largeBullet: {fileID: 1611370119638961620, guid: af9bea142d62c134ab45db99898f87b4, type: 3}
+  _fastBullet: {fileID: 4797582591742596366, guid: 7a6d80d0504b60846885b5905e93430a, type: 3}
   _camera: {fileID: 0}
+  _spriteRenderer: {fileID: 7062151151122119648}
+  _flashMaterial: {fileID: 2100000, guid: cdb817768d961864cad71026707b67d8, type: 2}
+  _originalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _health: 10
   _currentAttack: 0
   _maxAttacks: 0
+  _timeToChangeAttack: 0
+  _currentTimeToChangeAttack: 0
+  _durationOfFlash: 0.125
