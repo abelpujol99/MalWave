@@ -62,17 +62,20 @@ namespace Characters.Boss
             {
                 _currentTimeToChangeAttack = 0;
                 _currentAttack = Random.Range(0, _maxAttacks);
-            }
-
-            if (_currentAttack == 0)
-            {
-                FirstAttack();
-            }
-            else if (_currentAttack == 1)
-            {
                 
+                if (_currentAttack == 0)
+                {
+                    FirstAttack();
+                }
+                else if (_currentAttack == 1)
+                {
+                
+                }
+                else
+                {
+                    
+                }
             }
-            
         }
 
         void Die()

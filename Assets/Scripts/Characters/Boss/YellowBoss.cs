@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Bullet.Boss;
 using UnityEngine;
@@ -15,7 +16,6 @@ namespace Characters.Boss
         [SerializeField] private GameObject _portal;
         [SerializeField] private GameObject _largeBullet;
         [SerializeField] private GameObject _tinyBullet;
-        [SerializeField] private GameObject _hand;
 
         private Queue<GameObject> _largeBulletsQueue;
         private Queue<GameObject> _tinyBulletsQueue;
@@ -66,7 +66,6 @@ namespace Characters.Boss
             base.Update();
             _currentHandOffset = new Vector3(transform.position.x - _initHandOffset.x, transform.position.y + _initHandOffset.y,
                 transform.position.z + _initHandOffset.z);
-            _hand.transform.position = _currentHandOffset;
         }
 
         private void PortalBullets()
@@ -81,8 +80,14 @@ namespace Characters.Boss
                 GameObject disperseBullet;
                 disperseBullet = ReturnBullet(_largeBulletsQueue);
                 BossBullet bossBullet = disperseBullet.GetComponent<BossBullet>();
-                bossBullet.SpawnBullet(_largeBulletsDegrees[i], _currentHandOffset);
+                StartCoroutine(DelayBullets(1, i, bossBullet));
             }
+        }
+
+        private IEnumerator DelayBullets(float time, int i, BossBullet bossBullet)
+        {
+            yield return new WaitForSeconds(time * i);
+            bossBullet.SpawnBullet(_largeBulletsDegrees[i], _currentHandOffset);
         }
 
         private GameObject ReturnBullet(Queue<GameObject> bulletsQueue)
