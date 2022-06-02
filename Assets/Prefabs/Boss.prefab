@@ -132,9 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2dbe5d4d8a45ac9c8c882bf2c4472e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tinyBullet: {fileID: 7609995378200035672, guid: d717d19c6cb8346479903493b59b7a75, type: 3}
-  _largeBullet: {fileID: 1611370119638961620, guid: af9bea142d62c134ab45db99898f87b4, type: 3}
-  _fastBullet: {fileID: 4797582591742596366, guid: 7a6d80d0504b60846885b5905e93430a, type: 3}
   _camera: {fileID: 0}
   _spriteRenderer: {fileID: 7062151151122119648}
   _flashMaterial: {fileID: 2100000, guid: cdb817768d961864cad71026707b67d8, type: 2}
@@ -142,6 +139,16 @@ MonoBehaviour:
   _health: 10
   _currentAttack: 0
   _maxAttacks: 0
-  _timeToChangeAttack: 0
+  _timeToChangeAttackForEachAttak: []
   _currentTimeToChangeAttack: 0
   _durationOfFlash: 0.125
+  _initHandOffset: {x: 2.78, y: -1.22, z: 0}
+  _currentHandOffset: {x: 0, y: 0, z: 0}
+  _portal: {fileID: 0}
+  _largeBullet: {fileID: 1611370119638961620, guid: af9bea142d62c134ab45db99898f87b4, type: 3}
+  _tinyBullet: {fileID: 7609995378200035672, guid: d717d19c6cb8346479903493b59b7a75, type: 3}
+  _hand: {fileID: 0}
+  _numLargeBullets: 0
+  _numTinyBullets: 0
+  _largeBulletsDegrees:
+  - 180

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bullet;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -272,8 +273,8 @@ namespace Characters.Main
                 _currentShootCooldown = _shootCooldown;
                 GameObject bulletToSpawn;
                 bulletToSpawn = SpawnBullet();
-                Bullet.Bullet bullet = bulletToSpawn.GetComponent<Bullet.Bullet>();
-                bullet.ShootBullet(transform.position);
+                MainCharacterBullet mainCharacterBullet = bulletToSpawn.GetComponent<MainCharacterBullet>();
+                mainCharacterBullet.ShootBullet(transform.position);
             }
         }
 

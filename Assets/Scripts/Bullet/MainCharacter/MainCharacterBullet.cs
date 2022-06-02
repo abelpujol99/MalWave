@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Bullet
 {
-    public class Bullet: MonoBehaviour
+    public class MainCharacterBullet: MonoBehaviour
     {
 
         [SerializeField] private float _speed = 5;

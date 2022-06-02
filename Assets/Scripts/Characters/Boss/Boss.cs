@@ -11,10 +11,6 @@ namespace Characters.Boss
     {
         private Dictionary<int, Action> _attacksDictionary;
 
-        [SerializeField] private GameObject _tinyBullet;
-        [SerializeField] private GameObject _largeBullet;
-        [SerializeField] private GameObject _fastBullet;
-
         [SerializeField] private UnityEngine.Camera _camera;
 
         [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -26,7 +22,7 @@ namespace Characters.Boss
         [SerializeField] private int _currentAttack;
         [SerializeField] private int _maxAttacks;
 
-        [SerializeField] private float _timeToChangeAttack;
+        [SerializeField] private float[] _timeToChangeAttackForEachAttak;
         [SerializeField] private float _currentTimeToChangeAttack = 0;
         [SerializeField] private float _durationOfFlash;
         
@@ -42,17 +38,8 @@ namespace Characters.Boss
         // Update is called once per frame
         protected void Update()
         {
-            if (transform.position.x >= 5)
-            {
-                Translate();
-            }
-            else
-            {
-                Move();    
-            }
-
+            Translate();
             Attack();
-
             Die();
         }
 
@@ -65,15 +52,9 @@ namespace Characters.Boss
                 transform.position.z), 3 * Time.deltaTime);
         }
 
-        void Move()
-        {
-            transform.position = new Vector3(_camera.transform.position.x + 5, _camera.transform.position.y - 0.3f,
-                transform.position.z);
-        }
-
         void Attack()
         {
-            if (_timeToChangeAttack > _currentTimeToChangeAttack)
+            if (_timeToChangeAttackForEachAttak[_currentAttack] > _currentTimeToChangeAttack)
             {
                 _currentTimeToChangeAttack += Time.deltaTime;
             }
@@ -82,6 +63,16 @@ namespace Characters.Boss
                 _currentTimeToChangeAttack = 0;
                 _currentAttack = Random.Range(0, _maxAttacks);
             }
+
+            if (_currentAttack == 0)
+            {
+                FirstAttack();
+            }
+            else if (_currentAttack == 1)
+            {
+                
+            }
+            
         }
 
         void Die()
@@ -111,6 +102,8 @@ namespace Characters.Boss
         {
             _attacksDictionary = attackDictionary;
         }
+
+        protected abstract void FirstAttack();
 
         private IEnumerator Flash()
         {
