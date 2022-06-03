@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1611370119638961621}
   - component: {fileID: -7729658985257612697}
   - component: {fileID: 1021787535180460342}
-  - component: {fileID: 6120611893820903290}
+  - component: {fileID: 6942261816259835475}
   m_Layer: 0
   m_Name: Large Yellow Bullet
   m_TagString: Untagged
@@ -122,7 +122,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &6120611893820903290
+--- !u!114 &6942261816259835475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,4 +136,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1611370119638961621}
   _rigidbody2D: {fileID: 1021787535180460342}
+  _boss: {fileID: 0}
   _speed: 0

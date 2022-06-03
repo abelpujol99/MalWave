@@ -9,8 +9,6 @@ namespace Characters.Boss
 {
     public abstract class Boss : MonoBehaviour
     {
-        private Dictionary<int, Action> _attacksDictionary;
-
         [SerializeField] private UnityEngine.Camera _camera;
 
         [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -29,7 +27,6 @@ namespace Characters.Boss
         // Start is called before the first frame update
         protected void Start()
         {
-            _attacksDictionary = new Dictionary<int, Action>();
             transform.position = new Vector3(_camera.transform.position.x + 12.5f, _camera.transform.position.y - 0.3f,
                 transform.position.z);
             _currentAttack = Random.Range(0, _maxAttacks);
@@ -69,7 +66,7 @@ namespace Characters.Boss
                 }
                 else if (_currentAttack == 1)
                 {
-                
+                    SecondAttack();
                 }
                 else
                 {
@@ -96,17 +93,9 @@ namespace Characters.Boss
             }
         }
 
-        protected Dictionary<int, Action> GetAttackDictionary()
-        {
-            return _attacksDictionary;
-        }
-
-        protected void SetAttackDictionary(Dictionary<int, Action> attackDictionary)
-        {
-            _attacksDictionary = attackDictionary;
-        }
-
+        public abstract Vector3 GetOffset();
         protected abstract void FirstAttack();
+        protected abstract void SecondAttack();
 
         private IEnumerator Flash()
         {

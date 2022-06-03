@@ -30,7 +30,6 @@ namespace Characters.Boss
             base.Start();
             _numLargeBullets = _largeBulletsDegrees.Length;
             InitializeBulletsQueues();
-            InitializeAttacksDictionary();
         }
 
         private void InitializeBulletsQueues()
@@ -53,14 +52,6 @@ namespace Characters.Boss
             }
         }
 
-        private void InitializeAttacksDictionary()
-        {
-            var dictionary = GetAttackDictionary();
-            dictionary.Add(0, PortalBullets);
-            dictionary.Add(1, DisperseBullets);
-            //dictionary.Add(2, );
-        }
-
         void Update()
         {
             base.Update();
@@ -68,26 +59,28 @@ namespace Characters.Boss
                 transform.position.z + _initHandOffset.z);
         }
 
-        private void PortalBullets()
+        private void Bullets(int numBullets, Queue<GameObject> bulletsQueue)
         {
-            
-        }
-
-        private void DisperseBullets()
-        {
-            for (int i = 0; i < _numLargeBullets; i++)
+            for (int i = 0; i < numBullets; i++)
             {
-                GameObject disperseBullet;
-                disperseBullet = ReturnBullet(_largeBulletsQueue);
-                BossBullet bossBullet = disperseBullet.GetComponent<BossBullet>();
+                GameObject bullet;
+                bullet = ReturnBullet(bulletsQueue);
+                BossBullet bossBullet = bullet.GetComponent<BossBullet>();
                 StartCoroutine(DelayBullets(1, i, bossBullet));
             }
         }
 
-        private IEnumerator DelayBullets(float time, int i, BossBullet bossBullet)
+        private IEnumerator DelayBullets(float time, int i, BossBullet bullet)
         {
             yield return new WaitForSeconds(time * i);
-            bossBullet.SpawnBullet(_largeBulletsDegrees[i], _currentHandOffset);
+            if (bullet.GetComponent<LargeYellowBossBullet>() != null)
+            {
+                bullet.SpawnBullet(_largeBulletsDegrees[i]);
+            }
+            else
+            {
+                bullet.SpawnBullet(180);
+            }
         }
 
         private GameObject ReturnBullet(Queue<GameObject> bulletsQueue)
@@ -100,7 +93,17 @@ namespace Characters.Boss
 
         protected override void FirstAttack()
         {
-            DisperseBullets();
+            Bullets(_numLargeBullets, _largeBulletsQueue);
+        }
+
+        protected override void SecondAttack()
+        {
+            Bullets(_numTinyBullets, _tinyBulletsQueue);
+        }
+
+        public override Vector3 GetOffset()
+        {
+            return _currentHandOffset;
         }
     }
 }
