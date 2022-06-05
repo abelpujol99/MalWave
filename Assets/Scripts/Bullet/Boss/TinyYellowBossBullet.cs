@@ -1,48 +1,81 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Bullet.Boss;
 using Characters.Boss;
+using Characters.Main;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Bullet.Boss
 {
     public class TinyYellowBossBullet : BossBullet
     {
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        
+        [SerializeField] private Transform _portalTransform;
+        
+        private readonly Vector3 _scaleChange = new Vector3(0, 0.001f, 0);
 
-        [SerializeField] private Sprite _portal;
+        private float[] _portalsPositionY;
+        
+        private float _offsetY;
+        private float _floor = -1.7f;
+        private float _ceil;
+        private float _distanceBetweenFloorAndCeil = 4.84f;
+        private float _timeToShootWhenPortalCompletelyOpen = 0.5f;
+        private float _distanceBetweenPortals = 0.605f;
+        private float _portalOffsetX = 1.2f;
+        private float _maxScale = 0.02f;
 
-        private GameObject _boss;
+        private bool _portalDisappear;
 
-        private float _bossXOffset;
-        private float _YOffset;
-        private float _ceil = 1.35f;
-        private float _floor = -4f;
+        private String _portalName = "Yellow Boss Portal";
 
-        // Start is called before the first frame update
+        private void Awake()
+        {
+            _ceil = _floor + _distanceBetweenFloorAndCeil;
+            _portalsPositionY = new float[Mathf.FloorToInt((_ceil - _floor) / _distanceBetweenPortals)];
+            for (int i = 0; i < _portalsPositionY.Length; i++)
+            {
+                _portalsPositionY[i] = _floor + i * _distanceBetweenPortals;
+            }
+        }
+
         void Start()
         {
-            _boss = FindObjectOfType<YellowBoss>().gameObject;
-            SetSpeed(100f);
+            base.Start();
+            SetSpeed(800f);
         }
 
-        // Update is called once per frame
         void Update()
         {
-            _bossXOffset = _boss.transform.position.x;
-            transform.position = new Vector3(_bossXOffset - 4, _YOffset, 0);
+            if (_portalTransform.localScale.y < _maxScale && !GetShoot())
+            {
+                transform.position = new Vector3(GetBoss().GetHandOffset().x - _portalOffsetX, GetBoss().GetHandOffset().y + _offsetY, 0);
+                _portalTransform.localScale += _scaleChange;
+            }
+            else if (!GetShoot())
+            {
+                SetShoot(true);
+                StartCoroutine(DelayBullet());
+            }
+            else if(_portalTransform.localScale.y >= 0f && _portalDisappear)
+            {
+                _portalTransform.localScale -= _scaleChange;
+            }
+            _portalTransform.position = new Vector3(GetBoss().GetHandOffset().x - _portalOffsetX, GetBoss().GetHandOffset().y + _offsetY, 0);
         }
 
-        public override void SpawnBullet(float angle)
+        public override void SpawnBullet(float angle, Player player)
         {
-            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, 180));
-            transform.rotation = targetRotation;
-                
-            Vector3 vector = Quaternion.AngleAxis(GetAngle(), Vector3.forward) * Vector3.right;
-            SetDirection(vector);
-
-            _YOffset = Random.Range(_ceil, _floor);
-
-            gameObject.SetActive(true);
+            base.SpawnBullet(angle, player);
+            
+            _portalDisappear = false;
+            _spriteRenderer.enabled = false;
+            var localScale = _portalTransform.localScale;
+            _portalTransform.transform.localScale = new Vector3(localScale.x, 0, localScale.z);
+            _offsetY = _portalsPositionY[Random.Range(0, _portalsPositionY.Length)];
 
         }
 
@@ -51,6 +84,16 @@ namespace Bullet.Boss
             GetRigidBody().AddForce(GetDirection().normalized * GetSpeed());
         }
 
+        private IEnumerator DelayBullet()
+        {
+            if (GetShoot())
+            {
+                yield return new WaitForSeconds(_timeToShootWhenPortalCompletelyOpen);
+                _portalDisappear = true;
+                _spriteRenderer.enabled = true;
+                ShootBullet();
+            }
+        }
     }
 }
 

@@ -30,15 +30,15 @@ namespace Characters.Main
 
         private Vector3 _dashTargetPosition; 
 
-        [SerializeField] private bool _jump;
-        [SerializeField] private bool _doubleJump;
-        [SerializeField] private bool _ground;
-        [SerializeField] private bool _canDoubleJump;
-        [SerializeField] private bool _dash;
-        [SerializeField] private bool _canDash;
-        [SerializeField] private bool _shoot;
-        [SerializeField] private bool _dead;
-        [SerializeField] private bool _surf;
+        private bool _jump;
+        private bool _doubleJump;
+        private bool _ground;
+        private bool _canDoubleJump;
+        private bool _dash;
+        private bool _canDash;
+        private bool _shoot;
+        private bool _dead;
+        private bool _surf;
         private bool _cooldownDashRestarting;
         private bool _win;
 
@@ -71,6 +71,7 @@ namespace Characters.Main
             for (int i = 0; i < _magSize; i++)
             {
                 GameObject obj = Instantiate(_bullet);
+                obj.transform.parent = transform;
                 obj.SetActive(false);
                 _bulletQueue.Enqueue(obj);
             }

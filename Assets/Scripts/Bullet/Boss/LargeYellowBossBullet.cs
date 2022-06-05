@@ -1,4 +1,5 @@
 ﻿using Characters.Boss;
+using Characters.Main;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
@@ -12,12 +13,10 @@ namespace Bullet.Boss
 
         private Color _opacity;
 
-        private Characters.Boss.Boss _boss;
-
         private void Start()
         {
-            SetSpeed(200f);
-            _boss = FindObjectOfType<YellowBoss>().GetComponent<YellowBoss>();
+            base.Start();
+            SetSpeed(1600f);
         }
 
         private void Update()
@@ -26,28 +25,19 @@ namespace Bullet.Boss
             {
                 _opacity.a += 0.5f * Time.deltaTime;
                 _spriteRenderer.color = _opacity;
-                transform.position = _boss.GetOffset() + 2f * GetDirection();
+                transform.position = GetBoss().GetHandOffset() + 2f * GetDirection();
             }
-            else
+            else if(!GetShoot())
             {
                 ShootBullet();
             }
         }
 
-        public override void SpawnBullet(float angle)
+        public override void SpawnBullet(float angle, Player player)
         {
-            SetAngle(angle);
-            
-            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            transform.rotation = targetRotation;
-            GetRigidBody().velocity = new Vector2(0, 0);
-                
-            Vector3 vector = Quaternion.AngleAxis(GetAngle(), Vector3.forward) * Vector3.right;
-            SetDirection(vector);
-            
-            ResetOpacity();
+            base.SpawnBullet(angle, player);
 
-            gameObject.SetActive(true);
+            ResetOpacity();
         }
 
         void ResetOpacity()
@@ -60,6 +50,7 @@ namespace Bullet.Boss
         protected override void ShootBullet()
         { 
             GetRigidBody().AddForce(GetDirection().normalized * GetSpeed());
+            SetShoot(true);
         }
     }
 }

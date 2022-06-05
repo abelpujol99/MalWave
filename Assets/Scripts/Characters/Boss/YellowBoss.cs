@@ -9,11 +9,10 @@ namespace Characters.Boss
 {
     public class YellowBoss : Boss
     {
-        [SerializeField] private Vector3 _initHandOffset;
-        [SerializeField] private Vector3 _currentHandOffset;
+        private Vector3 _initHandOffset;
+        private Vector3 _currentHandOffset;
         private Vector3[] _vectorLargeBullets;
 
-        [SerializeField] private GameObject _portal;
         [SerializeField] private GameObject _largeBullet;
         [SerializeField] private GameObject _tinyBullet;
 
@@ -24,12 +23,20 @@ namespace Characters.Boss
         [SerializeField] private int _numTinyBullets;
 
         [SerializeField] private float[] _largeBulletsDegrees;
+        private float _breakAfterDisperseBullets = -1;
+        private float _breakAfterPortalBullets = 2;
+        
 
         void Start()
         {
             base.Start();
+            _initHandOffset = new Vector3(2.78f, -1.22f, 0);
             _numLargeBullets = _largeBulletsDegrees.Length;
             InitializeBulletsQueues();
+            SetTimeToChangeAttackForEachAttackArray(new []{7f, 10f});
+            var firstDelay = (GetTimeToChangeAttackForEachAttackArray()[0] + _breakAfterDisperseBullets) / _numLargeBullets;
+            var secondDelay = (GetTimeToChangeAttackForEachAttackArray()[0] + _breakAfterPortalBullets) / _numTinyBullets;
+            SetBulletsDelayArray(new []{firstDelay, secondDelay});
         }
 
         private void InitializeBulletsQueues()
@@ -40,6 +47,7 @@ namespace Characters.Boss
             for (int i = 0; i < _numLargeBullets; i++)
             {
                 GameObject obj = Instantiate(_largeBullet);
+                obj.transform.parent = transform;
                 obj.SetActive(false);
                 _largeBulletsQueue.Enqueue(obj);
             }
@@ -47,6 +55,7 @@ namespace Characters.Boss
             for (int i = 0; i < _numTinyBullets; i++)
             {
                 GameObject obj = Instantiate(_tinyBullet);
+                obj.transform.parent = transform;
                 obj.SetActive(false);
                 _tinyBulletsQueue.Enqueue(obj);
             }
@@ -59,14 +68,14 @@ namespace Characters.Boss
                 transform.position.z + _initHandOffset.z);
         }
 
-        private void Bullets(int numBullets, Queue<GameObject> bulletsQueue)
+        private void Bullets(int bulletsDelayIndex, int numBullets, Queue<GameObject> bulletsQueue)
         {
             for (int i = 0; i < numBullets; i++)
             {
                 GameObject bullet;
                 bullet = ReturnBullet(bulletsQueue);
                 BossBullet bossBullet = bullet.GetComponent<BossBullet>();
-                StartCoroutine(DelayBullets(1, i, bossBullet));
+                StartCoroutine(DelayBullets(GetBulletsDelayArray()[bulletsDelayIndex], i, bossBullet));
             }
         }
 
@@ -75,11 +84,11 @@ namespace Characters.Boss
             yield return new WaitForSeconds(time * i);
             if (bullet.GetComponent<LargeYellowBossBullet>() != null)
             {
-                bullet.SpawnBullet(_largeBulletsDegrees[i]);
+                bullet.SpawnBullet(_largeBulletsDegrees[i], GetPlayer());
             }
             else
             {
-                bullet.SpawnBullet(180);
+                bullet.SpawnBullet(180, GetPlayer());
             }
         }
 
@@ -93,15 +102,15 @@ namespace Characters.Boss
 
         protected override void FirstAttack()
         {
-            Bullets(_numLargeBullets, _largeBulletsQueue);
+            Bullets(0, _numLargeBullets, _largeBulletsQueue);
         }
 
         protected override void SecondAttack()
         {
-            Bullets(_numTinyBullets, _tinyBulletsQueue);
+            Bullets(1, _numTinyBullets, _tinyBulletsQueue);
         }
 
-        public override Vector3 GetOffset()
+        public override Vector3 GetHandOffset()
         {
             return _currentHandOffset;
         }
