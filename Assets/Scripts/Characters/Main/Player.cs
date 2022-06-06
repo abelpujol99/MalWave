@@ -90,7 +90,7 @@ namespace Characters.Main
 
             if (transform.position.y < -10)
             {
-                Death("Gravity");
+                //Death("Gravity");
             }
         }
 
