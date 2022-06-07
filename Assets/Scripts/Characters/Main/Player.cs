@@ -46,6 +46,7 @@ namespace Characters.Main
         
         [SerializeField] private float _currentRunSpeed;
         [SerializeField] private float _runSpeed = 2;
+        [SerializeField] private float _runSpeedAfterDash = 2.5f;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
@@ -239,7 +240,7 @@ namespace Characters.Main
         private void EndDash()
         {
             _dash = false;
-            _currentRunSpeed = 2.5f;
+            _currentRunSpeed = _runSpeedAfterDash;
             _rb2D.velocity = Vector2.zero;
             _rb2D.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
 
@@ -378,9 +379,14 @@ namespace Characters.Main
             return _win;
         }
 
-        public bool ReturnDash()
+        public bool GetDash()
         {
             return _dash;
+        }
+
+        public bool GetCanDash()
+        {
+            return _canDash;
         }
 
         public bool GetDeath()
@@ -390,7 +396,8 @@ namespace Characters.Main
 
         public void StartDashing()
         {
-            _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
+            _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x,
+                _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
         }
     }
 }

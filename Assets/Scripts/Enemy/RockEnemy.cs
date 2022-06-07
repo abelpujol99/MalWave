@@ -43,11 +43,11 @@ namespace Enemy
     
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.layer == 7 && _player.ReturnDash())
+            if (other.gameObject.layer == 7 && _player.GetDash())
             {
                 Destroy(gameObject);
             }
-            else if (other.gameObject.layer == 7 && !_player.ReturnDash())
+            else if (other.gameObject.layer == 7 && !_player.GetDash())
             {
                 _player.Death(gameObject.name.Split('(')[0]);
             }
