@@ -47,7 +47,6 @@ namespace Characters.Boss
             for (int i = 0; i < _numLargeBullets; i++)
             {
                 GameObject obj = Instantiate(_largeBullet);
-                obj.transform.parent = transform;
                 obj.SetActive(false);
                 _largeBulletsQueue.Enqueue(obj);
             }
@@ -55,7 +54,6 @@ namespace Characters.Boss
             for (int i = 0; i < _numTinyBullets; i++)
             {
                 GameObject obj = Instantiate(_tinyBullet);
-                obj.transform.parent = transform;
                 obj.SetActive(false);
                 _tinyBulletsQueue.Enqueue(obj);
             }

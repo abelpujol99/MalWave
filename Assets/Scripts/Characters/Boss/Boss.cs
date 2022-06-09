@@ -27,6 +27,7 @@ namespace Characters.Boss
         private float[] _bulletsDelay;
         private float _currentTimeToChangeAttack;
         private float _durationOfFlash;
+        private float _travelDistance = 3f;
 
         private bool _canAttack;
 
@@ -49,12 +50,17 @@ namespace Characters.Boss
             
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(
                 _camera.transform.position.x + 5, _camera.transform.position.y - 0.3f,
-                transform.position.z), 3 * Time.deltaTime);
+                transform.position.z), _travelDistance * Time.deltaTime);
+
+            if (transform.position.x < _camera.transform.position.x + 5)
+            {
+                _travelDistance = 8;
+            }
         }
 
         protected void Update()
         {
-            Translate();
+            Translate();    
 
             if (CheckAttack())    
             {

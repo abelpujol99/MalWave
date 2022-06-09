@@ -45,7 +45,7 @@ namespace Bullet.Boss
         void Start()
         {
             base.Start();
-            SetSpeed(800f);
+            SetSpeed(200f);
         }
 
         void Update()
@@ -91,6 +91,7 @@ namespace Bullet.Boss
                 yield return new WaitForSeconds(_timeToShootWhenPortalCompletelyOpen);
                 _portalDisappear = true;
                 _spriteRenderer.enabled = true;
+                transform.position = new Vector3(GetBoss().GetHandOffset().x - _portalOffsetX, GetBoss().GetHandOffset().y + _offsetY, 0);
                 ShootBullet();
             }
         }

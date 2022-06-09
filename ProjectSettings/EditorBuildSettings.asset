@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tests.unity
+    path: Assets/Scenes/Final Boss.unity
     guid: e8f7a2643c4b0fe48a8f25dca76f3606
   m_configObjects: {}

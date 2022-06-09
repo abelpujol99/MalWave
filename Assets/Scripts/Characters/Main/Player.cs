@@ -72,7 +72,6 @@ namespace Characters.Main
             for (int i = 0; i < _magSize; i++)
             {
                 GameObject obj = Instantiate(_bullet);
-                obj.transform.parent = transform;
                 obj.SetActive(false);
                 _bulletQueue.Enqueue(obj);
             }
@@ -91,7 +90,7 @@ namespace Characters.Main
 
             if (transform.position.y < -10)
             {
-                //Death("Gravity");
+                Death("Gravity");
             }
         }
 
