@@ -12,6 +12,7 @@ public class ProceduralGeneration : MonoBehaviour
     [SerializeField] private Vector3 _offset;
     
     [SerializeField] private GameObject _cube;
+    [SerializeField] private GameObject _boss;
     
     private Dictionary<int, Queue<GameObject>> _cubePool;
 
@@ -109,21 +110,35 @@ public class ProceduralGeneration : MonoBehaviour
         }
     }
 
-
-
     void InitScenario()
     {
         for (int i = 0; i < _platformWidthPerEachHeight[0]; i++)
         {
-            SpawnObject(0, _offset.x, _offset.y);
+            MoveCube(0, _offset.x, _offset.y);
+            _offset.x += _cubeWidth;
+        }
+    }
+
+    void WhileBossApproaching()
+    {
+        Vector3 viewPos = _camera.WorldToViewportPoint(_cubePool[0].Peek().transform.position);
+        if (viewPos.x < 0f)
+        {
+            MoveCube(0, _offset.x, _heightPlatform[0]);
             _offset.x += _cubeWidth;
         }
     }
 
     private void Update()
     {
-        
-        GenerateScenario();
+        if (_boss.activeSelf)
+        {
+            GenerateScenario();
+        }
+        else
+        {
+            WhileBossApproaching();
+        }
     }
 
 
@@ -173,7 +188,7 @@ public class ProceduralGeneration : MonoBehaviour
             {
                 _currentMinSeparationBetweenHoles--;
             }
-            SpawnObject(i, _offset.x, _heightPlatform[i]);
+            MoveCube(i, _offset.x, _heightPlatform[i]);
         }
         else
         {
@@ -220,7 +235,7 @@ public class ProceduralGeneration : MonoBehaviour
                 {
                     if (_positionsDelayToAppearPlatformOverFirstHeightPlatform[i - 1] == 0)
                     {
-                        SpawnObject(i, _offset.x + counter * _cubeWidth, _heightPlatform[i]);
+                        MoveCube(i, _offset.x + counter * _cubeWidth, _heightPlatform[i]);
                         _repeatValuePerEachHeight[i]--;
                     }
                     else
@@ -245,7 +260,7 @@ public class ProceduralGeneration : MonoBehaviour
         }
     }
    
-    void SpawnObject(int i, float width, float height) 
+    void MoveCube(int i, float width, float height) 
     {
         GameObject obj = _cubePool[i].Dequeue();
         obj.transform.position = new Vector3(width, height);
