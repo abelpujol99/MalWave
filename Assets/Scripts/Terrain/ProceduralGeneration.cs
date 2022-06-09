@@ -47,9 +47,9 @@ public class ProceduralGeneration : MonoBehaviour
 
     private void Start()
     {
-        Vector3 sprite = _cube.GetComponent<SpriteRenderer>().bounds.size;
-        _cubeWidth = sprite.x - 0.0326f;
-        _cubeHeight = sprite.y - 0.0326f;
+        Vector3 spriteSizes = _cube.GetComponent<SpriteRenderer>().bounds.size;
+        _cubeWidth = spriteSizes.x - 0.0326f;
+        _cubeHeight = spriteSizes.y - 0.0326f;
         _offset = new Vector3(_offset.x - _cubeWidth / 2, _offset.y - _cubeHeight / 2, 0);
         _heightPlatform = new float[_platformWidthPerEachHeight.Length];
         for (int i = 0; i < _heightPlatform.Length; i++)
@@ -147,7 +147,7 @@ public class ProceduralGeneration : MonoBehaviour
         for (int i = 0; i < _cubePool.Count; i++)
         {
             Vector3 viewPos = _camera.WorldToViewportPoint(_cubePool[0].Peek().transform.position);
-            if (viewPos.x < 0f)
+            if (viewPos.x + _cubeWidth < 0f)
             {
                 if (i == 0)
                 {
