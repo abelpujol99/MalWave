@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SceneChangerManager : MonoBehaviour
+{
+    private static SceneChangerManager _instance;
+
+    public static SceneChangerManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
+
+    private int _lastSceneIndex;
+
+    private int _score;
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public int GetLastSceneIndex()
+    {
+        return _lastSceneIndex;
+    }
+
+    public void SetLastSceneIndex(int lastSceneIndex)
+    {
+        _lastSceneIndex = lastSceneIndex;
+    }
+
+    public int GetScore()
+    {
+        return _score;
+    }
+
+    public void SetScore(int score)
+    {
+        _score = score;
+    }
+}

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Character;
 using TMPro;
 using UnityEngine;
@@ -9,13 +10,17 @@ using UnityEngine.SceneManagement;
 public class UIMenu : MonoBehaviour
 {
     private const String MAIN_MENU_BUTTON_NAME = "Main Menu";
-    
+    private const String TUTO_LEVEL = "Tuto 0.1 i 0.2";
+
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _deathMenu;
     [SerializeField] private GameObject _settingsMenu;
+    [SerializeField] private GameObject _scorePanel;
     [SerializeField] private GameObject _winMenu;
     [SerializeField] private TextMeshProUGUI _killText;
     [SerializeField] private TextMeshProUGUI _winText;
+    [SerializeField] private TextMeshProUGUI _pauseScoreText;
+    [SerializeField] private TextMeshProUGUI _deathScoreText;
     [SerializeField] private Player _player;
 
     private GameObject _lastActiveMenu;
@@ -29,7 +34,7 @@ public class UIMenu : MonoBehaviour
         if (_player.GetWin())
         {
             _winMenu.SetActive(true);
-            _winText.SetText("YOU WIN\nSCORE: " + _player.GetScore());
+            _winText.SetText("YOU WIN\nSCORE: " + SceneChangerManager.Instance.GetScore());
         }
         else
         {
@@ -48,6 +53,7 @@ public class UIMenu : MonoBehaviour
                 {
                     _deathMenu.SetActive(true);
                     _killText.SetText(_player.GetKiller().ToUpper() + "\nKILLED YOU");
+                    _deathScoreText.SetText("SCORE: " + SceneChangerManager.Instance.GetScore());
                 }
                 else
                 { 
@@ -58,7 +64,7 @@ public class UIMenu : MonoBehaviour
 
     }
 
-    void CheckPause()
+    private void CheckPause()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -77,6 +83,7 @@ public class UIMenu : MonoBehaviour
     {
         _pause = false;
         _pauseMenu.SetActive(false);
+        _scorePanel.SetActive(true);
         Time.timeScale = 1f;
     }
 
@@ -84,12 +91,16 @@ public class UIMenu : MonoBehaviour
     {
         _pause = true;
         _pauseMenu.SetActive(true);
+        _pauseScoreText.SetText("SCORE: " + SceneChangerManager.Instance.GetScore());
+        _scorePanel.SetActive(false);
         Time.timeScale = 0f;
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(TUTO_LEVEL);
+        Destroy(GameObject.FindWithTag("Music"));
+        SceneChangerManager.Instance.SetScore(0);
         Resume();
     }
 
@@ -97,6 +108,8 @@ public class UIMenu : MonoBehaviour
     {
         _pause = false;
         Time.timeScale = 1f;
+        Destroy(GameObject.FindWithTag("Music"));
+        SceneChangerManager.Instance.SetScore(0);
         SceneManager.LoadScene(MAIN_MENU_BUTTON_NAME);
     }
 
