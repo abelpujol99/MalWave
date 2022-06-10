@@ -9,24 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2add8f4b1b828894e8c0df2cc26e23e9
   - enabled: 1
-    path: Assets/Scenes/Tuto 0.1 i 0.2.unity
+    path: Assets/Scenes/Tuto 0/Tuto 0.1 i 0.2.unity
     guid: 6d5584406bd8e2a41a1f18ac2cba4e8c
   - enabled: 1
-    path: Assets/Scenes/Tuto 0.2.0.unity
+    path: Assets/Scenes/Tuto 0/Tuto 0.2.0.unity
     guid: 98ae0b399c221cf4e8779f5ad1ecada8
   - enabled: 1
-    path: Assets/Scenes/Tuto 0.2.1.unity
+    path: Assets/Scenes/Tuto 0/Tuto 0.2.1.unity
     guid: a63c240b99aa5234689904c4e7fd4dce
   - enabled: 1
-    path: Assets/Scenes/Tuto 0.2.2.unity
+    path: Assets/Scenes/Tuto 0/Tuto 0.2.2.unity
     guid: 863462f214ef58a45815634d6edbe88e
   - enabled: 1
-    path: Assets/Scenes/Tuto 0.3.unity
+    path: Assets/Scenes/Tuto 0/Tuto 0.3.unity
     guid: 8d9726ce38a86a0458fb8bf0a9628250
   - enabled: 1
-    path: Assets/Scenes/Tuto 0.4.unity
+    path: Assets/Scenes/Tuto 0/Tuto 0.4.unity
     guid: c0103be625af8284c98d4f286d166ef7
   - enabled: 1
-    path: Assets/Scenes/Tuto 0.5 (final).unity
+    path: Assets/Scenes/Tuto 0/Tuto 0.5 (final).unity
     guid: 4e5603a961a98c54ca47d9a2f60862f3
   m_configObjects: {}
