@@ -24,7 +24,7 @@ public class ProceduralGeneration : MonoBehaviour
     private float _cubeWidth;
     private float _cubeHeight;
 
-    private int[] _platformWidthPerEachHeight = { 111, 200, 200, 200 };
+    private int[] _platformWidthPerEachHeight = { 121, 200, 200, 200 };
     private int[] _heightChances = { 2, 60, 0, 0 };
     private int[] _minWidthPlatformPerEachHeightOverFloor = {30, 20, 15};
     private int[] _maxWidthPlatformPerEachHeightOverFloor = {40, 35, 30};
