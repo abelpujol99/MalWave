@@ -272,6 +272,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 666510357}
     - target: {fileID: 4106452376141957414, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 277584925}
+    - target: {fileID: 4106452376141957414, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
       propertyPath: _characterPosition
       value: 
       objectReference: {fileID: 666510357}
@@ -281,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006636330365517430, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
       propertyPath: orthographic size
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5006636330365517449, guid: 2c9e30ec961e2964d889df17edb92540, type: 3}
       propertyPath: m_RootOrder
