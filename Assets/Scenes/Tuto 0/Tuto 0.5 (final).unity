@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 294650585}
   - component: {fileID: 294650584}
   - component: {fileID: 294650583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Win Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10421,11 +10421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.75
+      value: -4.15
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.47
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11933,7 +11933,7 @@ GameObject:
   - component: {fileID: 1432626380}
   - component: {fileID: 1432626379}
   - component: {fileID: 1432626378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Win Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19273,7 +19273,7 @@ GameObject:
   - component: {fileID: 2118106598}
   - component: {fileID: 2118106601}
   - component: {fileID: 2118106600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Win Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

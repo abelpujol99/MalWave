@@ -1234,7 +1234,7 @@ GameObject:
   - component: {fileID: 297097392}
   - component: {fileID: 297097391}
   - component: {fileID: 297097390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Win Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2133,7 @@ GameObject:
   - component: {fileID: 458204151}
   - component: {fileID: 458204150}
   - component: {fileID: 458204149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Win Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9595,7 +9595,7 @@ GameObject:
   - component: {fileID: 1385380576}
   - component: {fileID: 1385380579}
   - component: {fileID: 1385380578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Win Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
