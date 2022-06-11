@@ -182,8 +182,8 @@ MonoBehaviour:
   _fallMultiplier: 0.5
   _lowJumpMultiplier: 1
   _dashCooldown: 1
-  _dashSpeed: 5
-  _dashDistance: 5
+  _dashSpeed: 4
+  _dashDistance: 2
   _currentShootCooldown: 1
   _shootCooldown: 1
 --- !u!82 &1650804126179836160

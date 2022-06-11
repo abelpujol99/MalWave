@@ -6,6 +6,7 @@ namespace Event
     public class MainMenu : MonoBehaviour
     {
         [SerializeField] private GameObject _mainPanel;
+        [SerializeField] private GameObject _levelsMenu;
         [SerializeField] private GameObject _controlsPanel;
         [SerializeField] private GameObject _settingsMenu;
 
@@ -22,7 +23,13 @@ namespace Event
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-    
+
+        public void LevelsMenu()
+        {
+            _mainPanel.SetActive(false);
+            _levelsMenu.SetActive(true);
+        }
+
         public void ControlsMenu()
         {
             _mainPanel.SetActive(false);

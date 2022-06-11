@@ -531,14 +531,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
-      propertyPath: _dashSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
-      propertyPath: _dashDistance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7029461126232232192, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
       propertyPath: _shootCooldown
       value: 0.7
       objectReference: {fileID: 0}
