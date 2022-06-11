@@ -116,8 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ed73a9a0dcea14a90d6cd5d53840b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwShots: 2
-  Projectile: {fileID: 7511669360722755358, guid: 31a55a4b9380ad645b23d6831f608c8d, type: 3}
+  _projObject: {fileID: 7511669360722755358, guid: 31a55a4b9380ad645b23d6831f608c8d, type: 3}
   _player: {fileID: 0}
 --- !u!70 &878497176519403563
 CapsuleCollider2D:
