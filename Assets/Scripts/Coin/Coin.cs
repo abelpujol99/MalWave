@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private Player _player;
-
     [SerializeField] private int _score;
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -15,7 +15,7 @@ public class SceneChangerManager : MonoBehaviour
     }
 
     private int _lastSceneIndex;
-    private int _score;
+    private int _score = 0;
     private bool _deactivateTutorial;
     private void Awake()
     {

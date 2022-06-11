@@ -22,83 +22,96 @@ public class ChangeScene : MonoBehaviour
 
     private void Start()
     {
-            #region FirstPortal
-            if (SceneManager.GetActiveScene().buildIndex == 2 && SceneChangerManager.Instance.GetLastSceneIndex() == 1)
-            {
-                _nextSceneIndex = 5;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 5 && SceneChangerManager.Instance.GetLastSceneIndex() == 2)
-            {
-                _nextSceneIndex = 3;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 3 && SceneChangerManager.Instance.GetLastSceneIndex() == 5)
-            {
-                _nextSceneIndex = 6;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 6 && SceneChangerManager.Instance.GetLastSceneIndex() == 3)
-            {
-                _nextSceneIndex = 4;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 4 && SceneChangerManager.Instance.GetLastSceneIndex() == 6)
-            {
-                _nextSceneIndex = 7;
-            }
-            #endregion
 
-            #region SecondPortal
-            if (SceneManager.GetActiveScene().buildIndex == 3 && SceneChangerManager.Instance.GetLastSceneIndex() == 1)
-            {
-                _nextSceneIndex = 5;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 5 && SceneChangerManager.Instance.GetLastSceneIndex() == 3)
-            {
-                _nextSceneIndex = 4;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 4 && SceneChangerManager.Instance.GetLastSceneIndex() == 5)
-            {
-                _nextSceneIndex = 6;   
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 6 && SceneChangerManager.Instance.GetLastSceneIndex() == 4)
-            {
-                _nextSceneIndex = 2;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 2 && SceneChangerManager.Instance.GetLastSceneIndex() == 6)
-            {
-                _nextSceneIndex = 7;    
-            }
-            #endregion
+        int activeScene = SceneManager.GetActiveScene().buildIndex;
+        int lastActiveScene = SceneChangerManager.Instance.GetLastSceneIndex();
+        
+        #region Tutorial
+        
+        #region FirstPortal
+        if (activeScene == 2 && lastActiveScene == 1)
+        {
+            _nextSceneIndex = 5;
+        }
+        else if (activeScene == 5 && lastActiveScene == 2)
+        {
+            _nextSceneIndex = 3;
+        }
+        else if (activeScene == 3 && lastActiveScene == 5)
+        {
+            _nextSceneIndex = 6;
+        }
+        else if (activeScene == 6 && lastActiveScene == 3)
+        {
+            _nextSceneIndex = 4;
+        }
+        else if (activeScene == 4 && lastActiveScene == 6)
+        {
+            _nextSceneIndex = 7;
+        }
+        #endregion
 
-            #region ThirdPortal
-            if (SceneManager.GetActiveScene().buildIndex == 4 && SceneChangerManager.Instance.GetLastSceneIndex() == 1)
-            {
-                _nextSceneIndex = 5;
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 5 && SceneChangerManager.Instance.GetLastSceneIndex() == 4)
-            {
-                _nextSceneIndex = 2;    
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 2 && SceneChangerManager.Instance.GetLastSceneIndex() == 5)
-            {
-                _nextSceneIndex = 6;    
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 6 && SceneChangerManager.Instance.GetLastSceneIndex() == 2)
-            {
-                _nextSceneIndex = 3;    
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 3 && SceneChangerManager.Instance.GetLastSceneIndex() == 6)
-            {
-                _nextSceneIndex = 7;    
-            }
-            #endregion
+        #region SecondPortal
+        if (activeScene == 3 && lastActiveScene == 1)
+        {
+            _nextSceneIndex = 5;
+        }
+        else if (activeScene == 5 && lastActiveScene == 3)
+        {
+            _nextSceneIndex = 4;
+        }
+        else if (activeScene == 4 && lastActiveScene == 5)
+        {
+            _nextSceneIndex = 6;   
+        }
+        else if (activeScene == 6 && lastActiveScene == 4)
+        {
+            _nextSceneIndex = 2;
+        }
+        else if (activeScene == 2 && lastActiveScene == 6)
+        {
+            _nextSceneIndex = 7;    
+        }
+        #endregion
 
-            ChoosePortalColor();
+        #region ThirdPortal
+        if (activeScene == 4 && lastActiveScene == 1)
+        {
+            _nextSceneIndex = 5;
+        }
+        else if (activeScene == 5 && lastActiveScene == 4)
+        {
+            _nextSceneIndex = 2;    
+        }
+        else if (activeScene == 2 && lastActiveScene == 5)
+        {
+            _nextSceneIndex = 6;    
+        }
+        else if (activeScene == 6 && lastActiveScene == 2)
+        {
+            _nextSceneIndex = 3;    
+        }
+        else if (activeScene == 3 && lastActiveScene == 6)
+        {
+            _nextSceneIndex = 7;    
+        }
+        #endregion
+        
+        #endregion
+        
+        #region Level1
+        
+        
+        #endregion
 
-            SceneChangerManager.Instance.SetLastSceneIndex(SceneManager.GetActiveScene().buildIndex);
+        ChoosePortalColor();
+
+        SceneChangerManager.Instance.SetLastSceneIndex(SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(_nextSceneIndex);
         }

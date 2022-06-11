@@ -279,7 +279,7 @@ namespace Character
 
         private void CheckSurf()
         {
-            if (SceneManager.GetActiveScene().name == "Tuto 0.2.2")
+            if (SceneManager.GetActiveScene().name == "Tuto 0.2.2" || SceneManager.GetActiveScene().name == "Lvl. 1.2")
             {
                 _surf = true;
                 _animator.SetBool(SURF_ANIMATOR_NAME, true);
