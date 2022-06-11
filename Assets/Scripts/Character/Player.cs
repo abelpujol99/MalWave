@@ -23,6 +23,11 @@ namespace Character
 
         private RaycastHit2D _checkGround;
 
+        [SerializeField] private AudioSource _shootSound;
+        [SerializeField] private AudioSource _dashSound;
+        [SerializeField] private AudioSource _deathSound;
+        [SerializeField] private AudioSource _jumpSound;
+
         private Queue<GameObject> _bulletQueue;
 
         [SerializeField] private GameObject _bullet;
@@ -38,13 +43,14 @@ namespace Character
         [SerializeField] private bool _shoot;
         [SerializeField] private bool _dead;
         [SerializeField] private bool _surf;
+        private bool _playDeathSound;
         private bool _cooldownDashRestarting;
         private bool _win;
 
         [SerializeField] private int _magSize = 5;
         
-        [SerializeField] private float _currentRunSpeed;
-        [SerializeField] private float _runSpeed = 2;
+        [SerializeField] private float _currentRunSpeed = 2;
+        [SerializeField] private float _runSpeed = 3;
         [SerializeField] private float _jumpSpeed = 9;
         [SerializeField] private float _doubleJumpSpeed = 6;
         [SerializeField] private float _fallMultiplier = 0.5f;
@@ -61,6 +67,7 @@ namespace Character
         {
             CheckSurf();
             InitializeMag();
+            _playDeathSound = true;
         }
 
         private void InitializeMag()
@@ -77,7 +84,7 @@ namespace Character
 
         private void Update()
         {
-            if (!_surf)
+            if (!_surf && !_dead)
             {
                 CheckJumpAndDoubleJump();    
 
@@ -96,6 +103,12 @@ namespace Character
         {
             _killer = killer;
             _dead = true;
+           
+            if(_playDeathSound == true)
+            {
+                _deathSound.Play();
+            }
+            _playDeathSound = false;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
             _rb2D.isKinematic = true;
             _rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -167,6 +180,8 @@ namespace Character
                 _ground = false;
                 _animator.SetTrigger(JUMP_ANIMATOR_NAME);
                 _animator.SetBool(LAND_ANIMATOR_NAME, false);
+                //sound
+                _jumpSound.Play();
             }
         }
 
@@ -179,6 +194,8 @@ namespace Character
                 _canDoubleJump = false;
                 _animator.SetBool(FALL_ANIMATOR_NAME, false);
                 _animator.SetTrigger(DOUBLEJUMP_ANIMATOR_NAME);
+                //sound
+                _jumpSound.Play();
             }
         }
         
@@ -218,6 +235,8 @@ namespace Character
                 _canDash= false;
                 _dashTargetPosition = new Vector3(transform.position.x + _dashDistance, transform.position.y, 0);
                 _animator.SetTrigger(DASH_ANIMATOR_NAME);
+                //Sound
+                _dashSound.Play();
                 StartCoroutine(SetAnimationFalse(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
             }
         }
@@ -273,6 +292,7 @@ namespace Character
                 GameObject bulletToSpawn;
                 bulletToSpawn = SpawnBullet();
                 Bullet.Bullet bullet = bulletToSpawn.GetComponent<Bullet.Bullet>();
+                _shootSound.Play();
                 bullet.ShootBullet(transform.position);
             }
         }
