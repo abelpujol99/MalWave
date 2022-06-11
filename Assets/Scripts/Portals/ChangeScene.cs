@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,81 +18,83 @@ public class ChangeScene : MonoBehaviour
     [SerializeField] private Sprite _redPortal;
     [SerializeField] private Sprite _yellowPortal;
 
-    
     [SerializeField] private int _nextSceneIndex;
+    private int _lastSceneIndex;
+
+    [SerializeField] private bool _firstPortalOfTheLevel; 
 
     private void Start()
     {
 
+        _lastSceneIndex = SceneChangerManager.Instance.GetLastSceneIndex();
         int activeScene = SceneManager.GetActiveScene().buildIndex;
-        int lastActiveScene = SceneChangerManager.Instance.GetLastSceneIndex();
         
         #region Tutorial
         
         #region FirstPortal
-        if (activeScene == 2 && lastActiveScene == 1)
+        if (activeScene == 2 && _lastSceneIndex == 1)
         {
             _nextSceneIndex = 5;
         }
-        else if (activeScene == 5 && lastActiveScene == 2)
+        else if (activeScene == 5 && _lastSceneIndex == 2)
         {
             _nextSceneIndex = 3;
         }
-        else if (activeScene == 3 && lastActiveScene == 5)
+        else if (activeScene == 3 && _lastSceneIndex == 5)
         {
             _nextSceneIndex = 6;
         }
-        else if (activeScene == 6 && lastActiveScene == 3)
+        else if (activeScene == 6 && _lastSceneIndex == 3)
         {
             _nextSceneIndex = 4;
         }
-        else if (activeScene == 4 && lastActiveScene == 6)
+        else if (activeScene == 4 && _lastSceneIndex == 6)
         {
             _nextSceneIndex = 7;
         }
         #endregion
 
         #region SecondPortal
-        if (activeScene == 3 && lastActiveScene == 1)
+        if (activeScene == 3 && _lastSceneIndex == 1)
         {
             _nextSceneIndex = 5;
         }
-        else if (activeScene == 5 && lastActiveScene == 3)
+        else if (activeScene == 5 && _lastSceneIndex == 3)
         {
             _nextSceneIndex = 4;
         }
-        else if (activeScene == 4 && lastActiveScene == 5)
+        else if (activeScene == 4 && _lastSceneIndex == 5)
         {
             _nextSceneIndex = 6;   
         }
-        else if (activeScene == 6 && lastActiveScene == 4)
+        else if (activeScene == 6 && _lastSceneIndex == 4)
         {
             _nextSceneIndex = 2;
         }
-        else if (activeScene == 2 && lastActiveScene == 6)
+        else if (activeScene == 2 && _lastSceneIndex == 6)
         {
             _nextSceneIndex = 7;    
         }
         #endregion
 
         #region ThirdPortal
-        if (activeScene == 4 && lastActiveScene == 1)
+        if (activeScene == 4 && _lastSceneIndex == 1)
         {
             _nextSceneIndex = 5;
         }
-        else if (activeScene == 5 && lastActiveScene == 4)
+        else if (activeScene == 5 && _lastSceneIndex == 4)
         {
             _nextSceneIndex = 2;    
         }
-        else if (activeScene == 2 && lastActiveScene == 5)
+        else if (activeScene == 2 && _lastSceneIndex == 5)
         {
             _nextSceneIndex = 6;    
         }
-        else if (activeScene == 6 && lastActiveScene == 2)
+        else if (activeScene == 6 && _lastSceneIndex == 2)
         {
             _nextSceneIndex = 3;    
         }
-        else if (activeScene == 3 && lastActiveScene == 6)
+        else if (activeScene == 3 && _lastSceneIndex == 6)
         {
             _nextSceneIndex = 7;    
         }
@@ -105,6 +108,7 @@ public class ChangeScene : MonoBehaviour
         #endregion
 
         ChoosePortalColor();
+        Debug.Log(SceneChangerManager.Instance.GetLastSceneIndex());
 
         SceneChangerManager.Instance.SetLastSceneIndex(SceneManager.GetActiveScene().buildIndex);
     }
@@ -119,29 +123,33 @@ public class ChangeScene : MonoBehaviour
 
     private void ChoosePortalColor()
     {
-        if (_nextSceneIndex == 2)
+        if (!_firstPortalOfTheLevel)
         {
-            _spriteRenderer.sprite = _cyanPortal;
+            _spriteRenderer.sprite = _nextSceneIndex switch
+            {
+                2 => _cyanPortal,
+                3 => _pinkPortal,
+                4 => _purplePortal,
+                5 => _bluePortal,
+                6 => _greenPortal,
+                7 => _redPortal,
+                _ => throw new ArgumentOutOfRangeException()
+            };
         }
-        else if(_nextSceneIndex == 3)
+        else
         {
-            _spriteRenderer.sprite = _pinkPortal;
+            _spriteRenderer.flipX = true;
+            _spriteRenderer.sprite = SceneChangerManager.Instance.GetLastSceneIndex() switch
+            {
+                1 => _greenPortal,
+                2 => _cyanPortal,
+                3 => _pinkPortal,
+                4 => _purplePortal,
+                5 => _bluePortal,
+                6 => _greenPortal,
+                _ => throw new ArgumentOutOfRangeException()
+            };
         }
-        else if (_nextSceneIndex == 4)
-        {
-            _spriteRenderer.sprite = _purplePortal;
-        }
-        else if (_nextSceneIndex == 5)
-        {
-            _spriteRenderer.sprite = _bluePortal;
-        }
-        else if (_nextSceneIndex == 6)
-        {
-            _spriteRenderer.sprite = _greenPortal;
-        }
-        else if (_nextSceneIndex == 7)
-        {
-            _spriteRenderer.sprite = _redPortal;
-        }
+
     }
 }
