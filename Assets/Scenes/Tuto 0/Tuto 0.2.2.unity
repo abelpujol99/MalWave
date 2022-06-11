@@ -15869,6 +15869,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
   m_PrefabInstance: {fileID: 902235765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &902235767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5161951350719644155, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+  m_PrefabInstance: {fileID: 902235765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d68ad06d7c4734ab9a9d112a87c916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &923142387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24318,6 +24329,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3600936990084813658, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: _mainMenu
+      value: 
+      objectReference: {fileID: 902235767}
     - target: {fileID: 3600936990185876452, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 1
@@ -25467,6 +25482,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4349635744641107042, guid: b7cd2c700efe40b41b89452180641168, type: 3}
+      propertyPath: _mainCanvas
+      value: 
+      objectReference: {fileID: 902235767}
     - target: {fileID: 4349635744641107042, guid: b7cd2c700efe40b41b89452180641168, type: 3}
       propertyPath: _controlAdvisePanel
       value: 

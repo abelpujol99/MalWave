@@ -45,7 +45,6 @@ namespace Characters.Main
         [SerializeField] private bool _surf;
         [SerializeField] private bool _canSurf;
         
-        private bool _playDeathSound;
         private bool _cooldownDashRestarting;
         private bool _win;
 
@@ -68,7 +67,6 @@ namespace Characters.Main
         private void Start()
         {
             InitializeMag();
-            _playDeathSound = true;
         }
 
         private void InitializeMag()
@@ -104,12 +102,6 @@ namespace Characters.Main
         {
             _killer = killer;
             _dead = true;
-           
-            if(_playDeathSound == true)
-            {
-                _deathSound.Play();
-            }
-            _playDeathSound = false;
             _animator.SetTrigger(DEATH_ANIMATOR_NAME);
             _rb2D.isKinematic = true;
             _rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -181,8 +173,6 @@ namespace Characters.Main
                 _ground = false;
                 _animator.SetTrigger(JUMP_ANIMATOR_NAME);
                 _animator.SetBool(LAND_ANIMATOR_NAME, false);
-                //sound
-                _jumpSound.Play();
             }
         }
 
@@ -195,8 +185,6 @@ namespace Characters.Main
                 _canDoubleJump = false;
                 _animator.SetBool(FALL_ANIMATOR_NAME, false);
                 _animator.SetTrigger(DOUBLEJUMP_ANIMATOR_NAME);
-                //sound
-                _jumpSound.Play();
             }
         }
         
@@ -244,8 +232,6 @@ namespace Characters.Main
                 _canDash= false;
                 _dashTargetPosition = new Vector3(transform.position.x + _dashDistance, transform.position.y, 0);
                 _animator.SetTrigger(DASH_ANIMATOR_NAME);
-                //Sound
-                _dashSound.Play();
                 StartCoroutine(SetAnimationFalse(DASH_ANIMATOR_NAME, ReturnAnimationClip(DASH_ANIMATOR_NAME).length));
             }
         }
@@ -414,6 +400,21 @@ namespace Characters.Main
         public void StartDashing()
         {
             _rb2D.AddForce(new Vector2(_dashTargetPosition.x - transform.position.x, _dashTargetPosition.y - transform.position.y) * _dashSpeed, ForceMode2D.Impulse);
+        }
+
+        public void JumpSound()
+        {
+            _jumpSound.Play();
+        }
+
+        public void DashSound()
+        {
+            _dashSound.Play();
+        }
+
+        public void DeathSound()
+        {
+            _deathSound.Play();
         }
     }
 }
