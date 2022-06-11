@@ -13,7 +13,7 @@ namespace Event
         // Update is called once per frame
         private void Update()
         {
-            if (!_settingsMenu.activeSelf && !_controlsPanel.activeSelf)
+            if (!_settingsMenu.activeSelf && !_controlsPanel.activeSelf && !_levelsMenu.activeSelf)
             {
                 _mainPanel.SetActive(true);
             }

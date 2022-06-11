@@ -1546,6 +1546,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Event.UIMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5161951350389262252, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: m_fontSizeBase
       value: 50.8
@@ -1557,6 +1569,18 @@ PrefabInstance:
     - target: {fileID: 5161951350389262254, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: m_Name
       value: Kill Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350711560112, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350711560112, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Event.UIMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350711560112, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5161951350719644096, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: m_Name

@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &2057670
 SpriteRenderer:
@@ -297,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &136390630
 SpriteRenderer:
@@ -410,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &156396451
 SpriteRenderer:
@@ -655,6 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &198497099
 SpriteRenderer:
@@ -768,6 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &226693065
 SpriteRenderer:
@@ -893,6 +898,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Event.UIMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5161951350389262254, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: m_Name
       value: Kill Text
@@ -1556,6 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &495528299
 SpriteRenderer:
@@ -1730,6 +1748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &563316881
 SpriteRenderer:
@@ -1904,6 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &573121633
 SpriteRenderer:
@@ -2017,6 +2037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &638872913
 SpriteRenderer:
@@ -2191,6 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &685565161
 SpriteRenderer:
@@ -2304,6 +2326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &685719505
 SpriteRenderer:
@@ -2427,6 +2450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &718341989
 SpriteRenderer:
@@ -2540,6 +2564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &736558589
 SpriteRenderer:
@@ -2653,6 +2678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &747155042
 SpriteRenderer:
@@ -2827,6 +2853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &890561219
 SpriteRenderer:
@@ -2940,6 +2967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &893981476
 SpriteRenderer:
@@ -3053,6 +3081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &918660255
 SpriteRenderer:
@@ -3166,6 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &929875606
 SpriteRenderer:
@@ -3279,6 +3309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &939054181
 SpriteRenderer:
@@ -20372,6 +20403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1101832550
 SpriteRenderer:
@@ -20551,6 +20583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1160367037
 SpriteRenderer:
@@ -20664,6 +20697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1178947942
 SpriteRenderer:
@@ -20794,6 +20828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1191497650
 SpriteRenderer:
@@ -20973,6 +21008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1266962892
 SpriteRenderer:
@@ -21086,6 +21122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1275468408
 SpriteRenderer:
@@ -21199,6 +21236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1324726811
 SpriteRenderer:
@@ -21383,6 +21421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1353873726
 SpriteRenderer:
@@ -21496,6 +21535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1355611382
 SpriteRenderer:
@@ -21807,6 +21847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1504846444
 SpriteRenderer:
@@ -22139,6 +22180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1640815687
 SpriteRenderer:
@@ -22323,6 +22365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1735405247
 SpriteRenderer:
@@ -22507,6 +22550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1775357997
 SpriteRenderer:
@@ -22620,6 +22664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1827258798
 SpriteRenderer:
@@ -22733,6 +22778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &1842897169
 SpriteRenderer:
@@ -23044,6 +23090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &2010494235
 SpriteRenderer:
@@ -23382,6 +23429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &2090049410
 SpriteRenderer:
@@ -23495,6 +23543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &2090799799
 SpriteRenderer:
@@ -23608,6 +23657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &2121452509
 SpriteRenderer:
@@ -23802,6 +23852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b3e8306d84fcf49bf8b46bae5832a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _score: 5
 --- !u!212 &2138350803
 SpriteRenderer:

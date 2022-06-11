@@ -10,7 +10,6 @@ namespace Event
     public class UIMenu : MonoBehaviour
 {
     private const String MAIN_MENU_BUTTON_NAME = "Main Menu";
-    private const String TUTO_LEVEL = "Tuto 0.1 i 0.2";
 
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _deathMenu;
@@ -96,9 +95,9 @@ namespace Event
         Time.timeScale = 0f;
     }
 
-    public void Restart()
+    public void Restart(int restartToLevel)
     {
-        SceneManager.LoadScene(TUTO_LEVEL);
+        SceneManager.LoadScene(restartToLevel);
         Destroy(GameObject.FindWithTag("Music"));
         SceneChangerManager.Instance.SetScore(0);
         Resume();

@@ -26,7 +26,7 @@ namespace Enemy
                 GameObject obj = Instantiate(_projObject, transform.position, Quaternion.identity);//spawnea un proyectil
                 _projectile = obj.GetComponent<Projectile>();
                 _timeBetweenShots = _startTimeBetweenShots; 
-                _projectile.whoShoot(transform.position, _player);
+                _projectile.Shoot(gameObject, _player);
             }else{
                 _timeBetweenShots -= Time.deltaTime;
             }

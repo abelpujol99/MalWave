@@ -101,7 +101,7 @@ namespace Bullet.Boss
             if (collision.gameObject.layer == 7)
             {
                 gameObject.SetActive(false);
-                _player.Death(gameObject.name.Split('(')[0]);
+                _player.Death(_boss.name.Split('(')[0]);
             }
         }
         

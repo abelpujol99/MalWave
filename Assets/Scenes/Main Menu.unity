@@ -1438,8 +1438,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1596436459}
-        m_TargetAssemblyTypeName: Event.MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1596436461}
+        m_TargetAssemblyTypeName: Event.LevelsMenu, Assembly-CSharp
         m_MethodName: LevelButton
         m_Mode: 3
         m_Arguments:
@@ -2118,8 +2118,8 @@ RectTransform:
   - {fileID: 950387479}
   - {fileID: 1810817309}
   - {fileID: 444482681}
-  - {fileID: 1871417804}
   - {fileID: 2087336168}
+  - {fileID: 1871417804}
   m_Father: {fileID: 136659218}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2639,8 +2639,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1596436459}
-        m_TargetAssemblyTypeName: Event.MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1596436461}
+        m_TargetAssemblyTypeName: Event.LevelsMenu, Assembly-CSharp
         m_MethodName: LevelButton
         m_Mode: 3
         m_Arguments:
@@ -3154,8 +3154,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1596436458}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Mute
+        m_TargetAssemblyTypeName: Event.SettingsMenu, Assembly-CSharp
+        m_MethodName: SetTutorial
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5274,6 +5274,7 @@ GameObject:
   - component: {fileID: 1596436455}
   - component: {fileID: 1596436454}
   - component: {fileID: 1596436459}
+  - component: {fileID: 1596436461}
   - component: {fileID: 1596436458}
   - component: {fileID: 1596436460}
   m_Layer: 5
@@ -5381,6 +5382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: 683f09f6344928e43aa3e34bab502a23, type: 2}
   _muteToggle: {fileID: 802168097}
+  _tutorialToggle: {fileID: 1063667942}
 --- !u!114 &1596436459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5407,6 +5409,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9370068570d8804daed2a71a24dabeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1596436461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596436453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71e0a978df172249941081d2359a9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1617789649
@@ -6124,8 +6138,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1596436459}
-        m_TargetAssemblyTypeName: Event.MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1596436461}
+        m_TargetAssemblyTypeName: Event.LevelsMenu, Assembly-CSharp
         m_MethodName: LevelButton
         m_Mode: 3
         m_Arguments:
@@ -6504,7 +6518,7 @@ RectTransform:
   m_Children:
   - {fileID: 466141073}
   m_Father: {fileID: 725625893}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6555,8 +6569,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1596436460}
-        m_TargetAssemblyTypeName: ControlsMenu, Assembly-CSharp
+      - m_Target: {fileID: 1596436461}
+        m_TargetAssemblyTypeName: Event.LevelsMenu, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -7750,7 +7764,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 725625893}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

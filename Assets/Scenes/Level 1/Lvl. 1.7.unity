@@ -450,6 +450,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350711560112, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5161951350719644096, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: m_Name
       value: InGame Canvas
@@ -554,6 +562,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1873083396}
+    - target: {fileID: 7254726444926727239, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
 --- !u!224 &162802988 stripped
@@ -561,6 +573,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5161951350719644156, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
   m_PrefabInstance: {fileID: 162802987}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &162802989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5161951350719644155, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+  m_PrefabInstance: {fileID: 162802987}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d68ad06d7c4734ab9a9d112a87c916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &191375112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10444,7 +10467,7 @@ GameObject:
   - component: {fileID: 1953639964}
   - component: {fileID: 1953639963}
   m_Layer: 5
-  m_Name: Main Menu Button (1)
+  m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10514,14 +10537,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIMenu, Assembly-CSharp
+      - m_Target: {fileID: 162802989}
+        m_TargetAssemblyTypeName: Event.UIMenu, Assembly-CSharp
         m_MethodName: LevelButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

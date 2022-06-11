@@ -8177,8 +8177,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 878497176519403558, guid: c89a79402f5c5da42b01b754f035d571, type: 3}
       propertyPath: m_Name
-      value: ShooterEnemy (1)
+      value: Shooter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 878497176519403559, guid: c89a79402f5c5da42b01b754f035d571, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 324110230}
     - target: {fileID: 878497176519403562, guid: c89a79402f5c5da42b01b754f035d571, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -21168,8 +21172,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 878497176519403558, guid: c89a79402f5c5da42b01b754f035d571, type: 3}
       propertyPath: m_Name
-      value: ShooterEnemy
+      value: Shooter
       objectReference: {fileID: 0}
+    - target: {fileID: 878497176519403559, guid: c89a79402f5c5da42b01b754f035d571, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 324110230}
     - target: {fileID: 878497176519403562, guid: c89a79402f5c5da42b01b754f035d571, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -23062,6 +23070,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5161951350091470797, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350711560112, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5161951350719644096, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: m_Name
       value: InGame Canvas

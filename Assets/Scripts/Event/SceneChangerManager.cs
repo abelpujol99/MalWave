@@ -12,9 +12,10 @@ namespace Event
             get { return _instance; }
         }
 
-        private int _lastSceneIndex;
-        private int _score;
-        private bool _deactivateTutorial;
+        [SerializeField] private int _lastSceneIndex;
+        [SerializeField] private int _score;
+        [SerializeField] private int _restartToLevel;
+        [SerializeField] private bool _activateTutorial = true;
 
         private void Awake()
         {
@@ -51,6 +52,26 @@ namespace Event
         public void SetScore(int score)
         {
             _score = score;
+        }
+
+        public bool GetActivateTutorial()
+        {
+            return _activateTutorial;
+        }
+
+        public void SetActivateTutorial(bool activateTutorial)
+        {
+            _activateTutorial = activateTutorial;
+        }
+
+        public int GetRestartToLevel()
+        {
+            return _restartToLevel;
+        }
+
+        public void SetRestartToLevel(int restartToLevel)
+        {
+            _restartToLevel = restartToLevel;
         }
     }
 }

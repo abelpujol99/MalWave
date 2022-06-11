@@ -43,6 +43,8 @@ namespace Characters.Main
         [SerializeField] private bool _shoot;
         [SerializeField] private bool _dead;
         [SerializeField] private bool _surf;
+        [SerializeField] private bool _canSurf;
+        
         private bool _playDeathSound;
         private bool _cooldownDashRestarting;
         private bool _win;
@@ -65,7 +67,6 @@ namespace Characters.Main
 
         private void Start()
         {
-            CheckSurf();
             InitializeMag();
             _playDeathSound = true;
         }
@@ -117,7 +118,7 @@ namespace Characters.Main
 
         private void FixedUpdate()
         {
-            if (!_dead)
+            if (!_dead && !_surf)
             {
                 RunOrDash();    
             }
@@ -221,9 +222,17 @@ namespace Characters.Main
                 Vector2.down, 1f, LayerMask.GetMask("Ground"));
             if (!_checkGround)
             {
-                _ground = false;
-                _animator.SetBool(FALL_ANIMATOR_NAME, true);
-                _animator.SetBool(LAND_ANIMATOR_NAME, false);
+                if ((SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 9) && _canSurf) 
+                {
+                    _surf = true;
+                    _animator.SetBool(SURF_ANIMATOR_NAME, true);
+                }
+                else
+                {
+                    _ground = false;
+                    _animator.SetBool(FALL_ANIMATOR_NAME, true);
+                    _animator.SetBool(LAND_ANIMATOR_NAME, false);
+                }
             }
         }
 
@@ -294,15 +303,6 @@ namespace Characters.Main
                 Bullet.MainCharacterBullet bullet = bulletToSpawn.GetComponent<Bullet.MainCharacterBullet>();
                 _shootSound.Play();
                 bullet.ShootBullet(transform.position);
-            }
-        }
-
-        private void CheckSurf()
-        {
-            if (SceneManager.GetActiveScene().name == "Tuto 0.2.2" || SceneManager.GetActiveScene().name == "Lvl. 1.2")
-            {
-                _surf = true;
-                _animator.SetBool(SURF_ANIMATOR_NAME, true);
             }
         }
 
@@ -399,6 +399,11 @@ namespace Characters.Main
         public bool GetDash()
         {
             return _dash;
+        }
+
+        public void SetSurf(bool canSurf)
+        {
+            _canSurf = canSurf;
         }
 
         public bool GetDeath()

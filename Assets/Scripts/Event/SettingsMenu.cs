@@ -13,15 +13,15 @@ namespace Event
         
         [SerializeField] private AudioMixer _audioMixer;
         [SerializeField] private Toggle _muteToggle;
+        [SerializeField] private Toggle _tutorialToggle;
     
         private float _lastVolumeValue;
-    
+
         private void Update()
         {
-            if (_lastVolumeValue < -50.0f)
+            if (_tutorialToggle != null)
             {
-                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
-                _muteToggle.isOn = true;
+                _tutorialToggle.isOn = SceneChangerManager.Instance.GetActivateTutorial();
             }
         }
     
@@ -57,7 +57,12 @@ namespace Event
                 _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, _lastVolumeValue);
             }
         }
-    
+
+        public void SetTutorial(bool activateTutorial)
+        {
+            SceneChangerManager.Instance.SetActivateTutorial(activateTutorial);
+        }
+
         public void Exit()
         {
             transform.Find(SETTINGS_MENU_NAME).gameObject.SetActive(false);
