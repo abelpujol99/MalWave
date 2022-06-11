@@ -15,11 +15,12 @@ namespace Event
             }
         }
 
-        private int _lastSceneIndex;
-
-        private int _score;
-
-        private void Awake()
+    private int _lastSceneIndex;
+    private int _score = 0;
+    private bool _deactivateTutorial;
+    private void Awake()
+    {
+        if (_instance == null)
         {
             if (_instance == null)
             {

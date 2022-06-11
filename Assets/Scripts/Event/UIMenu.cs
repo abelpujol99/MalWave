@@ -113,6 +113,13 @@ namespace Event
         SceneManager.LoadScene(MAIN_MENU_BUTTON_NAME);
     }
 
+    public void LevelButton(int levelIndex)
+    {
+        Destroy(GameObject.FindWithTag("Music"));
+        SceneChangerManager.Instance.SetScore(0);
+        SceneManager.LoadScene(levelIndex);
+    }
+
     public void Settings()
     {
         _settingsMenu.SetActive(true);
