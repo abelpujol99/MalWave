@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Character;
+using Event;
 using UnityEngine;
 
 public class Coin : MonoBehaviour

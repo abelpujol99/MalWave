@@ -9,28 +9,28 @@ namespace Event
 
         public static SceneChangerManager Instance
         {
-            get
-            {
-                return _instance;
-            }
+            get { return _instance; }
         }
 
-    private int _lastSceneIndex;
-    private int _score = 0;
-    private bool _deactivateTutorial;
-    private void Awake()
-    {
-        if (_instance == null)
+        private int _lastSceneIndex;
+        private int _score;
+        private bool _deactivateTutorial;
+
+        private void Awake()
         {
             if (_instance == null)
             {
-                _instance = this;
+                if (_instance == null)
+                {
+                    _instance = this;
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+
+                DontDestroyOnLoad(gameObject);
             }
-            else
-            {
-                Destroy(gameObject);
-            }
-            DontDestroyOnLoad(gameObject);
         }
 
         public int GetLastSceneIndex()

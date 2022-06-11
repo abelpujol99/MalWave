@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 7029461126232232192}
   - component: {fileID: 1650804126179836160}
   - component: {fileID: 7053622518272197260}
-  - component: {fileID: 1417782233922511799}
-  - component: {fileID: 6394678171906293604}
+  - component: {fileID: 5015955982576435181}
+  - component: {fileID: 4890277021460284561}
   m_Layer: 7
   m_Name: Character
   m_TagString: Player
@@ -161,9 +161,9 @@ MonoBehaviour:
   _animator: {fileID: 7029461126232232204}
   _rb2D: {fileID: 7029461126232232193}
   _shootSound: {fileID: 7053622518272197260}
-  _dashSound: {fileID: 1417782233922511799}
+  _dashSound: {fileID: 5015955982576435181}
   _deathSound: {fileID: 1650804126179836160}
-  _jumpSound: {fileID: 6394678171906293604}
+  _jumpSound: {fileID: 4890277021460284561}
   _bullet: {fileID: 3289658312201462153, guid: 7b49e062177c35b4ab2f08d70d24ae1d, type: 3}
   _jump: 0
   _doubleJump: 0
@@ -378,7 +378,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &1417782233922511799
+--- !u!82 &5015955982576435181
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,7 +474,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &6394678171906293604
+--- !u!82 &4890277021460284561
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
