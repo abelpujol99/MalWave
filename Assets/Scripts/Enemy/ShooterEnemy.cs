@@ -1,44 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
-using Character;
+using Characters.Main;
 using UnityEngine;
 
-public class ShooterEnemy : MonoBehaviour
+namespace Enemy
 {
-    private float _timeBetweenShots;
-    public float startTimeBtwShots;
-    public GameObject Projectile;
-    //PLAYER
-    [SerializeField] private Player _player;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class ShooterEnemy : MonoBehaviour
     {
-        _timeBetweenShots = startTimeBtwShots;
-    }
+        private float _timeBetweenShots;
+        private float _startTimeBetweenShots =  2;
+        [SerializeField] private GameObject _projObject;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(_timeBetweenShots <= 0){
-            Instantiate(Projectile, transform.position, Quaternion.identity);//spawnea un proyectil
-            _timeBetweenShots = startTimeBtwShots; 
-        }else{
-            _timeBetweenShots -= Time.deltaTime;
-        }
-    }
+        private Projectile _projectile;
+        //PLAYER
+        [SerializeField] private Player _player;
     
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer == 7 && _player.ReturnDash())
+        // Start is called before the first frame update
+        void Start()
         {
-            Destroy(gameObject);
+            _timeBetweenShots = _startTimeBetweenShots;
         }
-        //else if (other.gameObject.layer == 7 && !_player.ReturnDash())
-        //{
-            //_player.Death();
-        //}
+
+        // Update is called once per frame
+        void Update()
+        {
+            if(_timeBetweenShots <= 0){
+                GameObject obj = Instantiate(_projObject, transform.position, Quaternion.identity);//spawnea un proyectil
+                _projectile = obj.GetComponent<Projectile>();
+                _timeBetweenShots = _startTimeBetweenShots; 
+                _projectile.whoShoot(transform.position, _player);
+            }else{
+                _timeBetweenShots -= Time.deltaTime;
+            }
+        }
+    
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.layer == 7 && _player.GetDash() || other.gameObject.layer == 8)
+            {
+                Destroy(gameObject);
+                if (other.gameObject.layer == 8){
+                    other.gameObject.SetActive(false);
+                }
+            }
+            else if (other.gameObject.layer == 7)
+            {
+            _player.Death(gameObject.name.Split('(')[0]);
+            }
+        }
     }
 }
+
 
 

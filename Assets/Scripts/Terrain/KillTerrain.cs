@@ -1,18 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Character;
+using Characters.Main;
 using UnityEngine;
 
-public class KillTerrain : MonoBehaviour
+
+namespace Terrain
 {
-    [SerializeField] private Player _player; 
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class KillTerrain : MonoBehaviour
     {
-        if (collision.gameObject.layer == 7)
+        [SerializeField] private Player _player; 
+    
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            _player.Death("FireWall");
+            if (collision.gameObject.layer == 7)
+            {
+                _player.Death("FireWall");
+            }
         }
     }
 }
+

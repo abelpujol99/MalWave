@@ -1,20 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FlipCamera : MonoBehaviour
+namespace Camera
 {
-    private Matrix4x4 mat;
+    public class FlipCamera : MonoBehaviour
+    {
+        private Matrix4x4 mat;
     
-    void Start()
-    {
-        mat = UnityEngine.Camera.main.projectionMatrix;
-        mat *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
-        UnityEngine.Camera.main.projectionMatrix = mat;
-    }
+        void Start()
+        {
+            mat = UnityEngine.Camera.main.projectionMatrix;
+            mat *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
+            UnityEngine.Camera.main.projectionMatrix = mat;
+        }
 
-    void Update()
-    {
+        void Update()
+        {
         
+        }
     }
+    
 }

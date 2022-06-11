@@ -1,13 +1,13 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Character;
+using Characters.Main;
+using Event;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIMenu : MonoBehaviour
+namespace Event
+{
+    public class UIMenu : MonoBehaviour
 {
     private const String MAIN_MENU_BUTTON_NAME = "Main Menu";
     private const String TUTO_LEVEL = "Tuto 0.1 i 0.2";
@@ -133,3 +133,5 @@ public class UIMenu : MonoBehaviour
     }
 
 }
+}
+

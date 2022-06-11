@@ -1,35 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 
 namespace Bullet
 {
-    public class Bullet: MonoBehaviour
+    public class MainCharacterBullet: MonoBehaviour
     {
 
         [SerializeField] private float _speed = 5;
         [SerializeField] private Rigidbody2D _rigidbody2D;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
 
         public void ShootBullet(Vector3 characterPosition)
         {
             gameObject.SetActive(true);
             gameObject.transform.position = new Vector3(characterPosition.x + 0.5f, characterPosition.y,
                                                 characterPosition.z);
+            _rigidbody2D.velocity = Vector2.zero;
             _rigidbody2D.AddForce(new Vector2((transform.position.x + 1) - transform.position.x, transform.position.y) * _speed, ForceMode2D.Impulse);
             
         }
