@@ -103,12 +103,79 @@ public class ChangeScene : MonoBehaviour
         #endregion
         
         #region Level1
+
+        #region FirstPortal
+        if (activeScene == 9 && _lastSceneIndex == 8)
+        {
+            _nextSceneIndex = 12;
+        }
+        else if (activeScene == 12 && _lastSceneIndex == 9)
+        {
+            _nextSceneIndex = 10;
+        }
+        else if (activeScene == 10 && _lastSceneIndex == 12)
+        {
+            _nextSceneIndex = 13;
+        }
+        else if (activeScene == 13 && _lastSceneIndex == 10)
+        {
+            _nextSceneIndex = 11;
+        }
+        else if (activeScene == 11 && _lastSceneIndex == 13)
+        {
+            _nextSceneIndex = 14;
+        }
+        #endregion
         
+        #region SecondPortal
+        if (activeScene == 10 && _lastSceneIndex == 8)
+        {
+            _nextSceneIndex = 12;
+        }
+        else if (activeScene == 12 && _lastSceneIndex == 10)
+        {
+            _nextSceneIndex = 11;
+        }
+        else if (activeScene == 11 && _lastSceneIndex == 12)
+        {
+            _nextSceneIndex = 13;   
+        }
+        else if (activeScene == 13 && _lastSceneIndex == 11)
+        {
+            _nextSceneIndex = 9;
+        }
+        else if (activeScene == 9 && _lastSceneIndex == 13)
+        {
+            _nextSceneIndex = 14;    
+        }
+        #endregion
+        
+        #region ThirdPortal
+        if (activeScene == 11 && _lastSceneIndex == 8)
+        {
+            _nextSceneIndex = 12;
+        }
+        else if (activeScene == 12 && _lastSceneIndex == 11)
+        {
+            _nextSceneIndex = 9;    
+        }
+        else if (activeScene == 9 && _lastSceneIndex == 12)
+        {
+            _nextSceneIndex = 13;    
+        }
+        else if (activeScene == 13 && _lastSceneIndex == 9)
+        {
+            _nextSceneIndex = 10;    
+        }
+        else if (activeScene == 10 && _lastSceneIndex == 13)
+        {
+            _nextSceneIndex = 14;    
+        }
+        #endregion
         
         #endregion
 
         ChoosePortalColor();
-        Debug.Log(SceneChangerManager.Instance.GetLastSceneIndex());
 
         SceneChangerManager.Instance.SetLastSceneIndex(SceneManager.GetActiveScene().buildIndex);
     }
@@ -125,31 +192,60 @@ public class ChangeScene : MonoBehaviour
     {
         if (!_firstPortalOfTheLevel)
         {
-            _spriteRenderer.sprite = _nextSceneIndex switch
+            switch (_nextSceneIndex)
             {
-                2 => _cyanPortal,
-                3 => _pinkPortal,
-                4 => _purplePortal,
-                5 => _bluePortal,
-                6 => _greenPortal,
-                7 => _redPortal,
-                _ => throw new ArgumentOutOfRangeException()
-            };
+                case 2:
+                    _spriteRenderer.sprite = _cyanPortal;
+                    break;
+                case 3:
+                    _spriteRenderer.sprite = _pinkPortal;
+                    break;
+                case 4:
+                    _spriteRenderer.sprite = _purplePortal;
+                    break;
+                case 5:
+                    _spriteRenderer.sprite = _bluePortal;
+                    break;
+                case 6:
+                    _spriteRenderer.sprite = _greenPortal;
+                    break;
+                case 7:
+                    _spriteRenderer.sprite = _redPortal;
+                    break;
+            }
         }
         else
         {
             _spriteRenderer.flipX = true;
-            _spriteRenderer.sprite = SceneChangerManager.Instance.GetLastSceneIndex() switch
+            switch (_lastSceneIndex)
             {
-                1 => _greenPortal,
-                2 => _cyanPortal,
-                3 => _pinkPortal,
-                4 => _purplePortal,
-                5 => _bluePortal,
-                6 => _greenPortal,
-                _ => throw new ArgumentOutOfRangeException()
-            };
+                case 1:
+                case 6:
+                case 8:
+                case 12:
+                    _spriteRenderer.sprite = _greenPortal;
+                    break;
+                
+                case 2:
+                case 11:
+                    _spriteRenderer.sprite = _cyanPortal;
+                    break;
+                
+                case 3:
+                case 13: 
+                    _spriteRenderer.sprite = _pinkPortal;
+                    break;
+                
+                case 4:
+                case 9:
+                    _spriteRenderer.sprite = _purplePortal;
+                    break;
+                
+                case 5:
+                case 10:
+                    _spriteRenderer.sprite = _bluePortal;
+                    break;
+            }
         }
-
     }
 }
