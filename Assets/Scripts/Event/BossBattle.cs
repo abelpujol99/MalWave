@@ -53,7 +53,10 @@ public class BossBattle : MonoBehaviour
         }
         else
         {
-            _boss.SetActive(true);
+            if (_boss != null)
+            {
+                _boss.SetActive(true);
+            }
             MoveCamera();
             Destroy(_panel);
         }

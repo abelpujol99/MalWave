@@ -35,6 +35,7 @@ namespace Event
             if (_player.GetWin())
             {
                 _winMenu.SetActive(true);
+                if (SceneManager.GetActiveScene().buildIndex == 15) return;
                 _winText.SetText("YOU WIN\nSCORE: " + SceneChangerManager.Instance.GetScore());
             }
             else

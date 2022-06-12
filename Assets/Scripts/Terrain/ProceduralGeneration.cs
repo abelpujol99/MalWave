@@ -10,6 +10,8 @@ public class ProceduralGeneration : MonoBehaviour
     [SerializeField] private UnityEngine.Camera _camera;
     
     [SerializeField] private Vector3 _offset;
+
+    [SerializeField] private Player _player;
     
     [SerializeField] private GameObject _cube;
     [SerializeField] private GameObject _boss;
@@ -131,6 +133,16 @@ public class ProceduralGeneration : MonoBehaviour
 
     private void Update()
     {
+        if (_player.GetWin())
+        {
+            Destroy(gameObject);
+            Rigidbody2D rigidbody2D = _player.GetComponent<Rigidbody2D>();
+            rigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
+            return;
+        }
+
+        if (_boss == null) return;
+        
         if (_boss.activeSelf)
         {
             GenerateScenario();

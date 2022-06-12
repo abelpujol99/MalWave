@@ -39111,6 +39111,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5161951349163006386, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: m_text
+      value: BACK
+      objectReference: {fileID: 0}
     - target: {fileID: 5161951350719644096, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: m_Name
       value: InGame Canvas

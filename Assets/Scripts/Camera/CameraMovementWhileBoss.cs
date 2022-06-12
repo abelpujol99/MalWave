@@ -10,6 +10,8 @@ namespace Camera
 
         [SerializeField] private Player _player;
 
+        [SerializeField] private GameObject _winPanel;
+
         private float _cameraPositionY;
 
         private void Start()
@@ -23,6 +25,10 @@ namespace Camera
             {
                 transform.position = new Vector3(_characterPosition.position.x + 6f, _cameraPositionY + 3f,
                     transform.position.z);
+            }
+            else
+            {
+                transform.position = _winPanel.transform.position;
             }
         }
     }

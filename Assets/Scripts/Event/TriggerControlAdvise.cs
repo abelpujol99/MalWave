@@ -24,13 +24,6 @@ public class TriggerControlAdvise : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            if (SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 9)
-            {
-                Rigidbody2D rigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
-                rigidbody2D.gravityScale = 0.22f;
-                Player player = collision.gameObject.GetComponent<Player>();
-                player.SetSurf(true);
-            }
             _mainCanvas.SetTutorialActive(true);
             _controlAdvisePanel.SetActive(true);
             Destroy(gameObject);

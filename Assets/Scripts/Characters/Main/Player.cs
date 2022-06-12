@@ -83,6 +83,7 @@ namespace Characters.Main
 
         private void Update()
         {
+            if (_win) return;
             if (!_surf && !_dead)
             {
                 CheckJumpAndDoubleJump();    
@@ -137,9 +138,14 @@ namespace Characters.Main
             }
             else
             {
+                Run();
+                if (_win)
+                {
+                    _animator.SetBool(SHOOT_ANIMATOR_NAME, false);
+                    return;
+                }
                 CheckShoot();
                 Shoot();
-                Run();
             }
         }
 

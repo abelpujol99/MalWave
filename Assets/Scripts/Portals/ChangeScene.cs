@@ -210,21 +210,32 @@ namespace Portals
                 switch (_nextSceneIndex)
                 {
                     case 2:
+                    case 11:
                         _spriteRenderer.sprite = _cyanPortal;
                         break;
+                    
                     case 3:
+                    case 13:
                         _spriteRenderer.sprite = _pinkPortal;
                         break;
+                    
                     case 4:
+                    case 9:
                         _spriteRenderer.sprite = _purplePortal;
                         break;
+                    
                     case 5:
+                    case 10:
                         _spriteRenderer.sprite = _bluePortal;
                         break;
+                    
                     case 6:
+                    case 12:
                         _spriteRenderer.sprite = _greenPortal;
                         break;
+                    
                     case 7:
+                    case 14:
                         _spriteRenderer.sprite = _redPortal;
                         break;
                 }

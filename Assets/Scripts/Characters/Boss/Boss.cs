@@ -99,6 +99,7 @@ namespace Characters.Boss
         {
             if (_health <= 0)
             {
+                _player.SetWin();
                 Destroy(gameObject);
             }
         }
