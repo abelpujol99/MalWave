@@ -15392,7 +15392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3665878907175727316, guid: 10dec0a2b63fab24d9e6c5b7d9dd885b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3665878907175727316, guid: 10dec0a2b63fab24d9e6c5b7d9dd885b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24346,7 +24346,7 @@ PrefabInstance:
       value: 'SURF UP - PRESS SPACE
 
 
-        SURF DOWN - DON''T PRESS ANYTHING'
+        SURF DOWN - DON''T PRESS space'
       objectReference: {fileID: 0}
     - target: {fileID: 3600936990185876453, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_fontSize

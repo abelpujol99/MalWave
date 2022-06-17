@@ -12,11 +12,13 @@ namespace Event
             get { return _instance; }
         }
 
-        [SerializeField] private int _lastSceneIndex;
-        [SerializeField] private int _score;
-        [SerializeField] private int _restartToLevel;
-        [SerializeField] private bool _activateTutorial = true;
-
+        private int _lastSceneIndex;
+        private int _score;
+        private int _restartToLevel;
+        private bool _activateTutorial = true;
+        private bool _completeTutorial;
+        private bool _completeLevel1;
+        
         private void Awake()
         {
             if (_instance == null)
@@ -62,6 +64,26 @@ namespace Event
         public void SetActivateTutorial(bool activateTutorial)
         {
             _activateTutorial = activateTutorial;
+        }
+
+        public bool GetCompleteTutorial()
+        {
+            return _completeTutorial;
+        }
+
+        public void SetCompleteTutorial()
+        {
+            _completeTutorial = true;
+        }
+
+        public bool GetCompleteLevel1()
+        {
+            return _completeLevel1;
+        }
+
+        public void SetCompleteLevel1()
+        {
+            _completeLevel1 = true;
         }
 
         public int GetRestartToLevel()

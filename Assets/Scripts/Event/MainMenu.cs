@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Event
 {
@@ -9,8 +11,22 @@ namespace Event
         [SerializeField] private GameObject _levelsMenu;
         [SerializeField] private GameObject _controlsPanel;
         [SerializeField] private GameObject _settingsMenu;
+        [SerializeField] private Button _level1Button;
+        [SerializeField] private Button _bossButton;
 
-        // Update is called once per frame
+        private void Start()
+        {
+            if (SceneChangerManager.Instance.GetCompleteTutorial())
+            {
+                _level1Button.interactable = true;
+            }
+
+            if (SceneChangerManager.Instance.GetCompleteLevel1())
+            {
+                _bossButton.interactable = true;
+            }
+        }
+
         private void Update()
         {
             if (!_settingsMenu.activeSelf && !_controlsPanel.activeSelf && !_levelsMenu.activeSelf)

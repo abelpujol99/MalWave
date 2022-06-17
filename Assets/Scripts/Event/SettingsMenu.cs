@@ -8,7 +8,7 @@ namespace Event
     public class SettingsMenu : MonoBehaviour
     {
     
-        private const String MUSIC_VOLUME_MIXER_NAME = "Music Volume";
+        [SerializeField] private String _musicName;
         private const String SETTINGS_MENU_NAME = "Settings Menu";
         
         [SerializeField] private AudioMixer _audioMixer;
@@ -34,12 +34,12 @@ namespace Event
         {
             if (volume < -50.0f)
             {
-                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+                _audioMixer.SetFloat(_musicName, -80);
                 _muteToggle.isOn = true;
             }
             else
             {
-                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, volume);
+                _audioMixer.SetFloat(_musicName, volume);
                 _muteToggle.isOn = false;
             }
             _lastVolumeValue = volume;
@@ -50,11 +50,11 @@ namespace Event
         {
             if (mute)
             {
-                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, -80);
+                _audioMixer.SetFloat(_musicName, -80);
             }
             else
             {
-                _audioMixer.SetFloat(MUSIC_VOLUME_MIXER_NAME, _lastVolumeValue);
+                _audioMixer.SetFloat(_musicName, _lastVolumeValue);
             }
         }
 
