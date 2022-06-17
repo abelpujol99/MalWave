@@ -35,10 +35,10 @@ namespace Bullet.Boss
         private void Awake()
         {
             _ceil = _floor + _distanceBetweenFloorAndCeil;
-            _portalsPositionY = new float[Mathf.FloorToInt((_ceil - _floor) / _distanceBetweenPortals)];
+            _portalsPositionY = new float[Mathf.FloorToInt((_ceil - _floor) / (_distanceBetweenPortals * 2))];
             for (int i = 0; i < _portalsPositionY.Length; i++)
             {
-                _portalsPositionY[i] = _floor + i * _distanceBetweenPortals;
+                _portalsPositionY[i] = _floor + i * _distanceBetweenPortals * 2;
             }
         }
 

@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d50502ab0a0e94428c688027a1b2550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainMenu: {fileID: 0}
 --- !u!1 &3600936990185876455
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,8 +164,8 @@ MonoBehaviour:
     PAUSE
     - PRESS P'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5049d8c30ab3f2646809b1ae5417977a, type: 2}
+  m_sharedMaterial: {fileID: 6357854544283715954, guid: 5049d8c30ab3f2646809b1ae5417977a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -374,8 +375,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ' Press "F" to back to game'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5049d8c30ab3f2646809b1ae5417977a, type: 2}
+  m_sharedMaterial: {fileID: 6357854544283715954, guid: 5049d8c30ab3f2646809b1ae5417977a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -399,7 +400,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.5
+  m_fontSize: 15.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
