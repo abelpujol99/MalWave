@@ -1150,7 +1150,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1787331620125453764, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: m_Name
-      value: Rock
+      value: Mcoffee
       objectReference: {fileID: 0}
     - target: {fileID: 1787331620125453767, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: _player
@@ -2406,7 +2406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1787331620125453764, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: m_Name
-      value: Rock (1)
+      value: Mcoffee (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1787331620125453767, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: _player
@@ -2918,7 +2918,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1787331620125453764, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: m_Name
-      value: Rock (3)
+      value: Mcoffee (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1787331620125453767, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: _player
@@ -4400,7 +4400,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1787331620125453764, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: m_Name
-      value: Rock (2)
+      value: Mcoffee (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1787331620125453767, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: _player
@@ -4816,7 +4816,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1787331620125453764, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: m_Name
-      value: Rock (4)
+      value: Mcoffee (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1787331620125453767, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: _player
@@ -4864,18 +4864,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1787331620125453768, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787331620125453769, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787331620125453769, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787331620125453769, guid: 04d893062d44fcd4d9332f566d042b90, type: 3}
-      propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -22,7 +22,10 @@ namespace Enemy
             switch (other.gameObject.layer)
             {
                 case 7:
-                    _player.Death(_shooter.name.Split('(')[0]);
+                    if (_shooter != null)
+                    {
+                        _player.Death(_shooter.name.Split('(')[0]);
+                    }
                     Destroy(gameObject);
                     break;
                 case 6:

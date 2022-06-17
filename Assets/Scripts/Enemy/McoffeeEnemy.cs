@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Enemy
 {
-    public class RockEnemy : MonoBehaviour
+    public class McoffeeEnemy : MonoBehaviour
     {
     
         [SerializeField] private Player _player;
