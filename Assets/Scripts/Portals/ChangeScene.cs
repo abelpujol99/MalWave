@@ -189,18 +189,11 @@ namespace Portals
             #endregion
 
             #endregion
+            
+            SceneChangerManager.Instance.GetNextSceneIndex(_nextSceneIndex);
 
             ChoosePortalColor();
 
-        }
-
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                SceneChangerManager.Instance.SetLastSceneIndex(SceneManager.GetActiveScene().buildIndex);
-                SceneManager.LoadScene(_nextSceneIndex);
-            }
         }
 
         private void ChoosePortalColor()
@@ -272,6 +265,15 @@ namespace Portals
                         _spriteRenderer.sprite = _bluePortal;
                         break;
                 }
+            }
+        }
+        
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                SceneChangerManager.Instance.SetLastSceneIndex(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(_nextSceneIndex);
             }
         }
     }

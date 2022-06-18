@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 4a7a8048f5f5ef742a3e539bdf0049e1
+guid: 1219199d44fad764d83dc0c9c4a48f29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3244875771830577424
-    second: Mcoffe_0
+      213: 8356666529293421147
+    second: Bichu22_0
   - first:
-      213: 8527796844580542757
-    second: Mcoffe_1
+      213: -4168324247839309157
+    second: Bichu22_1
   - first:
-      213: -7832223429810845760
-    second: Mcoffe_2
+      213: -7857997329290893296
+    second: Bichu22_2
   - first:
-      213: 6193311253936139763
-    second: Mcoffe_3
+      213: -3528053549079445259
+    second: Bichu22_3
   - first:
-      213: 8060496488328053399
-    second: Mcoffe_4
+      213: -742394790665479827
+    second: Bichu22_4
   - first:
-      213: 1103884783315656775
-    second: Mcoffe_5
+      213: 3063113521997884681
+    second: Bichu22_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mcoffe_0
+      name: Bichu22_0
       rect:
         serializedVersion: 2
-        x: 123
+        x: 127
         y: 1562
-        width: 380
-        height: 780
+        width: 353
+        height: 691
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f654c77da2e7f2d0800000000000000
-      internalID: -3244875771830577424
+      spriteID: b5a4ee0dee7d8f370800000000000000
+      internalID: 8356666529293421147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mcoffe_1
+      name: Bichu22_1
       rect:
         serializedVersion: 2
         x: 783
         y: 1613
-        width: 380
-        height: 780
+        width: 327
+        height: 734
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,19 +144,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5299be54c02d85670800000000000000
-      internalID: 8527796844580542757
+      spriteID: b9204ea6e232726c0800000000000000
+      internalID: -4168324247839309157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mcoffe_2
+      name: Bichu22_2
       rect:
         serializedVersion: 2
         x: 1447
         y: 1650
-        width: 380
+        width: 308
         height: 780
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -165,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c702a8994a5e4390800000000000000
-      internalID: -7832223429810845760
+      spriteID: 018e5adff09c2f290800000000000000
+      internalID: -7857997329290893296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mcoffe_3
+      name: Bichu22_3
       rect:
         serializedVersion: 2
-        x: 2089
+        x: 2097
         y: 1605
-        width: 380
-        height: 780
+        width: 315
+        height: 751
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fdea4a95cf03f550800000000000000
-      internalID: 6193311253936139763
+      spriteID: 5f040925df5d90fc0800000000000000
+      internalID: -3528053549079445259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mcoffe_4
+      name: Bichu22_4
       rect:
         serializedVersion: 2
         x: 2732
         y: 1566
-        width: 380
-        height: 780
+        width: 344
+        height: 703
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 792c31c89d2acdf60800000000000000
-      internalID: 8060496488328053399
+      spriteID: d69984b0fdb72b5f0800000000000000
+      internalID: -742394790665479827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mcoffe_5
+      name: Bichu22_5
       rect:
         serializedVersion: 2
         x: 3364
         y: 1539
         width: 380
-        height: 780
+        height: 687
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7402d7e9c59c15f00800000000000000
-      internalID: 1103884783315656775
+      spriteID: 90d2169e48d528a20800000000000000
+      internalID: 3063113521997884681
       vertices: []
       indices: 
       edges: []
