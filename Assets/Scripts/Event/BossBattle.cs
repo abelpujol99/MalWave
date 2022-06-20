@@ -14,9 +14,9 @@ public class BossBattle : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI _bossApproachingText;
 
-    [SerializeField] private AudioSource _warninigAudio;
-
     [SerializeField] private GameObject _panel;
+    [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _settingsMenu;
 
     private Color opacity;
 
@@ -42,14 +42,21 @@ public class BossBattle : MonoBehaviour
         transform.position = new Vector3(_mainCameraPositionX, transform.position.y, transform.position.z);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
         if (_timeToEndWarning > 0)
         {
-            _timeToEndWarning -= 1 * Time.deltaTime;
-            BlinkWarning();
+            if (!_pauseMenu.activeSelf && !_settingsMenu.activeSelf)
+            {
+                _timeToEndWarning -= 1 * Time.deltaTime;    
+                BlinkWarning();
+                _panel.SetActive(true);
+            }
+            else
+            {
+                _panel.SetActive(false);
+            }
         }
         else
         {

@@ -571,9 +571,20 @@ MonoBehaviour:
   _cameraUI: {fileID: 423644826}
   _warningSprite: {fileID: 1263593124}
   _bossApproachingText: {fileID: 1767514440}
-  _warninigAudio: {fileID: 0}
   _panel: {fileID: 635317495}
+  _pauseMenu: {fileID: 893867670}
+  _settingsMenu: {fileID: 970867498}
   _boss: {fileID: 1568298114}
+--- !u!1 &893867670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5161951349992460946, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+  m_PrefabInstance: {fileID: 1952525503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &970867498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5161951348953105106, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+  m_PrefabInstance: {fileID: 1952525503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1037128531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7029461126232232194, guid: 753908119e6b9ab47a8d2fe7887fa63e, type: 3}
@@ -1194,7 +1205,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1629,6 +1640,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGame Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644154, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: _musicName
+      value: Level1 Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161951350719644154, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
+      propertyPath: _audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: d1245e72870345a44b71af63642fa58a, type: 2}
     - target: {fileID: 5161951350719644155, guid: a743f42f1da943a4887abe1850a08a57, type: 3}
       propertyPath: _player
       value: 
