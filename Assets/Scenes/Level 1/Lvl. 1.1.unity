@@ -18689,6 +18689,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3600936990084813658, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: _keyCode
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936990084813658, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: _mainMenu
       value: 
       objectReference: {fileID: 315062021}
@@ -18698,11 +18702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3600936990185876452, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 12
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 3600936990185876453, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_text
-      value: SHOOT - MOUSE BUTTON 1
+      value: SHOOT - MOUSE BUTTON 0
       objectReference: {fileID: 0}
     - target: {fileID: 3600936990185876453, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_fontStyle
@@ -18711,6 +18715,18 @@ PrefabInstance:
     - target: {fileID: 3600936990185876453, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936991412761268, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936991412761268, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654065418979796613, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43.000023
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}

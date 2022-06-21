@@ -24334,12 +24334,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3600936990084813658, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: _input
+      value: Space
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936990084813658, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: _keyCode
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936990084813658, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: _mainMenu
       value: 
       objectReference: {fileID: 902235767}
     - target: {fileID: 3600936990185876452, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 3600936990185876453, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_text
@@ -24355,6 +24363,22 @@ PrefabInstance:
     - target: {fileID: 3600936990185876453, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
       propertyPath: m_fontSizeBase
       value: 17.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936990185876453, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936991412761268, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 179.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600936991412761268, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654065418979796613, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80.70001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f4b4b03f89088148b656bf5a5b1c422, type: 3}

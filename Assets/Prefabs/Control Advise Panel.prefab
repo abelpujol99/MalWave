@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3600936990084813657
 RectTransform:
   m_ObjectHideFlags: 0
@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainMenu: {fileID: 0}
+  _text: {fileID: 461076356545040519}
+  _input: 
 --- !u!1 &3600936990185876455
 GameObject:
   m_ObjectHideFlags: 0
